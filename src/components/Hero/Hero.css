@@ -1,0 +1,189 @@
+/* Hero Styles — Mobile First */
+.hero-section {
+  background-color: #1b0c2a;
+  /* Mobile First: Fade gradient between deep violet and global navy deep */
+  background-image: linear-gradient(180deg, #1b0c2a 0%, var(--clr-navy-deep) 100%);
+  padding-top: 110px; /* offset fixed header */
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  width: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 650px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  color: var(--clr-white);
+}
+
+.hero-title .text-highlight {
+  color: var(--clr-primary-pink);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--clr-text-light);
+  opacity: 0.9;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.hero-actions .btn {
+  width: 100%;
+}
+
+/* Badges strip integrated below actions */
+.hero-badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+}
+
+.hero-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-badge-icon {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(233, 30, 99, 0.12);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary-pink);
+  flex-shrink: 0;
+}
+
+.hero-badge-text {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--clr-white);
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+/* Tablet adjustments */
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    width: auto;
+    gap: 20px;
+  }
+
+  .hero-actions .btn {
+    width: auto;
+  }
+
+  .hero-badges {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .hero-badge-text {
+    font-size: 0.88rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-badges {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Desktop premium view — matching the user's reference image exactly */
+@media (min-width: 1024px) {
+  .hero-section {
+    background-color: #1b0c2a;
+    background-image: linear-gradient(135deg, #1b0c2a 0%, var(--clr-navy-deep) 100%);
+    padding-top: 140px;
+    padding-bottom: 90px;
+    min-height: 95vh;
+  }
+
+  .hero-content {
+    max-width: 520px; /* text remains compact and aligned to the left */
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.12;
+    margin-bottom: 25px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+  }
+
+  .hero-badges {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    gap: 20px;
+    max-width: 680px;
+  }
+
+  .hero-badge-item {
+    gap: 8px;
+  }
+
+  .hero-badge-icon {
+    width: 28px;
+    height: 28px;
+    background: none;
+    color: var(--clr-primary-pink);
+    padding: 0;
+  }
+  
+  .hero-badge-text {
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-badges {
+    gap: 30px;
+  }
+}
