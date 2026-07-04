@@ -1,8 +1,6 @@
 /* Hero Styles — Mobile First */
 .hero-section {
-  background-color: #1b0c2a;
-  /* Mobile First: Fade gradient between deep violet and global navy deep */
-  background-image: linear-gradient(180deg, #1b0c2a 0%, var(--clr-navy-deep) 100%);
+  background: linear-gradient(135deg, rgba(240, 67, 117, 0.2) 0%, rgba(122, 66, 153, 0.2) 100%), #0E1428;
   padding-top: 110px; /* offset fixed header */
   padding-bottom: 60px;
   position: relative;
@@ -131,8 +129,6 @@
 /* Desktop premium view — matching the user's reference image exactly */
 @media (min-width: 1024px) {
   .hero-section {
-    background-color: #1b0c2a;
-    background-image: linear-gradient(135deg, #1b0c2a 0%, var(--clr-navy-deep) 100%);
     padding-top: 140px;
     padding-bottom: 90px;
     min-height: 95vh;

@@ -1,6 +1,6 @@
 /* Footer Styles — Mobile First */
 .footer-section {
-  background-color: var(--clr-navy-deep);
+  background-color: var(--clr-navy-medium);
   color: var(--clr-white);
   border-top: 1px solid var(--clr-border-dark);
   padding-top: 60px;
