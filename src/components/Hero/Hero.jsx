@@ -5,6 +5,17 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section id="inicio" className="hero-section">
+      {/* Product image — positioned absolutely on desktop, flows naturally on mobile */}
+      <div className="hero-image-col">
+        <img 
+          src="/images/bgroup_background-nowm.webp" 
+          alt="Productos de empaques y merchandising personalizados de BarcaneGroup" 
+          className="hero-product-img"
+          loading="eager"
+        />
+      </div>
+
+      {/* Text content — always above the image via z-index on desktop */}
       <div className="container hero-container animate-fade-in-up">
         <div className="hero-content">
           <h1 className="hero-title">
@@ -36,7 +47,7 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Badges strip integrated at the bottom of hero content */}
+          {/* Badges strip */}
           <div className="hero-badges">
             <div className="hero-badge-item">
               <div className="hero-badge-icon">

@@ -7,25 +7,25 @@ export default function FeaturedProducts() {
 
   const products = [
     {
-      name: 'Bolsa Ejecutiva Premium',
-      image: '/images/items/barcanegroup_bolsas1.png'
+      name: "Bolsa Ejecutiva Premium",
+      image: "/images/items/barcanegroup_bolsas3.webp",
     },
     {
-      name: 'Papel Manteca Personalizado',
-      image: '/images/items/barcanegroup_papel_manteca.webp'
+      name: "Papel Manteca Personalizado",
+      image: "/images/items/barcanegroup_papel_manteca.webp",
     },
     {
-      name: 'Bolsa Kraft Personalizada',
-      image: '/images/items/barcanegroup_bolsas3.webp'
+      name: "Bolsa Kraft Personalizada",
+      image: "/images/items/barcanegroup_bolsas1.png",
     },
     {
-      name: 'Calendarios Corporativos',
-      image: '/images/items/barcanegroup_calendars.webp'
+      name: "Calendarios Corporativos",
+      image: "/images/items/barcanegroup_calendars.webp",
     },
     {
-      name: 'Merchandising Corporativo',
-      image: '/images/items/barcanegroup_bolsas4.webp'
-    }
+      name: "Merchandising Corporativo",
+      image: "/images/items/barcanegroup_bolsas4.webp",
+    },
   ];
 
   const scroll = (direction) => {
