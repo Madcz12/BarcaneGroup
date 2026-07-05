@@ -16,7 +16,7 @@ export default function FeaturedProducts() {
     },
     {
       name: "Bolsa Kraft Personalizada",
-      image: "/images/items/barcanegroup_bolsas1.png",
+      image: "/images/items/bgroup_bolsakraft1.webp",
     },
     {
       name: "Calendarios Corporativos",
