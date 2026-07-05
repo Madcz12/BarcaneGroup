@@ -1,20 +1,6 @@
-/* Hero Styles — Mobile First (Background Image with Protective Gradients) */
+/* Hero Styles — Mobile First (Sliding Background Carousel — Conveyor Belt) */
 .hero-section {
   background-color: #111422;
-  /* Mobile First: vertical gradient to protect text contrast over background image */
-  background-image: 
-    linear-gradient(
-      to bottom,
-      #111422 0%,
-      rgba(17, 20, 34, 0.75) 45%,
-      rgba(17, 20, 34, 0.3) 100%
-    ),
-    url('/images/items/background_barcanegroup_rescaled_v1.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 110px; /* offset fixed header */
-  padding-bottom: 60px;
   position: relative;
   overflow: hidden;
   min-height: 70vh;
@@ -22,10 +8,58 @@
   align-items: center;
 }
 
+/* Background sliding carousel viewport */
+.hero-bg-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Sliding track container */
+.hero-bg-track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Individual Slide in the sliding track */
+.hero-bg-slide {
+  height: 100%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Protective gradient overlay sitting fixed on top of the sliding track */
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      #111422 0%,
+      rgba(17, 20, 34, 0.75) 45%,
+      rgba(17, 20, 34, 0.3) 100%
+    );
+  pointer-events: none;
+}
+
+/* Foreground container layer */
 .hero-container {
   width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  padding-top: 110px; /* offset fixed header */
+  padding-bottom: 60px;
 }
 
 .hero-content {
@@ -140,9 +174,26 @@
   }
 }
 
-/* Desktop — Full screen cover layout with horizontal gradient */
+/* Desktop — Full screen cover layout with horizontal gradient and background shift */
 @media (min-width: 1024px) {
   .hero-section {
+    padding-top: 140px;
+    padding-bottom: 90px;
+    min-height: 80vh; /* Premium desktop height, perfect for panoramic covers */
+  }
+
+  .hero-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Shift the WebP slides 10vw to the right to prevent overlap with left text */
+  .hero-bg-slide {
+    background-position: calc(100% + 10vw) center;
+  }
+
+  /* Apply left-to-right protective gradient overlay, static at the left */
+  .hero-bg-overlay {
     background-image: 
       linear-gradient(
         to right,
@@ -150,14 +201,8 @@
         rgba(17, 20, 34, 0.9) 35%,
         rgba(17, 20, 34, 0.4) 65%,
         transparent 100%
-      ),
-      url('/images/items/background_barcanegroup_rescaled_v1.webp');
-    background-position: left center, calc(100% + 10vw) center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
-    padding-top: 140px;
-    padding-bottom: 90px;
-    min-height: 80vh; /* Premium desktop height, perfect for panoramic covers */
+      );
+    background-position: left center;
   }
 
   .hero-content {

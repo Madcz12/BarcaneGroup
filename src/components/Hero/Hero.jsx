@@ -1,10 +1,69 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import WhatsAppIcon from '../icons/WhatsAppIcon';
 import './Hero.css';
 
 export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  const slides = [
+    '/images/carrousel/barcanegroup-corpmerchcarrouselv2.webp',
+    '/images/carrousel/barcanegroup-gastrocateringcarrouselv2.webp',
+    '/images/carrousel/barcanegroup-kraftbagscarrouselv2.webp',
+    '/images/carrousel/barcanegroup-premiumbagscarrouselv2.webp'
+  ];
+
+  // Extend slides array by appending a clone of the first slide to create a seamless loop
+  const extendedSlides = [...slides, slides[0]];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsTransitioning(true);
+      setCurrentSlide((prev) => prev + 1);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Handle transition warp back to slide 0 after sliding to the clone slide
+  useEffect(() => {
+    if (currentSlide === slides.length) {
+      const warpTimer = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentSlide(0);
+      }, 800); // Matches the 0.8s transition duration defined in CSS/inline styles
+      return () => clearTimeout(warpTimer);
+    }
+  }, [currentSlide, slides.length]);
+
   return (
     <section id="inicio" className="hero-section">
+      {/* Background Sliding Carousel */}
+      <div className="hero-bg-carousel">
+        <div 
+          className="hero-bg-track"
+          style={{
+            width: `${extendedSlides.length * 100}%`,
+            transform: `translateX(-${(currentSlide * 100) / extendedSlides.length}%)`,
+            transition: isTransitioning ? 'transform 0.8s cubic-bezier(0.77, 0, 0.175, 1)' : 'none'
+          }}
+        >
+          {extendedSlides.map((slide, index) => (
+            <div
+              key={`${slide}-${index}`}
+              className="hero-bg-slide"
+              style={{ 
+                backgroundImage: `url(${slide})`,
+                width: `${100 / extendedSlides.length}%`
+              }}
+            />
+          ))}
+        </div>
+        {/* Protective Gradient Overlay */}
+        <div className="hero-bg-overlay" />
+      </div>
+
+      {/* Hero Content Overlay */}
       <div className="container hero-container animate-fade-in-up">
         <div className="hero-content">
           <h1 className="hero-title">
