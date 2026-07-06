@@ -1,0 +1,21 @@
+import React from 'react';
+import Hero from '../../components/Hero/Hero';
+import Services from '../../components/Services/Services';
+import IndustriesAndWhy from '../../components/IndustriesAndWhy/IndustriesAndWhy';
+import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
+import ProcessAndCTA from '../../components/ProcessAndCTA/ProcessAndCTA';
+
+// Home page: landing sections rendered inside the MainLayout shell.
+// Navbar and Footer are provided by MainLayout, so this component only
+// renders its own page-specific content.
+export default function HomePage() {
+  return (
+    <main>
+      <Hero />
+      <Services />
+      <IndustriesAndWhy />
+      <FeaturedProducts />
+      <ProcessAndCTA />
+    </main>
+  );
+}

@@ -1,0 +1,13 @@
+/* Layout wrapper: ensures the navbar, routed content and footer stack vertically
+   and the footer sits at the bottom of the viewport on short pages. */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-layout-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}

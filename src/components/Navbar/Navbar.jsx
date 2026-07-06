@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import WhatsAppIcon from '../icons/WhatsAppIcon';
 import './Navbar.css';
 
@@ -155,7 +156,7 @@ export default function Navbar() {
               <a href="#industrias-y-proceso" className="nav-link" onClick={() => setIsOpen(false)}>Industrias</a>
             </li>
             <li className="nav-item">
-              <a href="#productos" className="nav-link" onClick={() => setIsOpen(false)}>Productos</a>
+              <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Productos</Link>
             </li>
             <li className="nav-item">
               <a href="#contacto" className="nav-link" onClick={() => setIsOpen(false)}>Contacto</a>
