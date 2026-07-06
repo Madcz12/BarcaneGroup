@@ -68,7 +68,7 @@ export default function Hero() {
         <div className="hero-content">
           <h1 className="hero-title">
             Soluciones que <br />
-            fortalecen <span className="text-highlight">tu marca</span>
+            impulsan <span className="text-highlight">tu marca</span>
           </h1>
           
           <p className="hero-subtitle">

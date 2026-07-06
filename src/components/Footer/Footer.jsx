@@ -14,6 +14,7 @@ export default function Footer() {
               alt="Logo BarcaneGroup" 
               className="logo-img-footer" 
             />
+            <span className='footer-col-brand-title'>BarcaneGroup</span>
           </a>
           <p className="footer-brand-desc">
             Fabricación e impresión de empaques corporativos, editorial y merchandising de alta gama para empresas en todo el Perú.
