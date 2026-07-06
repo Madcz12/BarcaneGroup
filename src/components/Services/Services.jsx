@@ -46,7 +46,7 @@ export default function Services() {
       id: 'bolsas-ejecutivas',
       title: 'Bolsas Ejecutivas',
       description: 'Bolsas corporativas personalizadas que reflejan la identidad y elegancia de tu empresa.',
-      image: '/images/items/barcanegroup_bolsas3.webp'
+      image: '/images/bgroup_new_bagspremium.webp'
     },
     {
       id: 'merchandising-ejecutivo',
@@ -56,7 +56,7 @@ export default function Services() {
     },
     {
       id: 'impresion-editorial',
-      title: 'Impresión y Editorial',
+      title: 'Impresos',
       description: 'Libros, calendarios, agendas, catálogos y material impreso de alta calidad.',
       image: '/images/items/barcanegroup_calendars.webp'
     }
@@ -92,7 +92,7 @@ export default function Services() {
         {/* Main Section: Packaging */}
         <div className="services-group">
           <div className="services-header">
-            <h2 className="services-title">¿Qué empaques ofrecemos?</h2>
+            <h2 className="services-title">¿Qué ofrecemos?</h2>
             <div className="title-underline"></div>
           </div>
           <div className="services-grid services-grid-6">

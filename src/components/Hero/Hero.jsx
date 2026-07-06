@@ -11,7 +11,8 @@ export default function Hero() {
     '/images/carrousel/barcanegroup-corpmerchcarrouselv2.webp',
     '/images/carrousel/barcanegroup-gastrocateringcarrouselv2.webp',
     '/images/carrousel/barcanegroup-kraftbagscarrouselv2.webp',
-    '/images/carrousel/barcanegroup-premiumbagscarrouselv2.webp'
+    '/images/carrousel/barcanegroup-premiumbagscarrouselv2.webp',
+    '/images/carrousel/bgroup_oficial_bags.webp'
   ];
 
   // Extend slides array by appending a clone of the first slide to create a seamless loop
@@ -55,7 +56,8 @@ export default function Hero() {
               className="hero-bg-slide"
               style={{ 
                 backgroundImage: `url(${slide})`,
-                width: `${100 / extendedSlides.length}%`
+                width: `${100 / extendedSlides.length}%`,
+                ...(slide.includes('carrouselbags') ? { backgroundSize: '110% 110%' } : {})
               }}
             />
           ))}
