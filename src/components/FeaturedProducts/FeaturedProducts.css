@@ -2,6 +2,8 @@
 .featured-section {
   background-color: #b8c2d9;
   overflow: hidden;
+  padding-top: 40px !important;    /* Reduce el espacio con el techo */
+  padding-bottom: 40px !important; /* Reduce el espacio abajo de la sección */
 }
 
 .featured-header {
