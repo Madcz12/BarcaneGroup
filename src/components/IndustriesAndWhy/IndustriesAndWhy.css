@@ -168,14 +168,15 @@
 }
 
 .reason-item-title {
-  font-size: 0.98rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--clr-navy-deep);
 }
 
 .reason-item-desc {
-  font-size: 0.86rem;
-  color: var(--clr-text-muted);
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: black;
   line-height: 1.4;
 }
 
@@ -346,9 +347,9 @@
 }
 
 .step-item-desc {
-  font-size: 0.82rem;
-  color: var(--clr-text-muted);
-  line-height: 1.4;
+  font-size: 0.89rem;
+  color: black;
+  line-height: 1;
   max-width: 280px;
 }
 

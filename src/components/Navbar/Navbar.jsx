@@ -114,7 +114,7 @@ export default function Navbar() {
               <a href="#inicio" className="nav-link active" onClick={() => setIsOpen(false)}>Inicio</a>
             </li>
             <li className="nav-item">
-              <a href="#nosotros" className="nav-link" onClick={() => setIsOpen(false)}>Nosotros</a>
+              <a href="#que-hacemos" className="nav-link" onClick={() => setIsOpen(false)}>Nosotros</a>
             </li>
             <li className={`nav-item dropdown ${dropdownOpen ? 'dropdown-open' : ''}`}>
               <button 
@@ -152,13 +152,10 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a href="#industrias" className="nav-link" onClick={() => setIsOpen(false)}>Industrias</a>
+              <a href="#industrias-y-proceso" className="nav-link" onClick={() => setIsOpen(false)}>Industrias</a>
             </li>
             <li className="nav-item">
               <a href="#productos" className="nav-link" onClick={() => setIsOpen(false)}>Productos</a>
-            </li>
-            <li className="nav-item">
-              <a href="#blog" className="nav-link" onClick={() => setIsOpen(false)}>Blog</a>
             </li>
             <li className="nav-item">
               <a href="#contacto" className="nav-link" onClick={() => setIsOpen(false)}>Contacto</a>

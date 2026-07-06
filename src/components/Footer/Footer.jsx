@@ -50,7 +50,6 @@ export default function Footer() {
             <li><a href="#que-hacemos">Soluciones</a></li>
             <li><a href="#industrias">Industrias</a></li>
             <li><a href="#productos">Productos</a></li>
-            <li><a href="#blog">Blog</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>

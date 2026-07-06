@@ -1,8 +1,8 @@
 .process-cta-section {
   position: relative;
   overflow: hidden;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: #111422; /* Fondo marino oscuro idéntico al de la imagen para evitar bordes visibles */
 }
 
@@ -21,8 +21,8 @@
 .process-bg-image {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: 80% 95%; /* Enfoca y desplaza hacia abajo para mostrar el logo en móviles */
+  background-size: contain;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -136,8 +136,8 @@
    ========================================================================== */
 @media (min-width: 768px) {
   .process-cta-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   /* Desktop/Tablet overlay: suave degradado de izquierda a derecha para legibilidad */
@@ -152,10 +152,10 @@
       );
   }
 
-  /* Aleja la foto en desktop usando un porcentaje menor y la ubica abajo-derecha */
+  /* La imagen se muestra completa con contain; centrada para que la figura principal quede bien encuadrada */
   .process-bg-image {
-    background-size: cover;
-    background-position: 65% center; /* Centra la chica ligeramente a la izquierda para verla mejor */
+    background-size: contain;
+    background-position: right center;
   }
 
   .process-main-heading {
@@ -184,13 +184,13 @@
    ========================================================================== */
 @media (min-width: 1024px) {
   .process-cta-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
-  /* Modulación para pantallas ultra anchas */
+  /* En desktop la imagen se muestra completa, centrada a la derecha para enfocar a la trabajadora */
   .process-bg-image {
-    background-size: cover;
-    background-position: 65% center;
+    background-size: contain;
+    background-position: right center;
   }
 }

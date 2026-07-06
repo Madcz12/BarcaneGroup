@@ -4,7 +4,7 @@ import './ProcessAndCTA.css';
 
 export default function ProcessAndCTA() {
   return (
-    <section className="process-cta-section">
+    <section id="contacto" className="process-cta-section">
       {/* Background image layer — same pattern as Hero */}
       <div className="process-bg-layer">
         <div
