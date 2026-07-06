@@ -21,12 +21,12 @@
 .process-bg-image {
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-/* Gradient overlay — dark enough for white text legibility */
+/* Gradient overlay — lightened so background image is more visible */
 .process-bg-overlay {
   position: absolute;
   top: 0;
@@ -37,9 +37,9 @@
   background-image:
     linear-gradient(
       to bottom,
-      rgba(17, 20, 34, 0.92) 0%,
-      rgba(17, 20, 34, 0.88) 50%,
-      rgba(17, 20, 34, 0.94) 100%
+      rgba(17, 20, 34, 0.55) 0%,
+      rgba(17, 20, 34, 0.45) 50%,
+      rgba(17, 20, 34, 0.60) 100%
     );
   pointer-events: none;
 }
@@ -140,22 +140,21 @@
     padding-bottom: 100px;
   }
 
-  /* Desktop/Tablet overlay: suave degradado de izquierda a derecha para legibilidad */
+  /* Desktop/Tablet overlay: lighter gradient, centered image so gradient is more uniform */
   .process-bg-overlay {
     background-image:
       linear-gradient(
-        to right,
-        rgba(17, 20, 34, 0.94) 0%,
-        rgba(17, 20, 34, 0.88) 45%,
-        rgba(17, 20, 34, 0.70) 75%,
-        rgba(17, 20, 34, 0.75) 100%
+        to bottom,
+        rgba(17, 20, 34, 0.50) 0%,
+        rgba(17, 20, 34, 0.40) 50%,
+        rgba(17, 20, 34, 0.55) 100%
       );
   }
 
-  /* La imagen se muestra completa con contain; centrada para que la figura principal quede bien encuadrada */
+  /* La imagen cubre todo el contenedor; centrada para mantener el foco */
   .process-bg-image {
-    background-size: contain;
-    background-position: right center;
+    background-size: cover;
+    background-position: center center;
   }
 
   .process-main-heading {
@@ -188,9 +187,9 @@
     padding-bottom: 120px;
   }
 
-  /* En desktop la imagen se muestra completa, centrada a la derecha para enfocar a la trabajadora */
+  /* En desktop la imagen cubre todo el contenedor, centrada */
   .process-bg-image {
-    background-size: contain;
-    background-position: right center;
+    background-size: cover;
+    background-position: center center;
   }
 }
