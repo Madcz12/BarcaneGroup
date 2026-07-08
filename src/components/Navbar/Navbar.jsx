@@ -82,7 +82,7 @@ export default function Navbar() {
     <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         {/* Logo */}
-        <a href="#inicio" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img 
             src="/images/BarcaneGroupLogo-bgless.png" 
             alt="Logo BarcaneGroup" 
@@ -94,7 +94,7 @@ export default function Navbar() {
             </div>
             <div className="logo-slogan">GESTIONAMOS TUS PROYECTOS</div>
           </div>
-        </a>
+        </Link>
 
         {/* Hamburger Toggle */}
         <button 
@@ -112,7 +112,7 @@ export default function Navbar() {
         <nav className={`navbar-nav ${isOpen ? 'open' : ''}`}>
           <ul className="nav-list">
             <li className="nav-item">
-              <a href="#inicio" className="nav-link active" onClick={() => setIsOpen(false)}>Inicio</a>
+              <Link to="/" className="nav-link active" onClick={() => { setIsOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Inicio</Link>
             </li>
             <li className="nav-item">
               <a href="#que-hacemos" className="nav-link" onClick={() => setIsOpen(false)}>Nosotros</a>
@@ -145,8 +145,8 @@ export default function Navbar() {
                       <span className="dropdown-item-icon">{solution.icon}</span>
                       <div className="dropdown-item-text">
                         <span className="dropdown-item-title">{solution.title}</span>
-                        <span className="dropdown-item-desc">{solution.desc}</span>
-                      </div>
+                      <span className="dropdown-item-desc">{solution.desc}</span>
+                    </div>
                     </a>
                   </li>
                 ))}

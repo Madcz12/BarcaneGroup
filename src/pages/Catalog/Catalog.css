@@ -178,3 +178,37 @@
   border-radius: var(--radius-full);
   align-self: flex-start;
 }
+
+/* Back to top floating button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--clr-primary-pink);
+  color: var(--clr-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-pink);
+  transition: var(--transition-smooth);
+  z-index: 1000;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 2px var(--clr-primary-pink-glow), 0 16px 40px rgba(233, 30, 99, 0.35);
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    bottom: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+  }
+}

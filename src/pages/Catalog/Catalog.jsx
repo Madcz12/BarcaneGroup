@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import mockProducts from '../../data/mockProducts';
 import './Catalog.css';
@@ -14,6 +14,21 @@ const CATEGORIES = [
 
 export default function Catalog() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const filteredProducts = useMemo(() => {
     if (activeCategory === 'all') return mockProducts;
@@ -70,6 +85,20 @@ export default function Catalog() {
           </Link>
         ))}
       </div>
+
+      {/* Back to top button */}
+      {showBackToTop && (
+        <button
+          className="back-to-top-btn"
+          onClick={scrollToTop}
+          aria-label="Volver al inicio"
+          type="button"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+          </svg>
+        </button>
+      )}
     </section>
   );
 }
