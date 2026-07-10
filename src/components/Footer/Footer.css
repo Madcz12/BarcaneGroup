@@ -190,6 +190,14 @@
   transform: scale(1.05);
 }
 
+.newsletter-success {
+  font-size: 0.9rem;
+  color: #25d366;
+  font-weight: 500;
+  padding: 0.75rem 0;
+  line-height: 1.5;
+}
+
 /* Footer Bottom banner */
 .footer-bottom {
   border-top: 1px solid var(--clr-border-dark);

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    if (!newsletterEmail.trim()) return;
+    setNewsletterSubmitted(true);
+  };
   return (
     <footer className="footer-section">
       <div className="container footer-grid">
@@ -95,21 +103,31 @@ export default function Footer() {
           {/* Newsletter inside contact column / next column */}
           <div className="footer-newsletter">
             <h4 className="newsletter-title">Boletín</h4>
-            <p className="newsletter-desc">Recibe nuestras novedades y promociones.</p>
-            <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Tu correo electrónico" 
-                className="newsletter-input" 
-                required 
-              />
-              <button type="submit" className="newsletter-btn" aria-label="Suscribirse">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-              </button>
-            </form>
+            {newsletterSubmitted ? (
+              <p className="newsletter-success">
+                ¡Gracias por suscribirte! Te notificaremos pronto.
+              </p>
+            ) : (
+              <>
+                <p className="newsletter-desc">Recibe nuestras novedades y promociones.</p>
+                <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+                  <input 
+                    type="email" 
+                    placeholder="Tu correo electrónico" 
+                    className="newsletter-input" 
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    required 
+                  />
+                  <button type="submit" className="newsletter-btn" aria-label="Suscribirse">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                </form>
+              </>
+            )}
           </div>
         </div>
 

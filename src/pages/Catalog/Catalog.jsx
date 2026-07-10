@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import mockProducts from '../../data/mockProducts';
 import './Catalog.css';
 
@@ -13,7 +13,12 @@ const CATEGORIES = [
 ];
 
 export default function Catalog() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get('categoria');
+  const activeCategory = CATEGORIES.some((c) => c.id === categoryFromUrl)
+    ? categoryFromUrl
+    : 'all';
+
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
@@ -28,6 +33,14 @@ export default function Catalog() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCategoryChange = (categoryId) => {
+    if (categoryId === 'all') {
+      setSearchParams({});
+    } else {
+      setSearchParams({ categoria: categoryId });
+    }
   };
 
   const filteredProducts = useMemo(() => {
@@ -52,7 +65,7 @@ export default function Catalog() {
           <button
             key={cat.id}
             className={`catalog-filter-btn ${activeCategory === cat.id ? 'active' : ''}`}
-            onClick={() => setActiveCategory(cat.id)}
+            onClick={() => handleCategoryChange(cat.id)}
             type="button"
           >
             {cat.label}

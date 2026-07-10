@@ -1,7 +1,12 @@
 import React from 'react';
+import WhatsAppIcon from '../icons/WhatsAppIcon';
 import './Services.css';
 
 export default function Services() {
+  const buildWhatsAppLink = (productName) => {
+    const message = `Hola BarcaneGroup, vi su ${productName} en la web y me gustaría solicitar una cotización.`;
+    return `https://wa.me/51943703905?text=${encodeURIComponent(message)}`;
+  };
   const packagingList = [
     {
       id: 'papel-manteca',
@@ -75,12 +80,14 @@ export default function Services() {
       <div className="service-info">
         <h3 className="service-card-title">{item.title}</h3>
         <p className="service-card-desc">{item.description}</p>
-        <a href="#contacto" className="service-link">
+        <a 
+          href={buildWhatsAppLink(item.title)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="service-link"
+        >
+          <WhatsAppIcon size={16} />
           Cotizar este producto
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arrow-icon">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
         </a>
       </div>
     </article>

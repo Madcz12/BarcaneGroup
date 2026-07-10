@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../../components/Hero/Hero';
+// import Nosotros from '../../components/Nosotros/Nosotros'; // TODO: sección no solicitada por el cliente aún — evaluar más adelante
 import Services from '../../components/Services/Services';
 import IndustriesAndWhy from '../../components/IndustriesAndWhy/IndustriesAndWhy';
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      {/* <Nosotros /> */}
       <Services />
       <IndustriesAndWhy />
       <FeaturedProducts />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import WhatsAppIcon from '../icons/WhatsAppIcon';
 import './Navbar.css';
 
@@ -7,6 +7,25 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Scrolls to a homepage section, navigating to "/" first if needed.
+  const scrollToSection = (sectionId) => {
+    setIsOpen(false);
+    setDropdownOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for the homepage to render, then scroll
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
+    } else {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const solutions = [
     {
@@ -114,9 +133,11 @@ export default function Navbar() {
             <li className="nav-item">
               <Link to="/" className="nav-link active" onClick={() => { setIsOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Inicio</Link>
             </li>
+            {/*
             <li className="nav-item">
-              <a href="#que-hacemos" className="nav-link" onClick={() => setIsOpen(false)}>Nosotros</a>
+              <a href="#nosotros" className="nav-link" onClick={() => scrollToSection('nosotros')}>Nosotros</a>
             </li>
+            */}
             <li className={`nav-item dropdown ${dropdownOpen ? 'dropdown-open' : ''}`}>
               <button 
                 className="nav-link dropdown-toggle-btn"
@@ -135,10 +156,10 @@ export default function Navbar() {
                 {solutions.map((solution) => (
                   <li key={solution.id}>
                     <a 
-                      href={`#${solution.id}`} 
-                      onClick={() => {
-                        setIsOpen(false);
-                        setDropdownOpen(false);
+                      href={`#${solution.id}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection(solution.id);
                       }}
                       className="dropdown-item-link"
                     >
@@ -153,13 +174,13 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a href="#industrias-y-proceso" className="nav-link" onClick={() => setIsOpen(false)}>Industrias</a>
+              <a href="#industrias-y-proceso" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('industrias-y-proceso'); }}>Industrias</a>
             </li>
             <li className="nav-item">
               <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Productos</Link>
             </li>
             <li className="nav-item">
-              <a href="#contacto" className="nav-link" onClick={() => setIsOpen(false)}>Contacto</a>
+              <a href="#contacto" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }}>Contacto</a>
             </li>
           </ul>
           

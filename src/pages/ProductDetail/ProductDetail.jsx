@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
 import { getProductById } from '../../data/mockProducts';
@@ -14,6 +14,11 @@ function buildWhatsAppLink(productName) {
 export default function ProductDetail() {
   const { id } = useParams();
   const product = getProductById(id);
+
+  // Scroll to top on mount and when product id changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [id]);
 
   // Not found fallback
   if (!product) {
