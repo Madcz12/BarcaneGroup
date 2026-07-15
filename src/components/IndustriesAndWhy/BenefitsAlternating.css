@@ -141,7 +141,7 @@
     --mq-icon-size: 128px;
     --mq-svg-size: 72px;
     --mq-font-size: 1.45rem;
-    --mq-desc-size: 0.88rem;
+    --mq-desc-size: 1.05rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
