@@ -1,0 +1,75 @@
+/* TopMarquee — Dark navy blue scrolling badges bar */
+.top-marquee {
+  background: linear-gradient(90deg, var(--clr-navy-deep) 0%, var(--clr-navy-medium) 50%, var(--clr-navy-deep) 100%);
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.top-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+  width: max-content;
+}
+
+.top-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.top-marquee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 28px;
+  white-space: nowrap;
+  color: var(--clr-text-light);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-marquee-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--clr-primary-pink);
+  flex-shrink: 0;
+}
+
+.top-marquee-text {
+  font-family: var(--font-heading);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .top-marquee-track {
+    animation: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .top-marquee-track::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 639px) {
+  .top-marquee-badge {
+    padding: 8px 20px;
+    font-size: 0.75rem;
+  }
+}

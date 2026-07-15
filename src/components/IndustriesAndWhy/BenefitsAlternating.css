@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Benefits Grid (3 Columns, 2 Rows) — iw- BEM prefix
+   ========================================================================== */
+
+.iw-benefits {
+  --mq-card-padding: 24px 20px;
+  --mq-icon-size: 80px;
+  --mq-svg-size: 48px;
+  --mq-font-size: 1.1rem;
+  --mq-desc-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column on mobile */
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* ---- Card ---- */
+.iw-benefit {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-md);
+  padding: var(--mq-card-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  transition: var(--transition-premium);
+}
+
+.iw-benefit:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  border-color: var(--iw-accent);
+  box-shadow: 0 12px 28px rgba(22, 32, 58, 0.08);
+}
+
+.iw-benefit__visual {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iw-benefit__icon-circle {
+  width: var(--mq-icon-size);
+  height: var(--mq-icon-size);
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 116, 0, 0.06);
+  color: var(--iw-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-premium);
+}
+
+.iw-benefit__icon-circle svg {
+  width: var(--mq-svg-size);
+  height: var(--mq-svg-size);
+  transition: var(--transition-premium);
+}
+
+.iw-benefit:hover .iw-benefit__icon-circle {
+  background-color: transparent;
+  color: var(--iw-accent);
+  box-shadow: none;
+}
+
+.iw-benefit:hover .iw-benefit__icon-circle svg {
+  transform: scale(1.1);
+}
+
+.iw-benefit__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.iw-benefit__title {
+  font-size: var(--mq-font-size);
+  font-weight: 700;
+  color: var(--clr-navy-deep);
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1.25;
+}
+
+.iw-benefit:hover .iw-benefit__title {
+  color: var(--iw-accent);
+}
+
+.iw-benefit__desc {
+  font-size: var(--mq-desc-size);
+  font-weight: 600;
+  color: var(--clr-navy-deep);
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   Breakpoints
+   ========================================================================== */
+
+/* sm: 576px → 2 columns for tablets */
+@media (min-width: 576px) {
+  .iw-benefits {
+    --mq-card-padding: 24px 24px;
+    --mq-icon-size: 96px;
+    --mq-svg-size: 56px;
+    --mq-font-size: 1.2rem;
+    --mq-desc-size: 0.82rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* md: 768px */
+@media (min-width: 768px) {
+  .iw-benefits {
+    gap: 20px;
+  }
+}
+
+/* lg: 1024px → 3 columns, 2 rows (Option B giant icons layout) */
+@media (min-width: 1024px) {
+  .iw-benefits {
+    --mq-card-padding: 28px 32px;
+    --mq-icon-size: 110px;
+    --mq-svg-size: 64px;
+    --mq-font-size: 1.35rem;
+    --mq-desc-size: 0.85rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* xl: 1200px → 3 columns, 2 rows (full massive scale) */
+@media (min-width: 1200px) {
+  .iw-benefits {
+    --mq-card-padding: 32px 40px;
+    --mq-icon-size: 128px;
+    --mq-svg-size: 72px;
+    --mq-font-size: 1.45rem;
+    --mq-desc-size: 0.88rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ==========================================================================
+   Reduced motion CSS fallback
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .iw-benefit {
+    transition: none;
+  }
+  .iw-benefit:hover {
+    transform: none;
+  }
+  .iw-benefit__icon-circle {
+    transition: none;
+  }
+  .iw-benefit:hover .iw-benefit__icon-circle svg {
+    transform: none;
+  }
+}

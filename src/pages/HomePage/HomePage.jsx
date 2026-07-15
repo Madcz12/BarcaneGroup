@@ -1,4 +1,5 @@
 import React from 'react';
+import TopMarquee from '../../components/TopMarquee/TopMarquee';
 import Hero from '../../components/Hero/Hero';
 // import Nosotros from '../../components/Nosotros/Nosotros'; // TODO: sección no solicitada por el cliente aún — evaluar más adelante
 import Services from '../../components/Services/Services';
@@ -12,6 +13,7 @@ import ProcessAndCTA from '../../components/ProcessAndCTA/ProcessAndCTA';
 export default function HomePage() {
   return (
     <main>
+      <TopMarquee />
       <Hero />
       {/* <Nosotros /> */}
       <Services />

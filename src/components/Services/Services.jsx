@@ -69,26 +69,29 @@ export default function Services() {
 
   const renderCard = (item) => (
     <article className="service-card" key={item.id} id={item.id}>
-      <div className="service-image-container">
+      <div className="service-card-image-wrap">
         <img 
           src={item.image} 
           alt={item.title} 
           className="service-card-image"
           loading="lazy"
         />
-      </div>
-      <div className="service-info">
-        <h3 className="service-card-title">{item.title}</h3>
-        <p className="service-card-desc">{item.description}</p>
-        <a 
-          href={buildWhatsAppLink(item.title)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="service-link"
-        >
-          <WhatsAppIcon size={16} />
-          Cotizar este producto
-        </a>
+        <span className="service-card-label">{item.title}</span>
+        <div className="service-card-overlay">
+          <div className="service-card-overlay-content">
+            <h3 className="service-card-title">{item.title}</h3>
+            <p className="service-card-desc">{item.description}</p>
+            <a 
+              href={buildWhatsAppLink(item.title)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="service-link"
+            >
+              <WhatsAppIcon size={14} />
+              Cotizar
+            </a>
+          </div>
+        </div>
       </div>
     </article>
   );

@@ -1,0 +1,249 @@
+/* ==========================================================================
+   Materials Dashboard (Grid + Horizontal Row Split) — iw- BEM prefix
+   ========================================================================== */
+
+.iw-materials {
+  --mq-card-padding: 24px 20px;
+  --mq-icon-size: 80px;
+  --mq-svg-size: 48px;
+  --mq-font-size: 1.1rem;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- Grid Wrapper ---- */
+.iw-materials__grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- Hero Cards Layout (Badged - Horizontal 1 Row) ---- */
+.iw-materials__hero {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 4px 4px 12px 4px; /* space for scrollbar & shadows */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* On mobile, cards in horizontal scrolling row have fixed width to scroll nicely */
+.iw-materials__hero .iw-material-card--hero {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+}
+
+/* ---- Compact Cards Layout (Non-Badged - 2x2 Grid) ---- */
+.iw-materials__compact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* ---- Shared Card Styles ---- */
+.iw-material-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-md);
+  padding: var(--mq-card-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  transition: var(--transition-premium);
+}
+
+.iw-material-card:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  border-color: var(--iw-accent);
+  box-shadow: 0 12px 28px rgba(22, 32, 58, 0.08);
+}
+
+/* ---- Card Badge (Always-visible DOM element) ---- */
+.iw-material-card__badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--iw-accent);
+  color: var(--clr-white);
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(255, 116, 0, 0.3);
+}
+
+/* ---- Circular Icon Styling (Matching top carousel icons!) ---- */
+.iw-material-card__icon {
+  width: var(--mq-icon-size);
+  height: var(--mq-icon-size);
+  background-color: rgba(255, 116, 0, 0.06);
+  color: var(--iw-accent);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-premium);
+}
+
+.iw-material-card__icon svg {
+  width: var(--mq-svg-size);
+  height: var(--mq-svg-size);
+  transition: var(--transition-premium);
+}
+
+.iw-material-card:hover .iw-material-card__icon {
+  background-color: transparent;
+  color: var(--iw-accent);
+  box-shadow: none;
+}
+
+.iw-material-card:hover .iw-material-card__icon svg {
+  transform: scale(1.1);
+}
+
+/* ---- Card Typography ---- */
+.iw-material-card__name {
+  font-size: var(--mq-font-size);
+  font-weight: 700;
+  color: var(--clr-navy-deep);
+  line-height: 1.25;
+}
+
+/* ---- Advisor Banner ---- */
+.iw-materials__advisor {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: rgba(255, 116, 0, 0.04);
+  border: 1px dashed rgba(255, 116, 0, 0.2);
+  border-radius: var(--radius-md);
+  margin-top: 8px;
+}
+
+.iw-materials__advisor-icon {
+  color: var(--iw-accent);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.iw-materials__advisor-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.iw-materials__advisor-text {
+  font-size: 0.85rem;
+  color: var(--clr-navy-deep);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   Breakpoints
+   ========================================================================== */
+
+/* sm: 576px → 2 columns for tablets & scroll reset */
+@media (min-width: 576px) {
+  .iw-materials {
+    --mq-card-padding: 24px 24px;
+    --mq-icon-size: 96px;
+    --mq-svg-size: 56px;
+    --mq-font-size: 1.2rem;
+  }
+}
+
+/* md: 768px → all 5 hero cards flat in 1 row, 4 compact cards flat in 1 row */
+@media (min-width: 768px) {
+  .iw-materials__hero {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: visible;
+    padding: 4px;
+  }
+  .iw-materials__hero .iw-material-card--hero {
+    flex: none;
+  }
+  .iw-materials__compact {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* lg: 1024px → Stacked: 5 hero cards in 1 row on top, 4 compact cards in 1 row below */
+@media (min-width: 1024px) {
+  .iw-materials {
+    --mq-card-padding: 28px 32px;
+    --mq-icon-size: 110px;
+    --mq-svg-size: 64px;
+    --mq-font-size: 1.35rem;
+  }
+
+  .iw-materials__grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .iw-materials__hero {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .iw-materials__compact {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}
+
+/* xl: 1200px → full massive scale */
+@media (min-width: 1200px) {
+  .iw-materials {
+    --mq-card-padding: 32px 40px;
+    --mq-icon-size: 128px;
+    --mq-svg-size: 72px;
+    --mq-font-size: 1.5rem;
+    gap: 24px;
+  }
+
+  .iw-materials__grid-wrapper {
+    gap: 24px;
+  }
+
+  .iw-materials__hero {
+    gap: 16px;
+  }
+
+  .iw-materials__compact {
+    gap: 16px;
+  }
+}
+
+/* ==========================================================================
+   Reduced motion CSS fallback
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .iw-material-card {
+    transition: none;
+  }
+  .iw-material-card:hover {
+    transform: none;
+  }
+  .iw-material-card__icon {
+    transition: none;
+  }
+  .iw-material-card:hover .iw-material-card__icon svg {
+    transform: none;
+  }
+}
