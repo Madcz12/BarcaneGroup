@@ -57,15 +57,65 @@ export const reasons = [
 ];
 
 export const materials = [
-  { name: 'Papel manteca antigrasa', badge: 'Alta Demanda', iconKey: 'grease-paper' },
-  { name: 'Papel kraft', badge: '¡El más pedido!', iconKey: 'kraft' },
-  { name: 'Cartulina', iconKey: 'cardstock' },
-  { name: 'Papel blanco', iconKey: 'white-paper' },
-  { name: 'Adhesivos', badge: 'Ideal Delivery', iconKey: 'sticker' },
-  { name: 'Cartón para cajas', badge: '¡El más pedido!', iconKey: 'cardboard-box' },
-  { name: 'Impresión a una tinta', iconKey: 'single-print' },
-  { name: 'Impresión full color', badge: 'Alta Demanda', iconKey: 'full-color' },
-  { name: 'Acabados mate o brillantes', iconKey: 'finish' },
+  { 
+    name: 'Papel manteca antigrasa', 
+    badge: 'Alta Demanda', 
+    iconKey: 'grease-paper',
+    image: '/images/items/barcanegroup_papel_manteca.webp',
+    layoutType: 'tall'
+  },
+  { 
+    name: 'Papel kraft', 
+    badge: '¡El más pedido!', 
+    iconKey: 'kraft',
+    image: '/images/items/bgroup_bolsakraft1.webp',
+    layoutType: 'wide'
+  },
+  { 
+    name: 'Cartulina', 
+    iconKey: 'cardstock',
+    image: '/images/items/cartulinas.webp',
+    layoutType: 'standard'
+  },
+  { 
+    name: 'Papel blanco', 
+    iconKey: 'white-paper',
+    image: '/images/items/papelblanco.webp',
+    layoutType: 'standard'
+  },
+  { 
+    name: 'Adhesivos', 
+    badge: 'Ideal Delivery', 
+    iconKey: 'sticker',
+    image: '/images/items/adhesivos.webp',
+    layoutType: 'tall'
+  },
+  { 
+    name: 'Cartón para cajas', 
+    badge: '¡El más pedido!', 
+    iconKey: 'cardboard-box',
+    image: '/images/items/bgroup_foodbox.webp',
+    layoutType: 'large'
+  },
+  { 
+    name: 'Impresión a una tinta', 
+    iconKey: 'single-print',
+    image: '/images/items/tintink.webp',
+    layoutType: 'standard'
+  },
+  { 
+    name: 'Impresión full color', 
+    badge: 'Alta Demanda', 
+    iconKey: 'full-color',
+    image: '/images/items/fullcolorimpresor.webp',
+    layoutType: 'standard'
+  },
+  { 
+    name: 'Acabados mate o brillantes', 
+    iconKey: 'finish',
+    image: '/images/items/acabadomatebrillante.webp',
+    layoutType: 'standard'
+  },
 ];
 
 export const steps = [

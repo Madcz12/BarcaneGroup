@@ -134,7 +134,7 @@
 
 .iw-timeline__step-desc {
   font-size: 1rem;
-  color: var(--clr-text-muted);
+  color: black;
   line-height: 1.55;
   margin: 0;
 }

@@ -52,9 +52,8 @@
   margin-top: 40px;
 }
 
-/* ---- Globally reusable section heading (NOT prefixed) ---- */
-.block-title {
-  font-size: 1.45rem;
+h2.block-title {
+  font-size: 2.8rem;
   color: var(--clr-navy-deep);
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -76,8 +75,8 @@
    ========================================================================== */
 
 @media (min-width: 1024px) {
-  .block-title {
-    font-size: 1.5rem;
+  h2.block-title {
+    font-size: 2.4rem;
   }
 
   .iw-section__block + .iw-section__block {

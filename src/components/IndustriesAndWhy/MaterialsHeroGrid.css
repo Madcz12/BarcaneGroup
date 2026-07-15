@@ -1,94 +1,127 @@
 /* ==========================================================================
-   Materials Dashboard (Grid + Horizontal Row Split) — iw- BEM prefix
+   Materials Aligned Grid — iw- BEM prefix
    ========================================================================== */
 
 .iw-materials {
-  --mq-card-padding: 24px 20px;
-  --mq-icon-size: 80px;
-  --mq-svg-size: 48px;
-  --mq-font-size: 1.1rem;
   margin-top: 16px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* ---- Grid Wrapper ---- */
-.iw-materials__grid-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* ---- Hero Cards Layout (Badged - Horizontal 1 Row) ---- */
-.iw-materials__hero {
-  display: flex;
-  overflow-x: auto;
-  gap: 12px;
-  padding: 4px 4px 12px 4px; /* space for scrollbar & shadows */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* On mobile, cards in horizontal scrolling row have fixed width to scroll nicely */
-.iw-materials__hero .iw-material-card--hero {
-  flex: 0 0 200px;
-  scroll-snap-align: start;
-}
-
-/* ---- Compact Cards Layout (Non-Badged - 2x2 Grid) ---- */
-.iw-materials__compact {
+/* ---- Aligned Grid Layout Container ---- */
+.iw-materials__bento-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  grid-auto-rows: 200px;
 }
 
 /* ---- Shared Card Styles ---- */
 .iw-material-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 4px solid rgba(255, 255, 255, 0.4);
-  border-radius: var(--radius-md);
-  padding: var(--mq-card-padding);
+  overflow: hidden;
+  background-color: var(--clr-navy-deep);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg); /* 20px */
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 14px;
+  justify-content: flex-end;
+  padding: 12px;
+  cursor: pointer;
   transition: var(--transition-premium);
+  z-index: 1;
 }
 
 .iw-material-card:hover {
-  transform: translateY(-6px);
-  background: #ffffff;
-  border-color: var(--iw-accent);
-  box-shadow: 0 12px 28px rgba(22, 32, 58, 0.08);
+  border-color: rgba(233, 30, 99, 0.4);
+  box-shadow: 0 16px 36px rgba(233, 30, 99, 0.14);
 }
 
-/* ---- Card Badge (Always-visible DOM element) ---- */
+/* ---- Image Background ---- */
+.iw-material-card__image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.iw-material-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.95);
+  transition: var(--transition-premium);
+}
+
+.iw-material-card:hover .iw-material-card__image {
+  transform: scale(1.06);
+  filter: brightness(1.0) contrast(1.05);
+}
+
+/* ---- Card Badge ---- */
 .iw-material-card__badge {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  background: var(--iw-accent);
+  top: 12px;
+  right: 12px;
+  background: var(--clr-primary-pink);
   color: var(--clr-white);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 800;
   padding: 3px 10px;
   border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   white-space: nowrap;
-  z-index: 2;
-  box-shadow: 0 2px 6px rgba(255, 116, 0, 0.3);
+  z-index: 3;
+  box-shadow: 0 4px 10px rgba(233, 30, 99, 0.35);
+  transition: var(--transition-premium);
 }
 
-/* ---- Circular Icon Styling (Matching top carousel icons!) ---- */
-.iw-material-card__icon {
-  width: var(--mq-icon-size);
-  height: var(--mq-icon-size);
-  background-color: rgba(255, 116, 0, 0.06);
-  color: var(--iw-accent);
+.iw-material-card:hover .iw-material-card__badge {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(233, 30, 99, 0.45);
+}
+
+/* ---- Floating Glassmorphic Bottom Bar ---- */
+.iw-material-card__bottom {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  pointer-events: none;
+  background: rgba(22, 32, 58, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-top: auto;
+  transition: var(--transition-premium);
+}
+
+.iw-material-card:hover .iw-material-card__bottom {
+  background: rgba(22, 32, 58, 0.85);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- Sleek Glassmorphic Icon Wrapper ---- */
+.iw-material-card__icon-wrapper {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
@@ -96,28 +129,44 @@
   transition: var(--transition-premium);
 }
 
+.iw-material-card__icon {
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .iw-material-card__icon svg {
-  width: var(--mq-svg-size);
-  height: var(--mq-svg-size);
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.5;
   transition: var(--transition-premium);
 }
 
-.iw-material-card:hover .iw-material-card__icon {
-  background-color: transparent;
-  color: var(--iw-accent);
-  box-shadow: none;
+.iw-material-card:hover .iw-material-card__icon-wrapper {
+  background-color: var(--clr-primary-pink);
+  border-color: var(--clr-primary-pink);
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.4);
 }
 
 .iw-material-card:hover .iw-material-card__icon svg {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 /* ---- Card Typography ---- */
 .iw-material-card__name {
-  font-size: var(--mq-font-size);
+  font-size: 0.9rem;
   font-weight: 700;
-  color: var(--clr-navy-deep);
-  line-height: 1.25;
+  color: var(--clr-white);
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: var(--transition-premium);
+}
+
+.iw-material-card:hover .iw-material-card__name {
+  transform: translateX(2px);
 }
 
 /* ---- Advisor Banner ---- */
@@ -155,78 +204,78 @@
    Breakpoints
    ========================================================================== */
 
-/* sm: 576px → 2 columns for tablets & scroll reset */
+/* sm: 576px → 3 columns (perfect 3x3 grid) */
 @media (min-width: 576px) {
-  .iw-materials {
-    --mq-card-padding: 24px 24px;
-    --mq-icon-size: 96px;
-    --mq-svg-size: 56px;
-    --mq-font-size: 1.2rem;
+  .iw-materials__bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 240px;
+    gap: 16px;
+  }
+
+  .iw-material-card {
+    padding: 16px;
+  }
+
+  .iw-material-card__icon-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .iw-material-card__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .iw-material-card__name {
+    font-size: 0.95rem;
   }
 }
 
-/* md: 768px → all 5 hero cards flat in 1 row, 4 compact cards flat in 1 row */
-@media (min-width: 768px) {
-  .iw-materials__hero {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    overflow: visible;
-    padding: 4px;
-  }
-  .iw-materials__hero .iw-material-card--hero {
-    flex: none;
-  }
-  .iw-materials__compact {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* lg: 1024px → Stacked: 5 hero cards in 1 row on top, 4 compact cards in 1 row below */
+/* lg: 1024px → Desktop refined grid spacing and sizes */
 @media (min-width: 1024px) {
-  .iw-materials {
-    --mq-card-padding: 28px 32px;
-    --mq-icon-size: 110px;
-    --mq-svg-size: 64px;
-    --mq-font-size: 1.35rem;
+  .iw-materials__bento-grid {
+    grid-auto-rows: 280px;
+    gap: 20px;
   }
 
-  .iw-materials__grid-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  .iw-material-card__bottom {
+    padding: 10px 14px;
   }
 
-  .iw-materials__hero {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+  .iw-material-card__icon-wrapper {
+    width: 40px;
+    height: 40px;
   }
 
-  .iw-materials__compact {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+  .iw-material-card__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .iw-material-card__name {
+    font-size: 1.05rem;
   }
 }
 
-/* xl: 1200px → full massive scale */
+/* xl: 1200px → Larger desktop scale */
 @media (min-width: 1200px) {
-  .iw-materials {
-    --mq-card-padding: 32px 40px;
-    --mq-icon-size: 128px;
-    --mq-svg-size: 72px;
-    --mq-font-size: 1.5rem;
+  .iw-materials__bento-grid {
+    grid-auto-rows: 320px;
     gap: 24px;
   }
 
-  .iw-materials__grid-wrapper {
-    gap: 24px;
+  .iw-material-card__icon-wrapper {
+    width: 44px;
+    height: 44px;
   }
 
-  .iw-materials__hero {
-    gap: 16px;
+  .iw-material-card__icon svg {
+    width: 22px;
+    height: 22px;
   }
 
-  .iw-materials__compact {
-    gap: 16px;
+  .iw-material-card__name {
+    font-size: 1.15rem;
   }
 }
 
@@ -234,16 +283,29 @@
    Reduced motion CSS fallback
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  .iw-material-card {
-    transition: none;
+  .iw-material-card,
+  .iw-material-card__image,
+  .iw-material-card__overlay,
+  .iw-material-card__badge,
+  .iw-material-card__icon-wrapper,
+  .iw-material-card__icon svg,
+  .iw-material-card__name {
+    transition: none !important;
   }
-  .iw-material-card:hover {
-    transform: none;
+  
+  .iw-material-card:hover .iw-material-card__image {
+    transform: none !important;
   }
-  .iw-material-card__icon {
-    transition: none;
+
+  .iw-material-card:hover .iw-material-card__icon-wrapper {
+    transform: none !important;
   }
-  .iw-material-card:hover .iw-material-card__icon svg {
-    transform: none;
+  
+  .iw-material-card:hover .iw-material-card__badge {
+    transform: none !important;
+  }
+
+  .iw-material-card:hover .iw-material-card__name {
+    transform: none !important;
   }
 }
