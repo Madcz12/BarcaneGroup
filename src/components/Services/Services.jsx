@@ -43,7 +43,6 @@ export default function Services() {
           className="service-card-image"
           loading="lazy"
         />
-        <span className="service-card-label">{item.title}</span>
         <div className="service-card-overlay">
           <div className="service-card-overlay-content">
             <h3 className="service-card-title">{item.title}</h3>
