@@ -23,8 +23,8 @@
 
 /* ---- Section shell ---- */
 .iw-section {
-  --iw-accent: #ff7400;
-  background: linear-gradient(180deg, #fff2e8 0%, #fffaf6 100%);
+  --iw-accent: #E89EB8;
+  background: linear-gradient(180deg, #fdf0f4 0%, #fffaf8 100%);
   border-top: 1px solid rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
   position: relative;

@@ -76,24 +76,24 @@
   transform: scale(1.06);
 }
 
-/* ---- White Label Badge ---- */
+/* ---- White Text Label ---- */
 .service-card-label {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--clr-white);
-  color: var(--clr-navy-deep);
+  background: none;
+  color: var(--clr-white);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  padding: 10px 24px;
-  border-radius: 4px;
+  text-align: center;
+  padding: 0;
   z-index: 2;
   pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.4);
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
@@ -227,7 +227,6 @@
 
   .service-card-label {
     font-size: 0.9rem;
-    padding: 10px 24px;
   }
 }
 

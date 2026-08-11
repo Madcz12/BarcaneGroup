@@ -16,7 +16,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, var(--iw-accent) 0%, rgba(255, 116, 0, 0.2) 100%);
+  background: linear-gradient(180deg, var(--iw-accent) 0%, rgba(232, 158, 184, 0.2) 100%);
   transform: translateX(-50%);
   border-radius: var(--radius-full);
 }
@@ -62,7 +62,7 @@
 .iw-timeline__step-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
-  border-color: rgba(255, 116, 0, 0.15);
+  border-color: rgba(232, 158, 184, 0.2);
 }
 
 /* ---- Step header (icon + number) ---- */
@@ -77,8 +77,8 @@
   width: 72px;
   height: 72px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #fff5eb 0%, #fff 100%);
-  border: 2px solid rgba(255, 116, 0, 0.15);
+  background: linear-gradient(135deg, #fdf0f4 0%, #fff 100%);
+  border: 2px solid rgba(232, 158, 184, 0.2);
   color: var(--iw-accent);
   display: flex;
   align-items: center;
@@ -96,7 +96,7 @@
 .iw-timeline__step-card:hover .iw-timeline__step-icon {
   transform: scale(1.08);
   border-color: var(--iw-accent);
-  box-shadow: 0 4px 12px rgba(255, 116, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(232, 158, 184, 0.3);
 }
 
 .iw-timeline__step-card:hover .iw-timeline__step-icon svg {
@@ -110,11 +110,11 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--iw-accent) 0%, #ff9a44 100%);
+  background: linear-gradient(135deg, var(--iw-accent) 0%, #f0b8cc 100%);
   color: var(--clr-white);
   font-size: 1.1rem;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(255, 116, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(232, 158, 184, 0.35);
 }
 
 /* ---- Step content ---- */

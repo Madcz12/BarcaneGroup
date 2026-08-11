@@ -60,7 +60,7 @@
 .iw-marquee__icon {
   width: var(--mq-icon-size);
   height: var(--mq-icon-size);
-  background-color: rgba(255, 116, 0, 0.06);
+  background-color: rgba(232, 158, 184, 0.12);
   color: var(--iw-accent);
   border-radius: var(--radius-full);
   display: flex;
