@@ -13,14 +13,36 @@
  * ------------------------------------------------------------------ */
 
 export const industries = [
-  { name: 'Restaurantes', iconKey: 'restaurant' },
-  { name: 'Hamburgueserías', iconKey: 'burger' },
-  { name: 'Cafeterías', iconKey: 'coffee' },
-  { name: 'Panaderías', iconKey: 'bread' },
-  { name: 'Pastelerías', iconKey: 'cake' },
-  { name: 'Dark kitchens', iconKey: 'dark-kitchen' },
-  { name: 'Food trucks', iconKey: 'food-truck' },
-  { name: 'Catering y eventos', iconKey: 'catering' },
+  {
+    name: 'Gastronomía',
+    iconKey: 'restaurant',
+    label: 'Restaurantes, pollerías, cafeterías, fast food y food trucks',
+    hoverCopy: 'Empaques, menúes, uniformes, bolsas, papelería y material publicitario',
+  },
+  {
+    name: 'Hoteles y Turismo',
+    iconKey: 'hotel',
+    label: 'Hoteles, hostales, resorts y negocios del sector turismo',
+    hoverCopy: 'Papelería corporativa, señalética, amenities, material promocional y merchandising',
+  },
+  {
+    name: 'Educación',
+    iconKey: 'education',
+    label: 'Colegios, institutos, academias y centros de formación',
+    hoverCopy: 'Agendas, cuadernos de control, folders, diplomas y material institucional',
+  },
+  {
+    name: 'Salud',
+    iconKey: 'health',
+    label: 'Clínicas, laboratorios, consultorios y centros clínicos',
+    hoverCopy: 'Papelería, señalización, carpetas, material informativo y piezas corporativas',
+  },
+  {
+    name: 'Inmobiliarias y construcción',
+    iconKey: 'real-estate',
+    label: 'Inmobiliarias, constructoras y proyectos residenciales o comerciales',
+    hoverCopy: 'Brochures, folders, paneles de venta, señalización y material promocional',
+  },
 ];
 
 export const reasons = [

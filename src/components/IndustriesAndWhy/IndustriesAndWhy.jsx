@@ -24,7 +24,7 @@ export default function IndustriesAndWhy() {
 
           {/* ---- Block 1: Industries marquee ---- */}
           <div className="iw-section__block">
-            <h2 className="block-title">Ideal para negocios como:</h2>
+            <h2 className="block-title">Soluciones gráficas para multiples industrias:</h2>
             <div className="title-underline"></div>
             <IndustriesMarquee reducedMotion={prefersReducedMotion} />
           </div>

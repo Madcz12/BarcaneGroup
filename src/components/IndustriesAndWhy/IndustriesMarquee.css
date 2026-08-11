@@ -94,6 +94,56 @@
   hyphens: auto;
 }
 
+/* ---- Label (subtitle beneath name) ---- */
+.iw-marquee__label {
+  font-size: calc(var(--mq-font-size) * 0.72);
+  font-weight: 400;
+  color: var(--clr-navy-deep, #1a2744);
+  opacity: 0.65;
+  line-height: 1.35;
+  max-width: 260px;
+}
+
+/* ---- Hover overlay ---- */
+.iw-marquee__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.iw-marquee__hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(22, 32, 58, 0.92) 0%,
+    rgba(42, 55, 90, 0.95) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.iw-marquee__card:hover .iw-marquee__hover-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.iw-marquee__hover-copy {
+  font-size: calc(var(--mq-font-size) * 0.82);
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
 /* Target specifically Hamburgueserías (burger key) to prevent word splitting */
 .iw-marquee__card--burger .iw-marquee__name {
   white-space: nowrap;
@@ -129,29 +179,37 @@
   }
 }
 
-/* lg: 1024px → 4 visible (B option: massive elements, 4 columns) */
+/* lg: 1024px → 5 columns grid (all 5 aligned in a single row) */
 @media (min-width: 1024px) {
   .iw-marquee {
-    --mq-card-padding: 28px 32px;
-    --mq-icon-size: 110px;
-    --mq-svg-size: 64px;
-    --mq-font-size: 1.35rem;
+    --mq-card-padding: 24px 16px;
+    --mq-icon-size: 88px;
+    --mq-svg-size: 48px;
+    --mq-font-size: 1.15rem;
+  }
+  .iw-marquee__viewport {
+    overflow: visible;
+  }
+  .iw-marquee__container {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 16px !important;
+    transform: none !important;
   }
   .iw-marquee__slide {
-    flex: 0 0 calc(25% - 12px);
+    flex: none !important;
+    width: 100% !important;
+    padding-left: 0 !important;
   }
 }
 
-/* xl: 1200px → 4 visible (full massive size option B) */
+/* xl: 1200px → enhanced padding and icon sizes for 5 columns */
 @media (min-width: 1200px) {
   .iw-marquee {
-    --mq-card-padding: 32px 48px;
-    --mq-icon-size: 128px;
-    --mq-svg-size: 72px;
-    --mq-font-size: 1.5rem;
-  }
-  .iw-marquee__slide {
-    flex: 0 0 calc(25% - 12px);
+    --mq-card-padding: 28px 20px;
+    --mq-icon-size: 96px;
+    --mq-svg-size: 52px;
+    --mq-font-size: 1.22rem;
   }
 }
 
@@ -166,6 +224,10 @@
     transform: none;
   }
   .iw-marquee__card:hover .iw-marquee__icon svg {
+    transform: none;
+  }
+  .iw-marquee__hover-overlay {
+    transition: none;
     transform: none;
   }
 }

@@ -56,6 +56,14 @@ export default function IndustriesMarquee({ reducedMotion = false }) {
               <div className={`iw-marquee__card iw-marquee__card--${industries[0].iconKey}`}>
                 <div className="iw-marquee__icon">{iconMap[industries[0].iconKey]}</div>
                 <span className="iw-marquee__name">{industries[0].name}</span>
+                {industries[0].label && (
+                  <span className="iw-marquee__label">{industries[0].label}</span>
+                )}
+                {industries[0].hoverCopy && (
+                  <div className="iw-marquee__hover-overlay">
+                    <span className="iw-marquee__hover-copy">{industries[0].hoverCopy}</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -77,6 +85,14 @@ export default function IndustriesMarquee({ reducedMotion = false }) {
               <div className={`iw-marquee__card iw-marquee__card--${ind.iconKey}`}>
                 <div className="iw-marquee__icon">{iconMap[ind.iconKey]}</div>
                 <span className="iw-marquee__name">{ind.name}</span>
+                {ind.label && (
+                  <span className="iw-marquee__label">{ind.label}</span>
+                )}
+                {ind.hoverCopy && (
+                  <div className="iw-marquee__hover-overlay">
+                    <span className="iw-marquee__hover-copy">{ind.hoverCopy}</span>
+                  </div>
+                )}
               </div>
             </div>
           ))}

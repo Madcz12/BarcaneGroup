@@ -18,7 +18,7 @@ export default function Services() {
       id: 'impresos-corporativos',
       title: 'Impresos corporativos',
       description: 'Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.',
-      image: '/images/items/card_ceo_impress.webp'
+      image: '/images/items/card_chief_impress.webp'
     },
     {
       id: 'merchandising',
