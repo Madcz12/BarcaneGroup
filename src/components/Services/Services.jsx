@@ -27,7 +27,7 @@ export default function Services() {
       image: '/images/items/card_publicity.webp'
     },
     {
-      id: 'publicidad',
+      id: 'material-publicitario',
       title: 'Publicidad',
       description: 'Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.',
       image: '/images/items/card_branding.webp'
