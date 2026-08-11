@@ -7,63 +7,30 @@ export default function Services() {
     const message = `Hola BarcaneGroup, vi su ${productName} en la web y me gustaría solicitar una cotización.`;
     return `https://wa.me/51943703905?text=${encodeURIComponent(message)}`;
   };
-  const packagingList = [
+  const servicesList = [
     {
-      id: 'papel-manteca',
-      title: 'Papel manteca personalizado',
-      description: 'Papel antigrasa ideal para alimentos. Personalizado con tu logo o diseño.',
-      image: '/images/items/barcanegroup_papel_manteca.webp'
+      id: 'empaques-personalizados',
+      title: 'Empaques personalizados',
+      description: 'Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.',
+      image: '/images/items/card_perso_boxes.webp'
     },
     {
-      id: 'bolsas-kraft',
-      title: 'Bolsas kraft para delivery',
-      description: 'Resistentes y funcionales. Ideales para delivery, take away y pedidos.',
-      image: '/images/items/bgroup_bolsakraft1.webp'
+      id: 'impresos-corporativos',
+      title: 'Impresos corporativos',
+      description: 'Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.',
+      image: '/images/items/card_ceo_impress.webp'
     },
     {
-      id: 'cajas-alimentos',
-      title: 'Cajas para alimentos',
-      description: 'Cajas personalizadas para todo tipo de alimentos. Prácticas y seguras.',
-      image: '/images/items/bgroup_foodbox.webp'
+      id: 'merchandising',
+      title: 'Merchandising',
+      description: 'Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.',
+      image: '/images/items/card_publicity.webp'
     },
     {
-      id: 'stickers-etiquetas',
-      title: 'Stickers y etiquetas',
-      description: 'Personaliza cada detalle de tu empaque con stickers y etiquetas a tu medida.',
-      image: '/images/items/bgroup_stickers.png'
-    },
-    {
-      id: 'fajas-empaques',
-      title: 'Fajas para empaques',
-      description: 'Fajas personalizadas que refuerzan la identidad de tu marca.',
-      image: '/images/items/bgroup_fajas.png'
-    },
-    {
-      id: 'servilletas-personalizadas',
-      title: 'Servilletas personalizadas',
-      description: 'Servilletas impresas con tu logo o diseño para una presentación completa.',
-      image: '/images/items/bgroup_servilletas.png'
-    }
-  ];
-
-  const corporateList = [
-    {
-      id: 'bolsas-ejecutivas',
-      title: 'Bolsas Ejecutivas',
-      description: 'Bolsas corporativas personalizadas que reflejan la identidad y elegancia de tu empresa.',
-      image: '/images/bgroup_new_bagspremium.webp'
-    },
-    {
-      id: 'merchandising-ejecutivo',
-      title: 'Merchandising Ejecutivo',
-      description: 'Artículos promocionales de alta calidad que fortalecen tu marca y generan recordación.',
-      image: '/images/items/barcanegroup_bolsas4.webp'
-    },
-    {
-      id: 'impresion-editorial',
-      title: 'Impresos',
-      description: 'Libros, calendarios, agendas, catálogos y material impreso de alta calidad.',
-      image: '/images/items/barcanegroup_calendars.webp'
+      id: 'publicidad',
+      title: 'Publicidad',
+      description: 'Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.',
+      image: '/images/items/card_branding.webp'
     }
   ];
 
@@ -99,25 +66,13 @@ export default function Services() {
   return (
     <section id="que-hacemos" className="services-section section-padding">
       <div className="container">
-        {/* Main Section: Packaging */}
         <div className="services-group">
           <div className="services-header">
             <h2 className="services-title">¿Qué ofrecemos?</h2>
             <div className="title-underline"></div>
           </div>
-          <div className="services-grid services-grid-6">
-            {packagingList.map(renderCard)}
-          </div>
-        </div>
-
-        {/* Secondary Section: Corporate Services */}
-        <div className="services-group corporate-group">
-          <div className="services-header">
-            <h2 className="services-title">Otros servicios corporativos</h2>
-            <div className="title-underline"></div>
-          </div>
-          <div className="services-grid services-grid-3">
-            {corporateList.map(renderCard)}
+          <div className="services-grid services-grid-4">
+            {servicesList.map(renderCard)}
           </div>
         </div>
       </div>

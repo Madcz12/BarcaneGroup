@@ -71,12 +71,7 @@ export const materials = [
     image: '/images/items/bgroup_bolsakraft1.webp',
     layoutType: 'wide'
   },
-  { 
-    name: 'Cartulina', 
-    iconKey: 'cardstock',
-    image: '/images/items/cartulinas.webp',
-    layoutType: 'standard'
-  },
+
   { 
     name: 'Papel blanco', 
     iconKey: 'white-paper',
@@ -97,25 +92,7 @@ export const materials = [
     image: '/images/items/bgroup_foodbox.webp',
     layoutType: 'large'
   },
-  { 
-    name: 'Impresión a una tinta', 
-    iconKey: 'single-print',
-    image: '/images/items/tintink.webp',
-    layoutType: 'standard'
-  },
-  { 
-    name: 'Impresión full color', 
-    badge: 'Alta Demanda', 
-    iconKey: 'full-color',
-    image: '/images/items/fullcolorimpresor.webp',
-    layoutType: 'standard'
-  },
-  { 
-    name: 'Acabados mate o brillantes', 
-    iconKey: 'finish',
-    image: '/images/items/acabadomatebrillante.webp',
-    layoutType: 'standard'
-  },
+
 ];
 
 export const steps = [
