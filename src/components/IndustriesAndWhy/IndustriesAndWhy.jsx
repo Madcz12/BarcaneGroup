@@ -31,8 +31,11 @@ export default function IndustriesAndWhy() {
 
           {/* ---- Block 2: Why personalize (benefits) ---- */}
           <div className="iw-section__block">
-            <h2 className="block-title">¿Por qué personalizar tus empaques?</h2>
+            <h2 className="block-title">¿Por qué elegir soluciones personalizadas para tu negocio?</h2>
             <div className="title-underline"></div>
+            <p className="block-subtitle">
+              En Barcane Group desarrollamos materiales y soluciones que ayudan a tu marca a comunicar mejor, diferenciarse y generar una experiencia más profesional para tus clientes.
+            </p>
             <BenefitsAlternating reducedMotion={prefersReducedMotion} />
           </div>
 
@@ -45,7 +48,7 @@ export default function IndustriesAndWhy() {
 
           {/* ---- Block 4: How we work (process) ---- */}
           <div className="iw-section__block">
-            <h2 className="block-title">¿Cómo trabajamos tu empaque?</h2>
+            <h2 className="block-title">¿Cómo hacemos realidad tu proyecto?</h2>
             <div className="title-underline"></div>
             <ProcessTimeline reducedMotion={prefersReducedMotion} />
           </div>

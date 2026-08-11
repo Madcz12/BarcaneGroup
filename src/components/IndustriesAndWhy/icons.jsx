@@ -205,33 +205,16 @@ const iconMap = {
 
   /* ---- Steps (4) ---- */
   chat: (
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-      <circle cx="8" cy="10" r="1" fill="currentColor" />
-      <circle cx="12" cy="10" r="1" fill="currentColor" />
-      <circle cx="16" cy="10" r="1" fill="currentColor" />
-    </svg>
+    <img src="/images/items/chat-bubble-svgrepo-com.svg" alt="" className="iw-timeline__step-icon-img" />
   ),
   pen: (
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 20h9" />
-      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-    </svg>
+    <img src="/images/items/new_pencil_icon.svg" alt="" className="iw-timeline__step-icon-img" />
   ),
   customize: (
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="21 8 21 21 3 21 3 8" />
-      <rect x="1" y="3" width="22" height="5" rx="1" />
-      <line x1="10" y1="12" x2="14" y2="12" />
-    </svg>
+    <img src="/images/items/new_gear_icon.svg" alt="" className="iw-timeline__step-icon-img" />
   ),
   truck: (
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="1" y="3" width="15" height="13" rx="2" />
-      <polygon points="16 8 20 8 23 11 23 16 16 16" />
-      <circle cx="5.5" cy="18.5" r="2.5" />
-      <circle cx="18.5" cy="18.5" r="2.5" />
-    </svg>
+    <img src="/images/items/truck-svgrepo-com.svg" alt="" className="iw-timeline__step-icon-img" />
   ),
 
   /* ---- Advisor banner icon ---- */

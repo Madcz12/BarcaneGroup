@@ -24,14 +24,14 @@ export default function ProcessTimeline({ reducedMotion = false }) {
     ? {}
     : {
         hidden: {},
-        visible: { transition: { staggerChildren: 0.2, delayChildren: 0.2 } },
+        visible: { transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
       };
 
   const stepVariants = reducedMotion
     ? {}
     : {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
       };
 
   const animateProps = reducedMotion
@@ -47,29 +47,24 @@ export default function ProcessTimeline({ reducedMotion = false }) {
         variants={containerVariants}
         {...animateProps}
       >
-        {steps.map((step, idx) => {
-          const isLeft = idx % 2 === 0;
-          return (
-            <m.li
-              key={idx}
-              className={`iw-timeline__step ${isLeft ? 'iw-timeline__step--left' : 'iw-timeline__step--right'}`}
-              variants={stepVariants}
-            >
-              <div className="iw-timeline__step-card">
-                <div className="iw-timeline__step-header">
-                  <div className="iw-timeline__step-icon">
-                    {iconMap[step.iconKey]}
-                  </div>
-                  <span className="iw-timeline__step-number">{step.number}</span>
-                </div>
-                <div className="iw-timeline__step-content">
-                  <h3 className="iw-timeline__step-title">{step.title}</h3>
-                  <p className="iw-timeline__step-desc">{step.desc}</p>
-                </div>
+        {steps.map((step, idx) => (
+          <m.li
+            key={idx}
+            className="iw-timeline__step"
+            variants={stepVariants}
+          >
+            <div className="iw-timeline__step-number">{step.number}</div>
+            <div className="iw-timeline__step-border-wrap">
+              <div className="iw-timeline__step-icon">
+                {iconMap[step.iconKey]}
               </div>
-            </m.li>
-          );
-        })}
+            </div>
+            <div className="iw-timeline__step-content">
+              <h3 className="iw-timeline__step-title">{step.title}</h3>
+              <p className="iw-timeline__step-desc">{step.desc}</p>
+            </div>
+          </m.li>
+        ))}
       </m.ol>
     </div>
   );

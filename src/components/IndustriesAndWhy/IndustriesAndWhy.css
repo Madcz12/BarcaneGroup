@@ -70,6 +70,15 @@ h2.block-title {
   border-radius: var(--radius-full);
 }
 
+.block-subtitle {
+  font-size: 1.05rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-top: -4px;
+  margin-bottom: 24px;
+  max-width: 850px;
+}
+
 /* ==========================================================================
    Breakpoints
    ========================================================================== */

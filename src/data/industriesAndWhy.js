@@ -47,12 +47,12 @@ export const industries = [
 
 export const reasons = [
   {
-    title: 'Mejor presentación del producto',
+    title: 'Mejor presentación de tu marca',
     desc: 'Una presentación cuidada genera más confianza y valor percibido.',
     iconKey: 'presentation',
   },
   {
-    title: 'Adaptado a tu negocio',
+    title: 'Soluciones adaptadas a tu negocio',
     desc: 'Tamaños, diseños y materiales hechos a tu medida.',
     iconKey: 'puzzle',
   },
@@ -62,17 +62,17 @@ export const reasons = [
     iconKey: 'tag',
   },
   {
-    title: 'Ideal para delivery y take away',
+    title: 'Funcionalidad para cada necesidad',
     desc: 'Empaques resistentes, seguros y prácticos para transporte.',
     iconKey: 'delivery',
   },
   {
-    title: 'Experiencia más cuidada para el cliente',
+    title: 'Mejor experiencia para el cliente',
     desc: 'Cada detalle cuenta y mejora la percepción de tu negocio.',
     iconKey: 'smile',
   },
   {
-    title: 'Opciones para diferentes presupuestos',
+    title: 'Alternativas para distintos presupuestos',
     desc: 'Tenemos alternativas que se ajustan a tus necesidades.',
     iconKey: 'budget',
   },
@@ -119,27 +119,27 @@ export const materials = [
 
 export const steps = [
   {
-    number: '1',
-    title: 'Nos cuentas qué necesitas',
-    desc: 'Cuéntanos el tipo de producto, cantidad y fecha de entrega.',
+    number: '01',
+    title: 'Cuéntanos qué necesitas',
+    desc: 'Producto, cantidad y características',
     iconKey: 'chat',
   },
   {
-    number: '2',
-    title: 'Preparamos una propuesta',
-    desc: 'Te enviamos una propuesta de diseño y cotización.',
+    number: '02',
+    title: 'Preparamos tu propuesta',
+    desc: 'Asesoría, alternativas y cotización',
     iconKey: 'pen',
   },
   {
-    number: '3',
-    title: 'Personalizamos tu empaque',
-    desc: 'Aprobamos el diseño y producimos a tu medida.',
+    number: '03',
+    title: 'Diseñamos y producimos',
+    desc: 'Aprobación y producción',
     iconKey: 'customize',
   },
   {
-    number: '4',
-    title: 'Fabricamos y entregamos',
-    desc: 'Producimos con calidad y entregamos a tiempo.',
+    number: '04',
+    title: 'Entregamos tu pedido',
+    desc: 'Coordinación y entrega',
     iconKey: 'truck',
   },
 ];

@@ -1,241 +1,208 @@
 /* ==========================================================================
    Process Timeline — iw- BEM prefix
-   Alternating left/right layout like Papelera Central "Como Comprar"
+   Horizontal step layout with icon superimposed on top border line
    ========================================================================== */
 
 .iw-timeline {
   position: relative;
-  padding: 20px 0;
-}
-
-/* ---- Center line ---- */
-.iw-timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--iw-accent) 0%, rgba(232, 158, 184, 0.2) 100%);
-  transform: translateX(-50%);
-  border-radius: var(--radius-full);
+  width: 100%;
+  padding: 15px 0 10px;
 }
 
 .iw-timeline__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 28px;
   list-style: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
+/* Responsive grid layout */
+@media (min-width: 640px) {
+  .iw-timeline__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .iw-timeline__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
 /* ---- Step ---- */
 .iw-timeline__step {
-  position: relative;
-  width: 50%;
-  padding: 0 40px 50px;
-  box-sizing: border-box;
-}
-
-.iw-timeline__step--left {
-  left: 0;
-  text-align: right;
-  padding-right: 60px;
-}
-
-.iw-timeline__step--right {
-  left: 50%;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  padding-left: 60px;
-}
-
-/* ---- Step card ---- */
-.iw-timeline__step-card {
   position: relative;
-  background: var(--clr-white);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  transition: var(--transition-premium);
 }
 
-.iw-timeline__step-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
-  border-color: rgba(232, 158, 184, 0.2);
+/* ---- Step Number (01, 02, 03, 04) ---- */
+.iw-timeline__step-number {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--clr-navy-deep, #1e293b);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
-/* ---- Step header (icon + number) ---- */
-.iw-timeline__step-header {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-
-.iw-timeline__step-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #fdf0f4 0%, #fff 100%);
-  border: 2px solid rgba(232, 158, 184, 0.2);
-  color: var(--iw-accent);
+/* ---- Horizontal Border Line Wrapper & Superimposed Icon ---- */
+.iw-timeline__step-border-wrap {
+  position: relative;
+  width: 100%;
+  height: 64px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: var(--transition-premium);
-  flex-shrink: 0;
+  margin-bottom: 14px;
 }
 
-.iw-timeline__step-icon svg {
-  width: 36px;
-  height: 36px;
-  transition: var(--transition-premium);
+.iw-timeline__step-border-wrap::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.09);
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
-.iw-timeline__step-card:hover .iw-timeline__step-icon {
-  transform: scale(1.08);
-  border-color: var(--iw-accent);
-  box-shadow: 0 4px 12px rgba(232, 158, 184, 0.3);
+/* Seamless horizontal line across grid items on multi-column layouts */
+@media (min-width: 640px) {
+  .iw-timeline__step-border-wrap::before {
+    left: -12px;
+    right: -12px;
+  }
+
+  .iw-timeline__step:first-child .iw-timeline__step-border-wrap::before {
+    left: 0;
+  }
+
+  .iw-timeline__step:nth-child(2) .iw-timeline__step-border-wrap::before {
+    right: 0;
+  }
 }
 
-.iw-timeline__step-card:hover .iw-timeline__step-icon svg {
-  transform: scale(1.1);
+@media (min-width: 992px) {
+  .iw-timeline__step-border-wrap::before {
+    left: -12px;
+    right: -12px;
+  }
+
+  .iw-timeline__step:first-child .iw-timeline__step-border-wrap::before {
+    left: 0;
+  }
+
+  .iw-timeline__step:nth-child(2) .iw-timeline__step-border-wrap::before {
+    left: -12px;
+    right: -12px;
+  }
+
+  .iw-timeline__step:last-child .iw-timeline__step-border-wrap::before {
+    right: 0;
+  }
 }
 
-.iw-timeline__step-number {
+/* Superimposed Icon Badge */
+.iw-timeline__step-icon {
+  position: relative;
+  z-index: 2;
+  background-color: #fdf0f4;
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid rgba(232, 158, 184, 0.35);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--iw-accent) 0%, #f0b8cc 100%);
-  color: var(--clr-white);
-  font-size: 1.1rem;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(232, 158, 184, 0.35);
+  color: var(--iw-accent, #E89EB8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: var(--transition-premium, all 0.3s ease);
 }
 
-/* ---- Step content ---- */
+.iw-timeline__step-icon svg,
+.iw-timeline__step-icon-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.iw-timeline__step:hover .iw-timeline__step-icon {
+  transform: scale(1.12);
+  border-color: var(--iw-accent, #E89EB8);
+  box-shadow: 0 4px 12px rgba(232, 158, 184, 0.28);
+}
+
+.iw-timeline__step:hover .iw-timeline__step-icon svg,
+.iw-timeline__step:hover .iw-timeline__step-icon-img {
+  transform: scale(1.08);
+}
+
+/* ---- Step content (Title & Description) ---- */
 .iw-timeline__step-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .iw-timeline__step-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
-  color: var(--clr-navy-deep);
-  line-height: 1.3;
+  color: var(--clr-navy-deep, #0f172a);
+  line-height: 1.35;
   margin: 0;
 }
 
 .iw-timeline__step-desc {
-  font-size: 1rem;
-  color: black;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.5;
   margin: 0;
 }
 
-/* ==========================================================================
-   Desktop breakpoints — scale up further
-   ========================================================================== */
-@media (min-width: 1024px) {
-  .iw-timeline__step-card {
-    padding: 40px;
-  }
-
-  .iw-timeline__step-icon {
-    width: 88px;
-    height: 88px;
-  }
-
-  .iw-timeline__step-icon svg {
-    width: 44px;
-    height: 44px;
-  }
-
-  .iw-timeline__step-number {
-    width: 42px;
-    height: 42px;
-    font-size: 1.2rem;
-  }
-
-  .iw-timeline__step-title {
-    font-size: 1.35rem;
-  }
-
-  .iw-timeline__step-desc {
-    font-size: 1.05rem;
-  }
-}
-
+/* Desktop sizing scale-up */
 @media (min-width: 1200px) {
-  .iw-timeline__step-card {
-    padding: 48px;
-  }
-
-  .iw-timeline__step-icon {
-    width: 100px;
-    height: 100px;
-  }
-
-  .iw-timeline__step-icon svg {
-    width: 52px;
-    height: 52px;
-  }
-
   .iw-timeline__step-number {
-    width: 48px;
-    height: 48px;
-    font-size: 1.3rem;
-  }
-
-  .iw-timeline__step-title {
     font-size: 1.45rem;
   }
 
-  .iw-timeline__step-desc {
-    font-size: 1.1rem;
+  .iw-timeline__step-icon {
+    width: 66px;
+    height: 66px;
   }
-}
 
-/* ==========================================================================
-   Mobile (vertical stacked, < 768px): single column, line on left
-   ========================================================================== */
-.iw-timeline--mobile {
-  padding-left: 30px;
-}
+  .iw-timeline__step-icon svg,
+  .iw-timeline__step-icon-img {
+    width: 38px;
+    height: 38px;
+  }
 
-.iw-timeline--mobile::before {
-  left: 18px;
-  width: 3px;
-  transform: none;
-}
+  .iw-timeline__step-title {
+    font-size: 1.2rem;
+  }
 
-.iw-timeline--mobile .iw-timeline__step {
-  width: 100%;
-  left: 0 !important;
-  text-align: left !important;
-  padding: 0 0 30px 30px !important;
-}
-
-.iw-timeline--mobile .iw-timeline__step-header {
-  flex-direction: row;
+  .iw-timeline__step-desc {
+    font-size: 1rem;
+  }
 }
 
 /* ==========================================================================
    Reduced motion
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  .iw-timeline__step-card,
   .iw-timeline__step-icon,
   .iw-timeline__step-icon svg {
     transition: none;
   }
-  .iw-timeline__step-card:hover {
+  .iw-timeline__step:hover .iw-timeline__step-icon {
     transform: none;
   }
 }
