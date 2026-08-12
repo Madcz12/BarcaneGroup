@@ -48,12 +48,17 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
               <span className="iw-material-card__badge">{mat.badge}</span>
             )}
 
-            {/* Bottom Content (Icon + Title) */}
+            {/* Bottom Content (Icon + Title + Subtitle) */}
             <div className="iw-material-card__bottom">
               <div className="iw-material-card__icon-wrapper">
                 <div className="iw-material-card__icon">{iconMap[mat.iconKey]}</div>
               </div>
-              <h3 className="iw-material-card__name">{mat.name}</h3>
+              <div className="iw-material-card__text-wrapper">
+                <h3 className="iw-material-card__name">{mat.name}</h3>
+                {mat.subtitle && (
+                  <p className="iw-material-card__subtitle">{mat.subtitle}</p>
+                )}
+              </div>
             </div>
           </m.div>
         ))}

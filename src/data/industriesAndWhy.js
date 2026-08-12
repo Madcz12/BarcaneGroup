@@ -50,71 +50,75 @@ export const reasons = [
     title: 'Mejor presentación de tu marca',
     desc: 'Una presentación cuidada genera más confianza y valor percibido.',
     iconKey: 'presentation',
+    colorTheme: 'coral',
   },
   {
     title: 'Soluciones adaptadas a tu negocio',
     desc: 'Tamaños, diseños y materiales hechos a tu medida.',
     iconKey: 'puzzle',
+    colorTheme: 'green',
   },
   {
     title: 'Mayor recordación de marca',
     desc: 'Tu logo y diseño permanecen en la mente de tus clientes.',
     iconKey: 'tag',
+    colorTheme: 'amber',
   },
   {
     title: 'Funcionalidad para cada necesidad',
     desc: 'Empaques resistentes, seguros y prácticos para transporte.',
     iconKey: 'delivery',
+    colorTheme: 'green',
   },
   {
     title: 'Mejor experiencia para el cliente',
     desc: 'Cada detalle cuenta y mejora la percepción de tu negocio.',
     iconKey: 'smile',
+    colorTheme: 'amber',
   },
   {
     title: 'Alternativas para distintos presupuestos',
     desc: 'Tenemos alternativas que se ajustan a tus necesidades.',
     iconKey: 'budget',
+    colorTheme: 'coral',
   },
 ];
 
 export const materials = [
   { 
-    name: 'Papel manteca antigrasa', 
+    name: 'Papeles especiales',
+    subtitle: 'Antigrasa, seda y otras alternativas',
     badge: 'Alta Demanda', 
     iconKey: 'grease-paper',
-    image: '/images/items/barcanegroup_papel_manteca.webp',
-    layoutType: 'tall'
+    image: '/images/items/bggroup_special_papers.webp',
   },
   { 
-    name: 'Papel kraft', 
+    name: 'Kraft y ecológicos',
+    subtitle: 'Soluciones versátiles con apariencia natural',
     badge: '¡El más pedido!', 
     iconKey: 'kraft',
     image: '/images/items/bgroup_bolsakraft1.webp',
-    layoutType: 'wide'
-  },
-
-  { 
-    name: 'Papel blanco', 
-    iconKey: 'white-paper',
-    image: '/images/items/papelblanco.webp',
-    layoutType: 'standard'
   },
   { 
-    name: 'Adhesivos', 
+    name: 'Adhesivos y etiquetas',
+    subtitle: 'Para aplicaciones comerciales y corporativas',
     badge: 'Ideal Delivery', 
     iconKey: 'sticker',
-    image: '/images/items/adhesivos.webp',
-    layoutType: 'tall'
+    image: '/images/items/bggroup_sticks.webp',
   },
   { 
-    name: 'Cartón para cajas', 
+    name: 'Cartones y corrugados',
+    subtitle: 'Packaging, cajas y desarrollos especiales',
     badge: '¡El más pedido!', 
     iconKey: 'cardboard-box',
     image: '/images/items/bggroup_boxes.webp',
-    layoutType: 'large'
   },
-
+  { 
+    name: 'Acabados especiales',
+    subtitle: 'Laminados, stamping, relieves y troquelados',
+    iconKey: 'finish',
+    image: '/images/items/acabadomatebrillante.webp',
+  },
 ];
 
 export const steps = [

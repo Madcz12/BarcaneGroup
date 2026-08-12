@@ -37,7 +37,7 @@ export default function BenefitsAlternating({ reducedMotion = false }) {
       {reasons.map((reason, idx) => (
         <m.div
           key={idx}
-          className="iw-benefit"
+          className={`iw-benefit ${reason.colorTheme ? `iw-benefit--${reason.colorTheme}` : ''}`}
           variants={itemVariants}
         >
           <div className="iw-benefit__visual">
