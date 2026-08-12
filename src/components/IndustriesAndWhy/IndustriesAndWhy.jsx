@@ -21,28 +21,38 @@ export default function IndustriesAndWhy() {
     <LazyMotion features={domAnimation} strict>
       <section id="industrias-y-proceso" className="iw-section section-padding">
         <div className="container">
-
           {/* ---- Block 1: Industries marquee ---- */}
           <div className="iw-section__block">
-            <h2 className="block-title">Soluciones gráficas para multiples industrias:</h2>
+            <h2 className="block-title">
+              Soluciones gráficas para multiples industrias:
+            </h2>
             <div className="title-underline"></div>
             <IndustriesMarquee reducedMotion={prefersReducedMotion} />
           </div>
 
           {/* ---- Block 2: Why personalize (benefits) ---- */}
           <div className="iw-section__block">
-            <h2 className="block-title">¿Por qué elegir soluciones personalizadas para tu negocio?</h2>
+            <h2 className="block-title">
+              ¿Por qué elegir soluciones personalizadas para tu negocio?
+            </h2>
             <div className="title-underline"></div>
             <p className="block-subtitle">
-              En Barcane Group desarrollamos materiales y soluciones que ayudan a tu marca a comunicar mejor, diferenciarse y generar una experiencia más profesional para tus clientes.
+              En Barcane Group desarrollamos materiales y soluciones que ayudan
+              a tu marca a comunicar mejor, diferenciarse y generar una
+              experiencia más profesional para tus clientes.
             </p>
             <BenefitsAlternating reducedMotion={prefersReducedMotion} />
           </div>
 
           {/* ---- Block 3: Materials & finishes ---- */}
           <div className="iw-section__block">
-            <h2 className="block-title">Materiales y acabados</h2>
+            <h2 className="block-title">
+              Calidad que se siente en cada detalle
+            </h2>
             <div className="title-underline"></div>
+            <p className="block-subtitle">
+              Trabajamos con diferentes materiales, formatos y acabados para desarrollar soluciones adaptadas a las necesidades de cada proyecto.
+            </p>
             <MaterialsHeroGrid reducedMotion={prefersReducedMotion} />
           </div>
 
@@ -52,7 +62,6 @@ export default function IndustriesAndWhy() {
             <div className="title-underline"></div>
             <ProcessTimeline reducedMotion={prefersReducedMotion} />
           </div>
-
         </div>
       </section>
     </LazyMotion>

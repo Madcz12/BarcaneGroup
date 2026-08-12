@@ -111,7 +111,7 @@ export const materials = [
     name: 'Cartón para cajas', 
     badge: '¡El más pedido!', 
     iconKey: 'cardboard-box',
-    image: '/images/items/bgroup_foodbox.webp',
+    image: '/images/items/bggroup_boxes.webp',
     layoutType: 'large'
   },
 
