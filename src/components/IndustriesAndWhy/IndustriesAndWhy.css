@@ -21,7 +21,11 @@
      .process-connector-arrow, @keyframes pulse
    ========================================================================== */
 
-/* ---- Section shell ---- */
+/* ---- Section Shell & Wrapper ---- */
+.iw-wrapper {
+  scroll-margin-top: 100px;
+}
+
 .iw-section {
   --iw-accent: #E89EB8;
   background: linear-gradient(180deg, #fdf0f4 0%, #fffaf8 100%);
@@ -29,16 +33,33 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
   position: relative;
   overflow: hidden;
-  /* Override .section-padding (defined in src/index.css) — the IndustriesAndWhy
-     section uses tighter vertical spacing than the default. */
-  padding-top: 10px !important;
-  padding-bottom: 40px !important;
-  scroll-margin-top: 100px; /* offset for fixed navbar on anchor scroll */
+  padding-top: 25px !important;
+  padding-bottom: 35px !important;
+}
+
+/* ---- Dark Navy Section Variant ---- */
+.iw-section--why-dark {
+  background: var(--clr-navy-medium, #20293d) !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.iw-section--why-dark h2.block-title {
+  color: #ffffff !important;
+}
+
+.iw-section--why-dark .block-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 @media (min-width: 768px) {
   .iw-section {
-    padding-top: 15px !important;
+    padding-top: 30px !important;
+    padding-bottom: 45px !important;
+  }
+  .iw-section--why-dark {
+    padding-top: 35px !important;
     padding-bottom: 50px !important;
   }
 }
