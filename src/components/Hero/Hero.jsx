@@ -84,16 +84,6 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a
-              href="https://wa.me/51943703905?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-pink"
-            >
-              <WhatsAppIcon size={18} />
-              Solicitar cotización
-            </a>
-
             <Link to="/productos" className="btn btn-outline">
               Ver catálogo
               <svg

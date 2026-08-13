@@ -191,54 +191,6 @@ export default function Footer() {
               <span>Lima, Perú</span>
             </li>
           </ul>
-
-          {/* Newsletter inside contact column / next column */}
-          <div className="footer-newsletter">
-            <h4 className="newsletter-title">Boletín</h4>
-            {newsletterSubmitted ? (
-              <p className="newsletter-success">
-                ¡Gracias por suscribirte! Te notificaremos pronto.
-              </p>
-            ) : (
-              <>
-                <p className="newsletter-desc">
-                  Recibe nuestras novedades y promociones.
-                </p>
-                <form
-                  className="newsletter-form"
-                  onSubmit={handleNewsletterSubmit}
-                >
-                  <input
-                    type="email"
-                    placeholder="Tu correo electrónico"
-                    className="newsletter-input"
-                    value={newsletterEmail}
-                    onChange={(e) => setNewsletterEmail(e.target.value)}
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="newsletter-btn"
-                    aria-label="Suscribirse"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                  </button>
-                </form>
-              </>
-            )}
-          </div>
         </div>
       </div>
 
