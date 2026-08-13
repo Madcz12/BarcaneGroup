@@ -1,8 +1,8 @@
 .process-cta-section {
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 140px;
+  padding-bottom: 140px;
   background-color: #111422; /* Fondo marino oscuro idéntico al de la imagen para evitar bordes visibles */
 }
 
@@ -28,20 +28,7 @@
 
 /* Gradient overlay — lightened so background image is more visible */
 .process-bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(17, 20, 34, 0.55) 0%,
-      rgba(17, 20, 34, 0.45) 50%,
-      rgba(17, 20, 34, 0.60) 100%
-    );
-  pointer-events: none;
+  display: none;
 }
 
 /* Foreground content sits above the background */
@@ -102,17 +89,17 @@
 }
 
 .btn-process-whatsapp {
-  background-color: #25d366;
+  background-color: var(--clr-primary-pink);
   color: var(--clr-white);
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-pink);
   font-size: 0.92rem;
   width: 100%;
   max-width: 320px;
 }
 
 .btn-process-whatsapp:hover {
-  background-color: #20ba5a;
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  background-color: var(--clr-primary-pink-hover);
+  box-shadow: 0 10px 25px rgba(233, 30, 99, 0.35);
   transform: translateY(-2px);
 }
 
@@ -136,19 +123,8 @@
    ========================================================================== */
 @media (min-width: 768px) {
   .process-cta-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  /* Desktop/Tablet overlay: lighter gradient, centered image so gradient is more uniform */
-  .process-bg-overlay {
-    background-image:
-      linear-gradient(
-        to bottom,
-        rgba(17, 20, 34, 0.50) 0%,
-        rgba(17, 20, 34, 0.40) 50%,
-        rgba(17, 20, 34, 0.55) 100%
-      );
+    padding-top: 180px;
+    padding-bottom: 180px;
   }
 
   /* La imagen cubre todo el contenedor; centrada para mantener el foco */
@@ -163,7 +139,7 @@
   }
 
   .process-main-desc {
-    font-size: 1.15rem;
+    font-size: 1.35rem;
   }
 
   .process-actions {
@@ -183,8 +159,8 @@
    ========================================================================== */
 @media (min-width: 1024px) {
   .process-cta-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 220px;
+    padding-bottom: 220px;
   }
 
   /* En desktop la imagen cubre todo el contenedor, centrada */

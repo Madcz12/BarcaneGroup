@@ -86,6 +86,7 @@ export const reasons = [
 
 export const materials = [
   { 
+    id: 'papeles-especiales',
     name: 'Papeles especiales',
     subtitle: 'Antigrasa, seda y otras alternativas',
     badge: 'Alta Demanda', 
@@ -93,6 +94,7 @@ export const materials = [
     image: '/images/items/bggroup_special_papers.webp',
   },
   { 
+    id: 'kraft-y-ecologicos',
     name: 'Kraft y ecológicos',
     subtitle: 'Soluciones versátiles con apariencia natural',
     badge: '¡El más pedido!', 
@@ -100,6 +102,7 @@ export const materials = [
     image: '/images/items/bgroup_bolsakraft1.webp',
   },
   { 
+    id: 'adhesivos-y-etiquetas',
     name: 'Adhesivos y etiquetas',
     subtitle: 'Para aplicaciones comerciales y corporativas',
     badge: 'Ideal Delivery', 
@@ -107,6 +110,7 @@ export const materials = [
     image: '/images/items/bggroup_sticks.webp',
   },
   { 
+    id: 'cartones-y-corrugados',
     name: 'Cartones y corrugados',
     subtitle: 'Packaging, cajas y desarrollos especiales',
     badge: '¡El más pedido!', 
@@ -114,10 +118,11 @@ export const materials = [
     image: '/images/items/bggroup_boxes.webp',
   },
   { 
+    id: 'acabados-especiales',
     name: 'Acabados especiales',
     subtitle: 'Laminados, stamping, relieves y troquelados',
     iconKey: 'finish',
-    image: '/images/items/acabadomatebrillante.webp',
+    image: '/images/items/bggroup_prints_new.webp',
   },
 ];
 

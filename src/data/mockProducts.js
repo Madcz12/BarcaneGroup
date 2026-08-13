@@ -1,102 +1,103 @@
 // Mock product catalog for BarcaneGroup packaging & corporate merch company.
-// Each product represents a realistic item a packaging company would offer.
+// Aligned with official product lines from catalog structure reference.
 
 const mockProducts = [
   {
-    id: 'bolsa-ejecutiva-premium',
-    name: 'Bolsa Ejecutiva Premium',
+    id: 'packaging-cajas-personalizadas',
+    name: 'Packaging & cajas personalizadas',
+    category: 'packaging',
+    tag: 'PACKAGING',
     description:
-      'Bolsa de papel de alta gama con asas reforzadas y acabado mate personalizado. Ideal para retail corporativo, eventos y regalos ejecutivos. Impresión a tinta Full Color con stamping opcional en hot foil.',
-    price: 'Desde S/ 2.50 c/u',
-    image: '/images/items/barcanegroup_bolsas3.webp',
-    category: 'bolsas',
+      'Cajas, estuches y desarrollos especiales diseñados para proteger, presentar y diferenciar tus productos.',
+    feature: 'A medida de tu proyecto',
+    price: 'Consultar cotización',
+    image: '',
   },
   {
-    id: 'papel-manteca-personalizado',
-    name: 'Papel Manteca Personalizado',
+    id: 'papeles-especiales',
+    name: 'Papeles especiales',
+    category: 'papeles',
+    tag: 'PAPELES',
     description:
-      'Papel manteca anti-grasa con impresión personalizada para envoltura de alimentos. Apto para contacto directo con alimentos y resistente a temperaturas medias. Disponible en gramajes de 40g a 60g.',
-    price: 'Desde S/ 0.35 c/u',
-    image: '/images/items/barcanegroup_papel_manteca.webp',
-    category: 'empaques',
+      'Papel antigrasa, papeles personalizados, cartulinas y otras alternativas para aplicaciones comerciales y gastronómicas.',
+    feature: 'Materiales y formatos personalizados',
+    price: 'Consultar cotización',
+    image: '',
   },
   {
-    id: 'bolsa-kraft-personalizada',
-    name: 'Bolsa Kraft Personalizada',
+    id: 'etiquetas-adhesivos',
+    name: 'Etiquetas & adhesivos',
+    category: 'etiquetas',
+    tag: 'ETIQUETAS',
     description:
-      'Bolsa de papel kraft natural con handles de algodón o cinta de yute. Ecológica, reciclable y con excelente resistencia de carga. Personalización con tu logo a una o varias tintas.',
-    price: 'Desde S/ 1.80 c/u',
-    image: '/images/items/bgroup_bolsakraft1.webp',
-    category: 'bolsas',
+      'Etiquetas autoadhesivas, stickers, viniles y soluciones personalizadas para productos, empaques y comunicación de marca.',
+    feature: 'Diferentes materiales y acabados',
+    price: 'Consultar cotización',
+    image: '',
   },
   {
-    id: 'calendarios-corporativos',
-    name: 'Calendarios Corporativos',
+    id: 'bolsas-corporativas',
+    name: 'Bolsas corporativas',
+    category: 'packaging',
+    tag: 'PACKAGING',
     description:
-      'Calendarios de escritorio y pared con diseño personalizado de tu marca. Impresión de alta resolución en papel couché brillante o mate, con base troquelada de soporte. Perfectos para cierre de año.',
-    price: 'Desde S/ 4.50 c/u',
-    image: '/images/items/barcanegroup_calendars.webp',
+      'Bolsas de papel, kraft y otros materiales personalizadas con la identidad de tu empresa.',
+    feature: 'Diseños, tamaños y materiales a medida',
+    price: 'Consultar cotización',
+    image: '',
+  },
+  {
+    id: 'roll-screens-banners-gigantografias',
+    name: 'Roll screens, banners & gigantografías',
+    category: 'gran-formato',
+    tag: 'GRAN FORMATO',
+    description:
+      'Soluciones de gran formato para eventos, puntos de venta, oficinas, activaciones y espacios comerciales.',
+    feature: 'Alto impacto visual',
+    price: 'Consultar cotización',
+    image: '',
+  },
+  {
+    id: 'editorial-papeleria-corporativa',
+    name: 'Editorial & papelería corporativa',
     category: 'editorial',
+    tag: 'EDITORIAL',
+    description:
+      'Cuadernos, agendas, calendarios, catálogos, brochures y piezas impresas desarrolladas para tu empresa.',
+    feature: 'Producción personalizada',
+    price: 'Consultar cotización',
+    image: '',
   },
   {
     id: 'merchandising-corporativo',
-    name: 'Merchandising Corporativo',
-    description:
-      'Set de merchandising personalizado que incluye bolsas, libretas, stickers y más. Soluciones integrales para campañas promocionales, kits de bienvenida y regalos corporativos. Empaque coordinado con tu identidad.',
-    price: 'Consultar precio',
-    image: '/images/items/barcanegroup_bolsas4.webp',
+    name: 'Merchandising corporativo',
     category: 'merchandising',
+    tag: 'MERCHANDISING',
+    description:
+      'Productos personalizados para campañas, eventos, equipos de trabajo, clientes y acciones promocionales.',
+    feature: 'Fortalece la presencia de tu marca',
+    price: 'Consultar cotización',
+    image: '',
   },
   {
-    id: 'food-box-personalizado',
-    name: 'Food Box Personalizado',
+    id: 'acabados-especiales',
+    name: 'Acabados especiales',
+    category: 'acabados',
+    tag: 'ACABADOS',
     description:
-      'Caja de cartón para delivery de alimentos con impresión Full Color y troquelado a medida. Resistente a grasa y humedad, apta para comida caliente. Fabricada con cartón ecológico certificado.',
-    price: 'Desde S/ 1.20 c/u',
-    image: '/images/items/bgroup_foodbox.webp',
-    category: 'empaques',
-  },
-  {
-    id: 'servilletas-personalizadas',
-    name: 'Servilletas Personalizadas',
-    description:
-      'Servilletas de papel impresas a 1 o 2 tintas con tu logo o diseño. Disponibles en tamaños cóctel, intermedias y Sonntag. Ideales para restaurantes, cafeterías y eventos corporativos.',
-    price: 'Desde S/ 0.15 c/u',
-    image: '/images/items/bgroup_servilletas.png',
-    category: 'empaques',
-  },
-  {
-    id: 'stickers-personalizados',
-    name: 'Stickers Personalizados',
-    description:
-      'Stickers y etiquetas adhesivas con corte a medida y acabado mate, brillante o holográfico. Resistentes al agua y rayado. Perfectos para branding de productos, sellos de garantía y promociones.',
-    price: 'Desde S/ 0.08 c/u',
-    image: '/images/items/bgroup_stickers.png',
-    category: 'merchandising',
-  },
-  {
-    id: 'fajas-personalizadas',
-    name: 'Fajas Personalizadas',
-    description:
-      'Fajas de papel para envoltura de productos con impresión personalizada y fácil arranca. Refuerzan la identidad de marca en el punto de venta y protegen el producto. Múltiples tamaños disponibles.',
-    price: 'Desde S/ 0.25 c/u',
-    image: '/images/items/bgroup_fajas.png',
-    category: 'empaques',
-  },
-  {
-    id: 'bolsas-promocionales',
-    name: 'Bolsas Promocionales',
-    description:
-      'Bolsas de papel promocionales con impresión Full Color y acabados premium. Diseñadas para campañas de lanzamiento, ferias y eventos corporativos. Reforzadas con base cartón para mayor durabilidad.',
-    price: 'Desde S/ 2.00 c/u',
-    image: '/images/items/barcanegroup_bolsas3.webp',
-    category: 'bolsas',
+      'Laminados mate y brillante, stamping, plastificados, troquelados y acabados que aportan diferenciación a cada pieza.',
+    feature: 'El detalle que transforma el resultado',
+    price: 'Consultar cotización',
+    image: '',
   },
 ];
 
-// Helper: find a single product by its slug id.
+// Helper: find a single product by its slug id (with fallback to first match).
 function getProductById(id) {
-  return mockProducts.find((product) => product.id === id);
+  const found = mockProducts.find((product) => product.id === id);
+  if (found) return found;
+  // Fallback search by category or partial match
+  return mockProducts.find((p) => id && id.includes(p.category)) || mockProducts[0];
 }
 
 export default mockProducts;

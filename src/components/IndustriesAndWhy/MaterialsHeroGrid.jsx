@@ -28,6 +28,7 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
         {materials.map((mat, idx) => (
           <m.div
             key={idx}
+            id={mat.id}
             className="iw-material-card"
             viewport={{ once: true, amount: 0.1 }}
             variants={cardVariants}

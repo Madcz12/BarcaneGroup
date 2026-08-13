@@ -9,7 +9,7 @@ export default function ProcessAndCTA() {
       <div className="process-bg-layer">
         <div
           className="process-bg-image"
-          style={{ backgroundImage: "url('/images/bgroup_worker_def.webp')" }}
+          style={{ backgroundImage: "url('/images/barcanegroup_processctaimg.webp')" }}
         />
         <div className="process-bg-overlay" />
       </div>
@@ -19,13 +19,13 @@ export default function ProcessAndCTA() {
         {/* Process Flow / Text Content */}
         <div className="process-side">
           <h2 className="process-main-heading">
-            ¿Quieres empaques personalizados <br />
-            para <span className="text-highlight">tu restaurante?</span>
+            ¿Buscas una solución gráfica <br />
+            <span className="text-highlight">hecha a tu medida?</span>
           </h2>
 
           <p className="process-main-desc">
-            Cuéntanos qué necesitas: tipo de producto, cantidad y fecha de
-            entrega. Te responderemos lo más rápido posible.
+            Cuéntanos qué necesitas y te ayudamos a encontrar la mejor
+            alternativa para tu proyecto.
           </p>
 
           {/* Inline Action Elements: WhatsApp & Email Contact */}

@@ -54,7 +54,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-premium);
-  scroll-margin-top: 100px;
+  scroll-margin-top: 110px;
   aspect-ratio: 4 / 3;
   cursor: pointer;
 }

@@ -32,6 +32,7 @@
   cursor: pointer;
   transition: var(--transition-premium);
   z-index: 1;
+  scroll-margin-top: 110px;
 }
 
 .iw-material-card:hover {
@@ -63,6 +64,11 @@
 .iw-material-card:hover .iw-material-card__image {
   transform: scale(1.06);
   filter: brightness(1.0) contrast(1.05);
+}
+
+/* Última card: desplazar foco hacia inferior-derecha sin alterar escala */
+.iw-material-card:last-child .iw-material-card__image {
+  object-position: 60% 65%;
 }
 
 /* ---- Card Badge ---- */
