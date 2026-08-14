@@ -75,7 +75,8 @@ export default function Hero() {
         <div className="hero-content">
           <h1 className="hero-title">
             Soluciones que <br />
-            impulsan <span className="text-highlight">tu marca</span>
+            impulsan <span className="text-highlight">tu</span> <br />
+            <span className="text-highlight">marca</span>
           </h1>
 
           <p className="hero-subtitle">
@@ -109,8 +110,8 @@ export default function Hero() {
               <div className="hero-badge-icon">
                 <svg
                   viewBox="0 0 24 24"
-                  width="14"
-                  height="14"
+                  width="22"
+                  height="22"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -128,8 +129,8 @@ export default function Hero() {
               <div className="hero-badge-icon">
                 <svg
                   viewBox="0 0 24 24"
-                  width="14"
-                  height="14"
+                  width="22"
+                  height="22"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -146,8 +147,8 @@ export default function Hero() {
               <div className="hero-badge-icon">
                 <svg
                   viewBox="0 0 24 24"
-                  width="14"
-                  height="14"
+                  width="22"
+                  height="22"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"
@@ -165,8 +166,8 @@ export default function Hero() {
               <div className="hero-badge-icon">
                 <svg
                   viewBox="0 0 24 24"
-                  width="14"
-                  height="14"
+                  width="22"
+                  height="22"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2.5"

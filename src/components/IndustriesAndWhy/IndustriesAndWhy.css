@@ -80,14 +80,14 @@ h2.block-title {
   letter-spacing: -0.5px;
   line-height: 1.25;
   margin-top: 0;
+  text-align: center;
 }
 
 .title-underline {
   width: 40px;
   height: 4px;
   background-color: var(--iw-accent);
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin: 6px auto 16px auto;
   border-radius: var(--radius-full);
 }
 

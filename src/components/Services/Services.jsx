@@ -64,7 +64,7 @@ export default function Services() {
 
   return (
     <section id="que-hacemos" className="services-section section-padding">
-      <div className="container">
+      <div className="container services-container">
         <div className="services-group">
           <div className="services-header">
             <h2 className="services-title">¿Qué ofrecemos?</h2>

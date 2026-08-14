@@ -4,7 +4,7 @@ import Hero from '../../components/Hero/Hero';
 // import Nosotros from '../../components/Nosotros/Nosotros'; // TODO: sección no solicitada por el cliente aún — evaluar más adelante
 import Services from '../../components/Services/Services';
 import IndustriesAndWhy from '../../components/IndustriesAndWhy/IndustriesAndWhy';
-import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
+/* import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts'; */
 import ProcessAndCTA from '../../components/ProcessAndCTA/ProcessAndCTA';
 
 // Home page: landing sections rendered inside the MainLayout shell.
@@ -18,7 +18,7 @@ export default function HomePage() {
       {/* <Nosotros /> */}
       <Services />
       <IndustriesAndWhy />
-      <FeaturedProducts />
+      {/* <FeaturedProducts /> */}
       <ProcessAndCTA />
     </main>
   );

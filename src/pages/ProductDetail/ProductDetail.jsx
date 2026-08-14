@@ -45,11 +45,17 @@ export default function ProductDetail() {
       <div className="detail-container">
         {/* Image column */}
         <div className="detail-image-wrap">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="detail-image"
-          />
+          {product.image ? (
+            <img
+              src={product.image}
+              alt={product.name}
+              className="detail-image"
+            />
+          ) : (
+            <div className="catalog-card-placeholder">
+              <span className="catalog-card-placeholder-text">Imagen próximamente</span>
+            </div>
+          )}
         </div>
 
         {/* Info column */}
