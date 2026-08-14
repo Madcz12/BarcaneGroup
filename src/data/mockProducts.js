@@ -22,7 +22,7 @@ const mockProducts = [
       'Papel antigrasa, papeles personalizados, cartulinas y otras alternativas para aplicaciones comerciales y gastronómicas.',
     feature: 'Materiales y formatos personalizados',
     price: 'Consultar cotización',
-    image: '/images/catalog/bgroup_editorial_papers.webp',
+    image: '/images/items/bggroup_special_papers.webp',
   },
   {
     id: 'etiquetas-adhesivos',
@@ -55,7 +55,7 @@ const mockProducts = [
       'Soluciones de gran formato para eventos, puntos de venta, oficinas, activaciones y espacios comerciales.',
     feature: 'Alto impacto visual',
     price: 'Consultar cotización',
-    image: '/images/items/bggroup_prints_new.webp',
+    image: null,
   },
   {
     id: 'editorial-papeleria-corporativa',
@@ -88,7 +88,7 @@ const mockProducts = [
       'Laminados mate y brillante, stamping, plastificados, troquelados y acabados que aportan diferenciación a cada pieza.',
     feature: 'El detalle que transforma el resultado',
     price: 'Consultar cotización',
-    image: '/images/items/acabadomatebrillante.webp',
+    image: '/images/items/bggroup_prints_new.webp',
   },
 ];
 
