@@ -9,25 +9,25 @@ export default function Services() {
   };
   const servicesList = [
     {
+      id: "impresos-corporativos",
+      title: "Impresos corporativos ",
+      description:
+        "Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.",
+      image: "/images/items/bggroup_new_corp_impress.webp",
+    },
+    {
       id: "empaques-personalizados",
       title: "Empaques personalizados",
       description:
         "Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.",
-      image: "/images/items/card_chief_impress.webp",
-    },
-    {
-      id: "impresos-corporativos",
-      title: "Impresos corporativos",
-      description:
-        "Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.",
-      image: "/images/items/card_perso_boxes.webp",
+      image: "/images/items/card_tags_packages.webp",
     },
     {
       id: "merchandising",
       title: "Merchandising",
       description:
         "Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.",
-      image: "/images/items/card_publicity.webp",
+      image: "/images/items/card_new_merch_cloth.webp",
     },
     {
       id: "material-publicitario",

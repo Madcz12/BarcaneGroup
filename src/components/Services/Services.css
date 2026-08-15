@@ -99,6 +99,13 @@
   transform: scale(1.06);
 }
 
+/* Align left for cards so left-aligned text is not cropped */
+#impresos-corporativos .service-card-image,
+#empaques-personalizados .service-card-image,
+#merchandising .service-card-image {
+  object-position: left center;
+}
+
 
 
 /* ---- Overlay — hidden by default, appears on hover ---- */
