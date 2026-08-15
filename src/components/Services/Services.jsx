@@ -9,29 +9,33 @@ export default function Services() {
   };
   const servicesList = [
     {
-      id: 'empaques-personalizados',
-      title: 'Empaques personalizados',
-      description: 'Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.',
-      image: '/images/items/card_perso_boxes.webp'
+      id: "empaques-personalizados",
+      title: "Empaques personalizados",
+      description:
+        "Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.",
+      image: "/images/items/card_chief_impress.webp",
     },
     {
-      id: 'impresos-corporativos',
-      title: 'Impresos corporativos',
-      description: 'Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.',
-      image: '/images/items/card_chief_impress.webp'
+      id: "impresos-corporativos",
+      title: "Impresos corporativos",
+      description:
+        "Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.",
+      image: "/images/items/card_perso_boxes.webp",
     },
     {
-      id: 'merchandising',
-      title: 'Merchandising',
-      description: 'Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.',
-      image: '/images/items/card_publicity.webp'
+      id: "merchandising",
+      title: "Merchandising",
+      description:
+        "Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.",
+      image: "/images/items/card_publicity.webp",
     },
     {
-      id: 'material-publicitario',
-      title: 'Publicidad',
-      description: 'Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.',
-      image: '/images/items/card_branding.webp'
-    }
+      id: "material-publicitario",
+      title: "Publicidad",
+      description:
+        "Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.",
+      image: "/images/items/card_branding.webp",
+    },
   ];
 
   const renderCard = (item) => (
