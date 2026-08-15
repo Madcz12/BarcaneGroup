@@ -29,53 +29,93 @@ export default function Navbar() {
 
   const solutions = [
     {
-      id: 'gastronomy',
-      title: 'Empaques Gastronomía',
-      desc: 'Cajas, papel manteca y empaques para alimentos',
+      id: "impresos-corporativos",
+      productId: "editorial-papeleria-corporativa",
+      title: "Impresos corporativos",
+      desc: "Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.",
       icon: (
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 2v20M18 2v20M6 12h12"></path>
-          <circle cx="12" cy="7" r="3"></circle>
+        <svg
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
         </svg>
-      )
+      ),
     },
     {
-      id: 'bags',
-      title: 'Bolsas Ejecutivas',
-      desc: 'Bolsas de papel de alta gama personalizadas',
+      id: "empaques-personalizados",
+      productId: "packaging-cajas-personalizadas",
+      title: "Empaques personalizados",
+      desc: "Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.",
       icon: (
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <path d="M16 10a4 4 0 0 1-8 0"></path>
         </svg>
-      )
+      ),
     },
     {
-      id: 'merchandising',
-      title: 'Merchandising Corporativo',
-      desc: 'Artículos promocionales y regalos corporativos',
+      id: "merchandising",
+      productId: "merchandising-corporativo",
+      title: "Merchandising",
+      desc: "Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.",
       icon: (
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
           <line x1="9" y1="3" x2="9" y2="21"></line>
           <line x1="15" y1="3" x2="15" y2="21"></line>
           <line x1="3" y1="9" x2="21" y2="9"></line>
           <line x1="3" y1="15" x2="21" y2="15"></line>
         </svg>
-      )
+      ),
     },
     {
-      id: 'editorial',
-      title: 'Impresión y Editorial',
-      desc: 'Catálogos, agendas, libros y material corporativo',
+      id: "material-publicitario",
+      productId: "etiquetas-adhesivos",
+      title: "Publicidad",
+      desc: "Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.",
       icon: (
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        <svg
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 20h9"></path>
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
         </svg>
-      )
-    }
+      ),
+    },
   ];
 
   useEffect(() => {
@@ -155,20 +195,20 @@ export default function Navbar() {
               <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
                 {solutions.map((solution) => (
                   <li key={solution.id}>
-                    <a 
-                      href={`#${solution.id}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        scrollToSection(solution.id);
+                    <Link 
+                      to={`/productos/${solution.productId || solution.id}`}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setDropdownOpen(false);
                       }}
                       className="dropdown-item-link"
                     >
                       <span className="dropdown-item-icon">{solution.icon}</span>
                       <div className="dropdown-item-text">
                         <span className="dropdown-item-title">{solution.title}</span>
-                      <span className="dropdown-item-desc">{solution.desc}</span>
-                    </div>
-                    </a>
+                        <span className="dropdown-item-desc">{solution.desc}</span>
+                      </div>
+                    </Link>
                   </li>
                 ))}
               </ul>

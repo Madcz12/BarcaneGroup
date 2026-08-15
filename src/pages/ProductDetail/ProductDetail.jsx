@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
 import { getProductById } from '../../data/mockProducts';
@@ -14,11 +14,31 @@ function buildWhatsAppLink(productName) {
 export default function ProductDetail() {
   const { id } = useParams();
   const product = getProductById(id);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Scroll to top on mount and when product id changes
+  // Scroll to top on mount/id change and show smooth entry loader
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+    setIsLoading(true);
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 450);
+
+    return () => clearTimeout(timer);
   }, [id]);
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <section className="detail-section">
+        <div className="detail-loader-container">
+          <div className="detail-spinner" />
+          <p className="detail-loader-text">Cargando producto BarcaneGroup...</p>
+        </div>
+      </section>
+    );
+  }
 
   // Not found fallback
   if (!product) {
@@ -42,7 +62,7 @@ export default function ProductDetail() {
 
   return (
     <section className="detail-section">
-      <div className="detail-container">
+      <div className="detail-container animate-fade-in">
         {/* Image column */}
         <div className="detail-image-wrap">
           {product.image ? (

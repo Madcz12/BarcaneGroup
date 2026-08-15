@@ -96,6 +96,17 @@ const mockProducts = [
 function getProductById(id) {
   const found = mockProducts.find((product) => product.id === id);
   if (found) return found;
+
+  const idMap = {
+    'impresos-corporativos': 'editorial-papeleria-corporativa',
+    'empaques-personalizados': 'packaging-cajas-personalizadas',
+    'merchandising': 'merchandising-corporativo',
+    'material-publicitario': 'etiquetas-adhesivos',
+  };
+  if (idMap[id]) {
+    return mockProducts.find((product) => product.id === idMap[id]);
+  }
+
   // Fallback search by category or partial match
   return mockProducts.find((p) => id && id.includes(p.category)) || mockProducts[0];
 }

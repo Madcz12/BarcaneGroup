@@ -20,7 +20,7 @@ export default function Services() {
       title: "Empaques personalizados",
       description:
         "Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.",
-      image: "/images/items/card_tags_packages.webp",
+      image: "/images/items/card_new_tags_packages.webp",
     },
     {
       id: "merchandising",

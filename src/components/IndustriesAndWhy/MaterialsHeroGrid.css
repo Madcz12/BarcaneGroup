@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 12px;
-  cursor: pointer;
+  cursor: default;
   transition: var(--transition-premium);
   z-index: 1;
   scroll-margin-top: 110px;
