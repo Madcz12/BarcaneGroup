@@ -104,14 +104,14 @@ export const materials = [
     name: 'Adhesivos y etiquetas de seguridad',
     subtitle: 'La adherencia ideal para aplicaciones comerciales y corporativas',
     iconKey: 'sticker',
-    image: '/images/items/bggroup_sticks.webp',
+    image: '/images/items/bggroup_sec_stickers.webp',
   },
   { 
     id: 'cartones-y-corrugados',
     name: 'Cartones y corrugados',
     subtitle: 'Packaging, cajas y desarrollos especiales',
     iconKey: 'cardboard-box',
-    image: '/images/items/bggroup_boxes.webp',
+    image: '/images/items/bggroup_new_kraftboxes.webp',
   },
   { 
     id: 'acabados-especiales',
