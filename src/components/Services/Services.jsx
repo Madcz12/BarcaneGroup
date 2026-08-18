@@ -10,31 +10,31 @@ export default function Services() {
   const servicesList = [
     {
       id: "impresos-corporativos",
-      title: "Impresos corporativos ",
+      title: "Impresos corporativos",
       description:
-        "Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.",
-      image: "/images/items/bggroup_new_corp_impress.webp",
+        "Papelería ejecutiva, formatos, revistas, libros y cuadernos de control.",
+      image: "/images/items/bggroup_new_impress_corp_notext.webp",
     },
     {
       id: "empaques-personalizados",
-      title: "Empaques personalizados",
+      title: "Empaques y etiquetas",
       description:
-        "Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.",
-      image: "/images/items/card_new_tags_packages.webp",
+        "Cajas ecológicas, bolsas boutique, hangtags, papel membretado, etiquetas troqueladas, precintos de seguridad.",
+      image: "/images/items/bggroup_new_packages_stickers_notext.webp",
     },
     {
       id: "merchandising",
       title: "Merchandising",
       description:
         "Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.",
-      image: "/images/items/card_new_merch_cloth.webp",
+      image: "/images/items/bggroup_merch_cloth_notextv2.jpg",
     },
     {
       id: "material-publicitario",
       title: "Publicidad",
       description:
         "Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.",
-      image: "/images/items/bggroup_new_brand_equip.webp",
+      image: "/images/items/bggroup_new_brand_equipment_notext.webp",
     },
   ];
 
