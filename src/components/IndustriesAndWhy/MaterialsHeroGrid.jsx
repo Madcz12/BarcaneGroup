@@ -23,6 +23,14 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
 
   return (
     <div className="iw-materials">
+      {/* ---- Advisor banner ---- */}
+      <div className="iw-materials__advisor">
+        <div className="iw-materials__advisor-icon">{iconMap.advisor}</div>
+        <p className="iw-materials__advisor-text">
+          Te asesoramos para elegir el material adecuado según el tipo de
+          alimento, presentación y uso del empaque.
+        </p>
+      </div>
       {/* ---- Bento Grid containing all materials ---- */}
       <div className="iw-materials__bento-grid">
         {materials.map((mat, idx) => (
@@ -36,11 +44,11 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
           >
             {/* Background Image */}
             <div className="iw-material-card__image-wrapper">
-              <img 
-                src={mat.image} 
-                alt={mat.name} 
-                className="iw-material-card__image" 
-                loading="lazy" 
+              <img
+                src={mat.image}
+                alt={mat.name}
+                className="iw-material-card__image"
+                loading="lazy"
               />
             </div>
 
@@ -52,7 +60,9 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
             {/* Bottom Content (Icon + Title + Subtitle) */}
             <div className="iw-material-card__bottom">
               <div className="iw-material-card__icon-wrapper">
-                <div className="iw-material-card__icon">{iconMap[mat.iconKey]}</div>
+                <div className="iw-material-card__icon">
+                  {iconMap[mat.iconKey]}
+                </div>
               </div>
               <div className="iw-material-card__text-wrapper">
                 <h3 className="iw-material-card__name">{mat.name}</h3>
@@ -63,15 +73,6 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
             </div>
           </m.div>
         ))}
-      </div>
-
-      {/* ---- Advisor banner ---- */}
-      <div className="iw-materials__advisor">
-        <div className="iw-materials__advisor-icon">{iconMap.advisor}</div>
-        <p className="iw-materials__advisor-text">
-          Te asesoramos para elegir el material adecuado según el tipo de
-          alimento, presentación y uso del empaque.
-        </p>
       </div>
     </div>
   );
