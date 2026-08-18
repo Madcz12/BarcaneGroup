@@ -87,22 +87,22 @@ export const reasons = [
 export const materials = [
   { 
     id: 'papeles-especiales',
-    name: 'Papeles especiales',
-    subtitle: 'Antigrasa, seda y otras alternativas',
+    name: 'Papeles y cartulinas finas',
+    subtitle: 'Bond, couche, antigrasa, seda y otras alternativas',
     iconKey: 'grease-paper',
     image: '/images/items/bggroup_special_papers.webp',
   },
   { 
     id: 'kraft-y-ecologicos',
-    name: 'Kraft y ecológicos',
-    subtitle: 'Soluciones versátiles con apariencia natural',
+    name: 'Fibras ecológicas y cartones corrugados',
+    subtitle: 'Resistencia, funcionalidad y apariencia natural en materiales responsables',
     iconKey: 'kraft',
     image: '/images/items/bgroup_bolsakraft1.webp',
   },
   { 
     id: 'adhesivos-y-etiquetas',
-    name: 'Adhesivos y etiquetas',
-    subtitle: 'Para aplicaciones comerciales y corporativas',
+    name: 'Adhesivos y etiquetas de seguridad',
+    subtitle: 'La adherencia ideal para aplicaciones comerciales y corporativas',
     iconKey: 'sticker',
     image: '/images/items/bggroup_sticks.webp',
   },

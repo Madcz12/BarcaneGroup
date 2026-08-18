@@ -34,7 +34,7 @@ export default function Services() {
       title: "Publicidad",
       description:
         "Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.",
-      image: "/images/items/card_brand_equipment.webp",
+      image: "/images/items/bggroup_new_brand_equip.webp",
     },
   ];
 
