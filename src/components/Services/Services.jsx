@@ -24,16 +24,16 @@ export default function Services() {
     },
     {
       id: "merchandising",
-      title: "Merchandising",
+      title: "Merchandising y textil",
       description:
-        "Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.",
+        "Lapiceros, resaltadores, lanyards, fotochecks, mugs, tomadotodos, polos, gorros, bolsas de tela.",
       image: "/images/items/bggroup_merch_cloth_notextv2.jpg",
     },
     {
       id: "material-publicitario",
-      title: "Publicidad",
+      title: "Publicidad y equipamento",
       description:
-        "Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.",
+        "Banner, viniles rollscreen, backing, pavonados, plumas, totem, ruleta.",
       image: "/images/items/bggroup_new_brand_equipment_notext.webp",
     },
   ];

@@ -41,7 +41,7 @@ export default function IndustriesAndWhy() {
               </h2>
               <p className="block-subtitle">
                 En Barcane Group desarrollamos materiales y soluciones que ayudan
-                a tu marca a comunicar mejor, diferenciarse y generar una
+                a tu marca a comunicar, diferenciarse y generar una
                 experiencia más profesional para tus clientes.
               </p>
               <BenefitsAlternating reducedMotion={prefersReducedMotion} />
