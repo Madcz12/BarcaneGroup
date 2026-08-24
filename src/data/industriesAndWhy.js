@@ -86,11 +86,11 @@ export const reasons = [
 
 export const materials = [
   { 
-    id: 'kraft-y-ecologicos',
-    name: 'Fibras ecológicas y cartones corrugados',
-    subtitle: 'Resistencia, funcionalidad y apariencia natural en materiales responsables',
-    iconKey: 'kraft',
-    image: '/images/items/bggroup_new_kraftboxes.webp',
+    id: 'papeles-especiales',
+    name: 'Papeles y cartulinas finas',
+    subtitle: 'Bond, couche, antigrasa, seda y otras alternativas',
+    iconKey: 'grease-paper',
+    image: '/images/items/bggroup_special_papers.webp',
   },
   { 
     id: 'adhesivos-y-etiquetas',
@@ -100,11 +100,11 @@ export const materials = [
     image: '/images/items/bggroup_sec_stickers.webp',
   },
   { 
-    id: 'papeles-especiales',
-    name: 'Papeles y cartulinas finas',
-    subtitle: 'Bond, couche, antigrasa, seda y otras alternativas',
-    iconKey: 'grease-paper',
-    image: '/images/items/bggroup_special_papers.webp',
+    id: 'kraft-y-ecologicos',
+    name: 'Fibras ecológicas y cartones corrugados',
+    subtitle: 'Resistencia, funcionalidad y apariencia natural en materiales responsables',
+    iconKey: 'kraft',
+    image: '/images/items/bggroup_new_kraftboxes.webp',
   },
   { 
     id: 'acabados-especiales',

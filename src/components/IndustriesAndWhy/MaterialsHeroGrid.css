@@ -150,6 +150,13 @@
   transition: var(--transition-premium);
 }
 
+.iw-material-card__icon-img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  transition: var(--transition-premium);
+}
+
 .iw-material-card:hover .iw-material-card__icon-wrapper {
   background-color: var(--clr-primary-pink);
   border-color: var(--clr-primary-pink);
@@ -249,6 +256,11 @@
     height: 18px;
   }
 
+  .iw-material-card__icon-img {
+    width: 18px;
+    height: 18px;
+  }
+
   .iw-material-card__name {
     font-size: 1rem;
   }
@@ -279,6 +291,11 @@
     height: 20px;
   }
 
+  .iw-material-card__icon-img {
+    width: 20px;
+    height: 20px;
+  }
+
   .iw-material-card__name {
     font-size: 1.05rem;
   }
@@ -301,6 +318,11 @@
   }
 
   .iw-material-card__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .iw-material-card__icon-img {
     width: 22px;
     height: 22px;
   }

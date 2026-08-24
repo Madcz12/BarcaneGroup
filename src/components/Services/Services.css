@@ -55,6 +55,44 @@
   margin: 0 auto;
 }
 
+/* ---- Card wrapper with header text ---- */
+.service-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-header {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.service-card-header-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.service-card-footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.service-card-header-subtitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+  text-shadow: 
+    -1px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff,
+     2px  2px 3px rgba(0, 0, 0, 0.45);
+}
+
 /* ---- Card — clean image with label badge ---- */
 .service-card {
   position: relative;
