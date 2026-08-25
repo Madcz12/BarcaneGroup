@@ -68,7 +68,7 @@ export default function CorporatePrints() {
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
       <header className="service-detail-hero-fullbleed">
         <img
-          src="/images/catalog/bggroup_merch_textil_ground.webp"
+          src="/images/items/bggroup_corpo_prints_ground.webp"
           alt="Impresos corporativos BarcaneGroup"
           className="service-detail-hero-img"
         />
