@@ -107,6 +107,23 @@
   cursor: default;
 }
 
+.service-card-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.service-card-header-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.service-card-header-link:hover .service-card-header-title {
+  color: var(--clr-primary-pink);
+  transition: color var(--transition-fast);
+}
+
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);

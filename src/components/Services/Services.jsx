@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import WhatsAppIcon from '../icons/WhatsAppIcon';
 import './Services.css';
 
@@ -15,6 +16,7 @@ export default function Services() {
       description:
         "Papelería ejecutiva, formatos, revistas, libros y cuadernos de control.",
       image: "/images/items/bggroup_new_impress_corp_notext.webp",
+      route: "/servicios/impresos-corporativos",
     },
     {
       id: "empaques-personalizados",
@@ -42,41 +44,80 @@ export default function Services() {
     },
   ];
 
-  const renderCard = (item) => (
-    <div className="service-card-wrapper" key={item.id}>
-      <div className="service-card-header">
-        <h3 className="service-card-header-title">{item.title}</h3>
-      </div>
-      <article className="service-card" id={item.id}>
-        <div className="service-card-image-wrap">
-          <img 
-            src={item.image} 
-            alt={item.title} 
-            className="service-card-image"
-            loading="lazy"
-          />
-          <div className="service-card-overlay">
-            <div className="service-card-overlay-content">
-              <h3 className="service-card-title">{item.title}</h3>
-              <p className="service-card-desc">{item.description}</p>
-              <a 
-                href={buildWhatsAppLink(item.title)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="service-link"
-              >
-                <WhatsAppIcon size={14} />
-                Cotizar
-              </a>
-            </div>
-          </div>
+  const renderCard = (item) => {
+    const isClickable = Boolean(item.route);
+
+    return (
+      <div className="service-card-wrapper" key={item.id}>
+        <div className="service-card-header">
+          {isClickable ? (
+            <Link to={item.route} className="service-card-header-link">
+              <h3 className="service-card-header-title">{item.title}</h3>
+            </Link>
+          ) : (
+            <h3 className="service-card-header-title">{item.title}</h3>
+          )}
         </div>
-      </article>
-      <div className="service-card-footer">
-        <p className="service-card-header-subtitle">{item.subtitle}</p>
+        {isClickable ? (
+          <Link to={item.route} className="service-card service-card-link" id={item.id}>
+            <div className="service-card-image-wrap">
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                className="service-card-image"
+                loading="lazy"
+              />
+              <div className="service-card-overlay">
+                <div className="service-card-overlay-content">
+                  <h3 className="service-card-title">{item.title}</h3>
+                  <p className="service-card-desc">{item.description}</p>
+                  <a 
+                    href={buildWhatsAppLink(item.title)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="service-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <WhatsAppIcon size={14} />
+                    Cotizar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ) : (
+          <article className="service-card" id={item.id}>
+            <div className="service-card-image-wrap">
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                className="service-card-image"
+                loading="lazy"
+              />
+              <div className="service-card-overlay">
+                <div className="service-card-overlay-content">
+                  <h3 className="service-card-title">{item.title}</h3>
+                  <p className="service-card-desc">{item.description}</p>
+                  <a 
+                    href={buildWhatsAppLink(item.title)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="service-link"
+                  >
+                    <WhatsAppIcon size={14} />
+                    Cotizar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        )}
+        <div className="service-card-footer">
+          <p className="service-card-header-subtitle">{item.subtitle}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section id="que-hacemos" className="services-section section-padding">
