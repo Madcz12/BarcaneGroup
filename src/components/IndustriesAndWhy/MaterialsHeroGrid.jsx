@@ -27,8 +27,8 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
       <div className="iw-materials__advisor">
         <div className="iw-materials__advisor-icon">{iconMap.advisor}</div>
         <p className="iw-materials__advisor-text">
-          Te asesoramos para elegir el material adecuado según el tipo de
-          alimento, presentación y uso del empaque.
+          Te asesoramos para elegir el material y acabado adecuado según las
+          necesidades de tu producto o proyecto.
         </p>
       </div>
       {/* ---- Bento Grid containing all materials ---- */}

@@ -25,6 +25,7 @@ export default function Services() {
       description:
         "Cajas ecológicas, bolsas boutique, hangtags, papel membretado, etiquetas troqueladas, precintos de seguridad.",
       image: "/images/items/bggroup_new_packages_stickers_notext.webp",
+      route: "/servicios/empaques-personalizados",
     },
     {
       id: "merchandising",

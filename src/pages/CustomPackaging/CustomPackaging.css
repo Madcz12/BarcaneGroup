@@ -1,4 +1,4 @@
-/* Service Detail Page - Corporate Prints */
+/* Service Detail Page - Custom Packaging & Labels */
 .service-detail-page {
   min-height: 100vh;
   display: flex;
@@ -132,7 +132,7 @@
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* --- Product Categories Section (Based on Reference Image Layout) --- */
+/* --- Product Categories Section --- */
 .corporate-products-section {
   padding: 70px 0 90px;
   background-color: #f8fafc;

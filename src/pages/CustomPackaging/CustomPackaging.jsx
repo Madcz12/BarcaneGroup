@@ -1,68 +1,63 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
-import './CorporatePrints.css';
+import './CustomPackaging.css';
 
-export default function CorporatePrints() {
+export default function CustomPackaging() {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
   const buildWhatsAppLink = (categoryName) => {
-    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Impresos Corporativos).`;
+    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Empaques y etiquetas).`;
     return `https://wa.me/51943703905?text=${encodeURIComponent(message)}`;
   };
 
   const productCategories = [
     {
-      id: 'papeleria',
-      title: 'Papelería',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item1.webp',
+      id: 'empaques',
+      title: 'Empaques',
+      image: null,
       items: [
-        'Tarjetas de presentación',
-        'Hojas membretadas',
-        'Sobres',
-        'Carpetas',
-        'Blocks',
-        'Formularios',
+        'Cajas plegadizas',
+        'Cajas corrugadas',
+        'Estuches',
+        'Bolsas',
+        'Packaging personalizado',
       ],
     },
     {
-      id: 'comunicacion-comercial',
-      title: 'Comunicación comercial',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item2.webp',
+      id: 'papeles-envoltorios',
+      title: 'Papeles y envoltorios',
+      image: null,
       items: [
-        'Brochures',
-        'Catálogos',
-        'Flyers',
-        'Dípticos',
-        'Trípticos',
-        'Fichas comerciales',
+        'Papel antigrasa',
+        'Papel personalizado',
+        'Envoltorios',
+        'Fajas y sleeves',
       ],
     },
     {
-      id: 'editorial-corporativo',
-      title: 'Editorial y corporativo',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item3.webp',
+      id: 'etiquetas',
+      title: 'Etiquetas',
+      image: null,
       items: [
-        'Agendas',
-        'Cuadernos',
-        'Manuales',
-        'Revistas',
-        'Memorias corporativas',
+        'Etiquetas adhesivas',
+        'Stickers',
+        'Etiquetas en rollo',
+        'Etiquetas especiales',
       ],
     },
     {
-      id: 'especializados',
-      title: 'Especializados',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item4.webp',
+      id: 'identificacion-producto',
+      title: 'Identificación de producto',
+      image: null,
       items: [
-        'Menús',
-        'Cartas',
-        'Certificados',
-        'Invitaciones',
-        'Material informativo',
+        'Hangtags',
+        'Tags',
+        'Fajas',
+        'Elementos de presentación',
       ],
     },
   ];
@@ -72,8 +67,8 @@ export default function CorporatePrints() {
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
       <header className="service-detail-hero-fullbleed">
         <img
-          src="/images/catalog/CorpPrints/bggroup_corpprint_wideheadsec.webp"
-          alt="Impresos corporativos BarcaneGroup"
+          src="/images/catalog/Packaging/bggroup_packaging_wideheadsec.jpg"
+          alt="Empaques y etiquetas BarcaneGroup"
           className="service-detail-hero-img"
         />
 
@@ -93,13 +88,13 @@ export default function CorporatePrints() {
             {/* Text Card aligned to the left zone */}
             <div className="service-detail-hero-card">
               <h1 className="service-detail-hero-title">
-                Impresos corporativos
+                Empaques y etiquetas
               </h1>
               <p className="service-detail-hero-subtitle">
-                Materiales impresos que comunican, presentan y fortalecen la identidad de tu marca
+                Packaging que presenta, protege y diferencia tu marca
               </p>
               <p className="service-detail-hero-sub2">
-                Papelería, material comercial y piezas impresas pensadas para acompañar la comunicación diaria de tu empresa
+                Cajas ecológicas, bolsas boutique, hangtags, etiquetas troqueladas y precintos de seguridad diseñados a la medida de tu producto
               </p>
             </div>
           </div>
@@ -112,7 +107,7 @@ export default function CorporatePrints() {
           <div className="corporate-products-grid">
             {productCategories.map((category) => (
               <div className="corporate-product-card" key={category.id}>
-                {/* Image Box */}
+                {/* Image Box / Placeholder */}
                 <div className="corporate-card-placeholder">
                   {category.image ? (
                     <img

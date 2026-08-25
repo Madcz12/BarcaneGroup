@@ -92,12 +92,13 @@ h2.block-title {
 }
 
 .block-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: #000000;
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 2px auto 24px auto;
   max-width: 850px;
   text-align: center;
+  font: bold;
 }
 
 /* ==========================================================================

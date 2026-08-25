@@ -66,6 +66,8 @@ export default function IndustriesAndWhy() {
             {/* ---- Block 4: How we work (process) ---- */}
             <div className="iw-section__block" style={{ marginTop: '50px' }}>
               <h2 className="block-title">¿Cómo hacemos realidad tu proyecto?</h2>
+              <br />
+              <br />
               <ProcessTimeline reducedMotion={prefersReducedMotion} />
             </div>
           </div>
