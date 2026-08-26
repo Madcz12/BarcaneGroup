@@ -197,6 +197,11 @@
     background-position: calc(100% + 10vw) center;
   }
 
+  /* Custom positioning for bggroup_corpo_prints_ground.webp to show right-side banners and boxes */
+  .hero-bg-slide--corpo-prints {
+    background-position: 90% center;
+  }
+
   /* Apply left-to-right protective gradient overlay, static at the left */
   .hero-bg-overlay {
     background-image: 

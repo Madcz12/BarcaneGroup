@@ -8,7 +8,7 @@ export default function Hero() {
   const [isTransitioning, setIsTransitioning] = useState(true);
 
   const slides = [
-    '/images/carrousel/bggroup_carrousel_main.webp',
+    '/images/items/bggroup_corpo_prints_ground.webp',
     '/images/carrousel/barcanegroup-corpmerchcarrouselv2.webp',
     '/images/carrousel/barcanegroup-gastrocateringcarrouselv2.webp',
     '/images/carrousel/barcanegroup-premiumbagscarrouselv2.webp',
@@ -51,16 +51,19 @@ export default function Hero() {
               : "none",
           }}
         >
-          {extendedSlides.map((slide, index) => (
-            <div
-              key={`${slide}-${index}`}
-              className="hero-bg-slide"
-              style={{
-                backgroundImage: `url(${slide})`,
-                width: `${100 / extendedSlides.length}%`,
-              }}
-            />
-          ))}
+          {extendedSlides.map((slide, index) => {
+            const isCorpoPrints = slide.includes('bggroup_corpo_prints_ground');
+            return (
+              <div
+                key={`${slide}-${index}`}
+                className={`hero-bg-slide ${isCorpoPrints ? 'hero-bg-slide--corpo-prints' : ''}`}
+                style={{
+                  backgroundImage: `url(${slide})`,
+                  width: `${100 / extendedSlides.length}%`,
+                }}
+              />
+            );
+          })}
         </div>
         {/* Protective Gradient Overlay */}
         <div className="hero-bg-overlay" />
