@@ -64,6 +64,11 @@ export default function Services() {
                 className="service-card-image"
                 loading="lazy"
               />
+              <div className="service-card-overlay">
+                <div className="service-card-overlay-content">
+                  <p className="service-card-desc">{item.description}</p>
+                </div>
+              </div>
             </div>
           </Link>
         ) : (
@@ -75,6 +80,11 @@ export default function Services() {
                 className="service-card-image"
                 loading="lazy"
               />
+              <div className="service-card-overlay">
+                <div className="service-card-overlay-content">
+                  <p className="service-card-desc">{item.description}</p>
+                </div>
+              </div>
             </div>
           </article>
         )}
