@@ -93,18 +93,18 @@ export const materials = [
     image: '/images/items/bggroup_special_papers.webp',
   },
   { 
-    id: 'adhesivos-y-etiquetas',
-    name: 'Adhesivos y etiquetas de seguridad',
-    subtitle: 'La adherencia ideal para aplicaciones comerciales y corporativas',
-    iconKey: 'sticker',
-    image: '/images/items/bggroup_sec_stickers.webp',
-  },
-  { 
     id: 'kraft-y-ecologicos',
     name: 'Fibras ecológicas y cartones corrugados',
     subtitle: 'Resistencia, funcionalidad y apariencia natural en materiales responsables',
     iconKey: 'kraft',
     image: '/images/items/bggroup_new_kraftboxes.webp',
+  },
+  { 
+    id: 'adhesivos-y-etiquetas',
+    name: 'Adhesivos y etiquetas de seguridad',
+    subtitle: 'La adherencia ideal para aplicaciones comerciales y corporativas',
+    iconKey: 'sticker',
+    image: '/images/items/bggroup_sec_stickers.webp',
   },
   { 
     id: 'acabados-especiales',

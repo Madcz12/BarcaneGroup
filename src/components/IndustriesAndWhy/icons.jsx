@@ -144,7 +144,7 @@ const iconMap = {
 
   /* ---- Materials (9) ---- */
   'grease-paper': (
-    <img src="/images/items/document-paper.svg" alt="" aria-hidden="true" className="iw-material-card__icon-img" />
+    <img src="/images/items/packaging_papers.svg" alt="" aria-hidden="true" className="iw-material-card__icon-img" />
   ),
   kraft: (
     <img src="/images/items/recycle-sign-svgrepo-com.svg" alt="" aria-hidden="true" className="iw-material-card__icon-img" />
@@ -163,11 +163,7 @@ const iconMap = {
     </svg>
   ),
   sticker: (
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10a10 10 0 0 0 10-10" />
-      <path d="M22 12h-6a4 4 0 0 1-4-4V2" />
-      <path d="M22 12a10 10 0 0 0-10-10" opacity="0.3" />
-    </svg>
+    <img src="/images/items/sticker_paper.svg" alt="" aria-hidden="true" className="iw-material-card__icon-img" />
   ),
   'cardboard-box': (
     <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">

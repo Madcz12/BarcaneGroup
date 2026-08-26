@@ -18,7 +18,7 @@ export default function CustomPackaging() {
     {
       id: 'empaques',
       title: 'Empaques',
-      image: null,
+      image: '/images/catalog/Packaging/bggroup_packaging_boxes.webp',
       items: [
         'Cajas plegadizas',
         'Cajas corrugadas',
@@ -30,7 +30,7 @@ export default function CustomPackaging() {
     {
       id: 'papeles-envoltorios',
       title: 'Papeles y envoltorios',
-      image: null,
+      image: '/images/catalog/Packaging/bggroup_packaging_papers_sleeves.webp',
       items: [
         'Papel antigrasa',
         'Papel personalizado',
