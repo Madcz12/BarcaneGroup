@@ -6,7 +6,7 @@
  *  etc.).  Icon visuals stay in icons.jsx (lookup map keyed by iconKey).
  *
  *  Array sizes (spec contract):
- *    industries  → 8   { name, iconKey }
+ *    industries  → 4   { name, iconKey }
  *    reasons     → 6   { title, desc, iconKey }
  *    materials   → 9   { name, badge?, iconKey }
  *    steps       → 4   { number, title, desc, iconKey }
@@ -14,33 +14,27 @@
 
 export const industries = [
   {
-    name: 'Gastronomía',
-    iconKey: 'restaurant',
-    label: 'Restaurantes, pollerías, cafeterías, fast food y food trucks',
-    hoverCopy: 'Empaques, menúes, uniformes, bolsas, papelería y material publicitario',
-  },
-  {
-    name: 'Hoteles y Turismo',
-    iconKey: 'hotel',
-    label: 'Hoteles, hostales, resorts y negocios del sector turismo',
-    hoverCopy: 'Papelería corporativa, señalética, amenities, material promocional y merchandising',
+    name: 'Alimentos, hoteles y turismo',
+    iconKey: 'restaurant-hotel',
+    label: 'RESTAURANTES, POLLERÍAS, CAFETERÍAS, FAST FOOD, HOTELES, RESORT, HOSPEDAJES Y NEGOCIOS DEL SECTOR TURISMO',
+    hoverCopy: 'Menúes por cartas, uniformes, bolsas, papelería, señalética, merchandising y material publicitario',
   },
   {
     name: 'Educación',
     iconKey: 'education',
-    label: 'Colegios, institutos, academias y centros de formación',
+    label: 'COLEGIOS, INSTITUTOS, ACADEMIAS Y CENTROS DE FORMACIÓN',
     hoverCopy: 'Agendas, cuadernos de control, folders, diplomas y material institucional',
   },
   {
     name: 'Salud',
     iconKey: 'health',
-    label: 'Clínicas, laboratorios, consultorios y centros clínicos',
+    label: 'CLÍNICAS, LABORATORIOS, CONSULTORIOS Y CENTROS CLÍNICOS',
     hoverCopy: 'Papelería, señalización, carpetas, material informativo y piezas corporativas',
   },
   {
     name: 'Inmobiliarias y construcción',
     iconKey: 'real-estate',
-    label: 'Inmobiliarias, constructoras y proyectos residenciales o comerciales',
+    label: 'INMOBILIARIAS, CONSTRUCTORAS Y PROYECTOS RESIDENCIALES O COMERCIALES',
     hoverCopy: 'Brochures, folders, paneles de venta, señalización y material promocional',
   },
 ];
