@@ -30,9 +30,9 @@ export default function Navbar() {
   const solutions = [
     {
       id: "impresos-corporativos",
-      productId: "editorial-papeleria-corporativa",
+      route: "/servicios/impresos-corporativos",
       title: "Impresos corporativos",
-      desc: "Papelería corporativa, agendas, calendarios y material de alta calidad para tu empresa.",
+      desc: "Papelería ejecutiva, formatos, revistas, libros y cuadernos de control.",
       icon: (
         <svg
           viewBox="0 0 24 24"
@@ -51,9 +51,9 @@ export default function Navbar() {
     },
     {
       id: "empaques-personalizados",
-      productId: "packaging-cajas-personalizadas",
-      title: "Empaques personalizados",
-      desc: "Cajas, fajas, servilletas y empaques a medida para alimentos y delivery.",
+      route: "/servicios/empaques-personalizados",
+      title: "Empaques y etiquetas",
+      desc: "Cajas plegadizas · Cajas corrugadas · Estuches · Bolsas · Packaging personalizado",
       icon: (
         <svg
           viewBox="0 0 24 24"
@@ -73,9 +73,9 @@ export default function Navbar() {
     },
     {
       id: "merchandising",
-      productId: "merchandising-corporativo",
-      title: "Merchandising",
-      desc: "Artículos promocionales y productos corporativos que refuerzan la presencia de tu marca.",
+      route: "/servicios/merchandising-y-textil",
+      title: "Merchandising y textil",
+      desc: "Lapiceros, resaltadores, lanyards, fotochecks, mugs, tomadotodos, polos, gorros, bolsas de tela.",
       icon: (
         <svg
           viewBox="0 0 24 24"
@@ -97,9 +97,9 @@ export default function Navbar() {
     },
     {
       id: "material-publicitario",
-      productId: "etiquetas-adhesivos",
-      title: "Publicidad",
-      desc: "Stickers, etiquetas, banners y empaques publicitarios diseñados para destacar.",
+      route: null,
+      title: "Publicidad y equipamiento",
+      desc: "Banner, viniles rollscreen, backing, pavonados, plumas, totem, ruleta.",
       icon: (
         <svg
           viewBox="0 0 24 24"
@@ -195,20 +195,37 @@ export default function Navbar() {
               <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
                 {solutions.map((solution) => (
                   <li key={solution.id}>
-                    <Link 
-                      to={`/productos/${solution.productId || solution.id}`}
-                      onClick={() => {
-                        setIsOpen(false);
-                        setDropdownOpen(false);
-                      }}
-                      className="dropdown-item-link"
-                    >
-                      <span className="dropdown-item-icon">{solution.icon}</span>
-                      <div className="dropdown-item-text">
-                        <span className="dropdown-item-title">{solution.title}</span>
-                        <span className="dropdown-item-desc">{solution.desc}</span>
-                      </div>
-                    </Link>
+                    {solution.route ? (
+                      <Link 
+                        to={solution.route}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setDropdownOpen(false);
+                        }}
+                        className="dropdown-item-link"
+                      >
+                        <span className="dropdown-item-icon">{solution.icon}</span>
+                        <div className="dropdown-item-text">
+                          <span className="dropdown-item-title">{solution.title}</span>
+                          <span className="dropdown-item-desc">{solution.desc}</span>
+                        </div>
+                      </Link>
+                    ) : (
+                      <a 
+                        href="#que-hacemos"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollToSection('que-hacemos');
+                        }}
+                        className="dropdown-item-link"
+                      >
+                        <span className="dropdown-item-icon">{solution.icon}</span>
+                        <div className="dropdown-item-text">
+                          <span className="dropdown-item-title">{solution.title}</span>
+                          <span className="dropdown-item-desc">{solution.desc}</span>
+                        </div>
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -30,7 +30,8 @@ export default function CustomPackaging() {
     {
       id: 'papeles-envoltorios',
       title: 'Papeles y envoltorios',
-      image: '/images/catalog/Packaging/bggroup_packaging_papers_sleeves.webp',
+      image: '/images/catalog/Packaging/bcgroup_food_wrapperv3.webp',
+      objectPosition: 'center',
       items: [
         'Papel antigrasa',
         'Papel personalizado',
@@ -41,7 +42,7 @@ export default function CustomPackaging() {
     {
       id: 'etiquetas',
       title: 'Etiquetas',
-      image: null,
+      image: '/images/catalog/Packaging/bcgroup_lbl_stickers.webp',
       items: [
         'Etiquetas adhesivas',
         'Stickers',
@@ -52,7 +53,7 @@ export default function CustomPackaging() {
     {
       id: 'identificacion-producto',
       title: 'Identificación de producto',
-      image: null,
+      image: '/images/catalog/Packaging/bggroup_packaging_papers_sleeves.webp',
       items: [
         'Hangtags',
         'Tags',
@@ -91,11 +92,12 @@ export default function CustomPackaging() {
                 Empaques y etiquetas
               </h1>
               <p className="service-detail-hero-subtitle">
-                Packaging que presenta, protege y diferencia tu marca
+                Packaging que presenta, protege y diferencia tu marca.
               </p>
-              <p className="service-detail-hero-sub2">
-                Cajas ecológicas, bolsas boutique, hangtags, etiquetas troqueladas y precintos de seguridad diseñados a la medida de tu producto
-              </p>
+{/*               <p className="service-detail-hero-sub2">
+                Cajas plegadizas · Cajas corrugadas · Estuches · Bolsas ·
+                Packaging personalizado
+              </p> */}
             </div>
           </div>
         </div>
@@ -114,6 +116,11 @@ export default function CustomPackaging() {
                       src={category.image}
                       alt={category.title}
                       className="corporate-card-img"
+                      style={
+                        category.objectPosition
+                          ? { objectPosition: category.objectPosition }
+                          : undefined
+                      }
                     />
                   ) : (
                     <div className="corporate-placeholder-inner">
@@ -126,11 +133,20 @@ export default function CustomPackaging() {
                         strokeWidth="1.5"
                         className="corporate-placeholder-icon"
                       >
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <rect
+                          x="3"
+                          y="3"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                        />
                         <circle cx="8.5" cy="8.5" r="1.5" />
                         <polyline points="21 15 16 10 5 21" />
                       </svg>
-                      <span className="corporate-placeholder-text">Imagen próximamente</span>
+                      <span className="corporate-placeholder-text">
+                        Imagen próximamente
+                      </span>
                     </div>
                   )}
                 </div>
@@ -139,7 +155,7 @@ export default function CustomPackaging() {
                 <div className="corporate-card-info">
                   <h2 className="corporate-card-title">{category.title}</h2>
                   <p className="corporate-card-items">
-                    {category.items.join(' · ')}
+                    {category.items.join(" · ")}
                   </p>
                   <div className="corporate-card-footer">
                     <a

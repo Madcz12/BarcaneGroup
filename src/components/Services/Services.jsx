@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import WhatsAppIcon from '../icons/WhatsAppIcon';
 import './Services.css';
 
 export default function Services() {
-  const buildWhatsAppLink = (productName) => {
-    const message = `Hola BarcaneGroup, vi su ${productName} en la web y me gustaría solicitar una cotización.`;
-    return `https://wa.me/51943703905?text=${encodeURIComponent(message)}`;
-  };
   const servicesList = [
     {
       id: "impresos-corporativos",
@@ -34,6 +29,7 @@ export default function Services() {
       description:
         "Lapiceros, resaltadores, lanyards, fotochecks, mugs, tomadotodos, polos, gorros, bolsas de tela.",
       image: "/images/items/bggroup_merch_cloth_notextv2.jpg",
+      route: "/servicios/merchandising-y-textil",
     },
     {
       id: "material-publicitario",
@@ -68,22 +64,6 @@ export default function Services() {
                 className="service-card-image"
                 loading="lazy"
               />
-              <div className="service-card-overlay">
-                <div className="service-card-overlay-content">
-                  <h3 className="service-card-title">{item.title}</h3>
-                  <p className="service-card-desc">{item.description}</p>
-                  <a 
-                    href={buildWhatsAppLink(item.title)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="service-link"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <WhatsAppIcon size={14} />
-                    Cotizar
-                  </a>
-                </div>
-              </div>
             </div>
           </Link>
         ) : (
@@ -95,21 +75,6 @@ export default function Services() {
                 className="service-card-image"
                 loading="lazy"
               />
-              <div className="service-card-overlay">
-                <div className="service-card-overlay-content">
-                  <h3 className="service-card-title">{item.title}</h3>
-                  <p className="service-card-desc">{item.description}</p>
-                  <a 
-                    href={buildWhatsAppLink(item.title)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="service-link"
-                  >
-                    <WhatsAppIcon size={14} />
-                    Cotizar
-                  </a>
-                </div>
-              </div>
             </div>
           </article>
         )}

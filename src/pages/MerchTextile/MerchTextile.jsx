@@ -1,68 +1,64 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
-import './CorporatePrints.css';
+import './MerchTextile.css';
 
-export default function CorporatePrints() {
+export default function MerchTextile() {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
   const buildWhatsAppLink = (categoryName) => {
-    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Impresos Corporativos).`;
+    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Merchandising y textil).`;
     return `https://wa.me/51943703905?text=${encodeURIComponent(message)}`;
   };
 
   const productCategories = [
     {
-      id: 'papeleria',
-      title: 'Papelería',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item1.webp',
+      id: 'textil-corporativo',
+      title: 'Textil corporativo',
+      image: null,
       items: [
-        'Tarjetas de presentación',
-        'Hojas membretadas',
-        'Sobres',
-        'Carpetas',
-        'Blocks',
-        'Formularios',
+        'Polos',
+        'Camisas',
+        'Hoodies',
+        'Chaquetas',
+        'Uniformes',
       ],
     },
     {
-      id: 'comunicacion-comercial',
-      title: 'Comunicación comercial',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item2.webp',
+      id: 'accesorios-textiles',
+      title: 'Accesorios textiles',
+      image: null,
       items: [
-        'Brochures',
-        'Catálogos',
-        'Flyers',
-        'Dípticos',
-        'Trípticos',
-        'Fichas comerciales',
+        'Gorras',
+        'Tote bags',
+        'Bolsos',
+        'Mochilas',
       ],
     },
     {
-      id: 'editorial-corporativo',
-      title: 'Editorial y corporativo',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item3.webp',
+      id: 'merchandising',
+      title: 'Merchandising',
+      image: null,
       items: [
-        'Agendas',
-        'Cuadernos',
-        'Manuales',
-        'Revistas',
-        'Memorias corporativas',
+        'Termos',
+        'Botellas',
+        'Tazas',
+        'Lanyards',
+        'Artículos promocionales',
       ],
     },
     {
-      id: 'especializados',
-      title: 'Especializados',
-      image: '/images/catalog/CorpPrints/bggroup_corp_impr_item4.webp',
+      id: 'campanas-eventos',
+      title: 'Campañas y eventos',
+      image: null,
       items: [
-        'Menús',
-        'Cartas',
-        'Certificados',
-        'Invitaciones',
-        'Material informativo',
+        'Kits corporativos',
+        'Welcome packs',
+        'Regalos empresariales',
+        'Productos para activaciones',
       ],
     },
   ];
@@ -72,8 +68,8 @@ export default function CorporatePrints() {
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
       <header className="service-detail-hero-fullbleed">
         <img
-          src="/images/catalog/CorpPrints/bggroup_corpprint_wideheadsec.webp"
-          alt="Impresos corporativos BarcaneGroup"
+          src="/images/catalog/MerchTextile/bcgroup_merch_cloth_widehead.webp"
+          alt="Merchandising & textil BarcaneGroup"
           className="service-detail-hero-img"
         />
 
@@ -93,14 +89,11 @@ export default function CorporatePrints() {
             {/* Text Card aligned to the left zone */}
             <div className="service-detail-hero-card">
               <h1 className="service-detail-hero-title">
-                Impresos corporativos
+                Merchandising & textil
               </h1>
               <p className="service-detail-hero-subtitle">
-                Materiales impresos que comunican, presentan y fortalecen la identidad de tu marca
+                Productos que mantienen tu marca siempre presente.
               </p>
-{/*               <p className="service-detail-hero-sub2">
-                Tarjetas de presentación · Hojas membretadas · Sobres · Carpetas · Blocks · Formularios
-              </p> */}
             </div>
           </div>
         </div>
@@ -112,7 +105,7 @@ export default function CorporatePrints() {
           <div className="corporate-products-grid">
             {productCategories.map((category) => (
               <div className="corporate-product-card" key={category.id}>
-                {/* Image Box */}
+                {/* Image Box / Placeholder */}
                 <div className="corporate-card-placeholder">
                   {category.image ? (
                     <img
