@@ -108,10 +108,11 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: var(--radius-md);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   margin-top: auto;
+  min-height: 62px;
   transition: var(--transition-premium);
 }
 
@@ -171,25 +172,26 @@
 .iw-material-card__text-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  justify-content: center;
+  gap: 1px;
   overflow: hidden;
 }
 
 .iw-material-card__name {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--clr-white);
-  line-height: 1.25;
+  line-height: 1.2;
   margin: 0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   transition: var(--transition-premium);
 }
 
 .iw-material-card__subtitle {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.25;
+  line-height: 1.2;
   margin: 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -246,6 +248,10 @@
     padding: 16px;
   }
 
+  .iw-material-card__bottom {
+    min-height: 68px;
+  }
+
   .iw-material-card__icon-wrapper {
     width: 36px;
     height: 36px;
@@ -262,11 +268,11 @@
   }
 
   .iw-material-card__name {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
 
   .iw-material-card__subtitle {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 }
 
@@ -278,7 +284,8 @@
   }
 
   .iw-material-card__bottom {
-    padding: 10px 14px;
+    padding: 7px 14px;
+    min-height: 70px;
   }
 
   .iw-material-card__icon-wrapper {
@@ -297,11 +304,11 @@
   }
 
   .iw-material-card__name {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .iw-material-card__subtitle {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -310,6 +317,11 @@
   .iw-materials__bento-grid {
     grid-auto-rows: 320px;
     gap: 24px;
+  }
+
+  .iw-material-card__bottom {
+    padding: 8px 14px;
+    min-height: 74px;
   }
 
   .iw-material-card__icon-wrapper {
@@ -328,11 +340,11 @@
   }
 
   .iw-material-card__name {
-    font-size: 1.15rem;
+    font-size: 1.08rem;
   }
 
   .iw-material-card__subtitle {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 }
 

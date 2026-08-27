@@ -53,7 +53,7 @@ export default function ProcessTimeline({ reducedMotion = false }) {
             className="iw-timeline__step"
             variants={stepVariants}
           >
-            <div className="iw-timeline__step-number">{step.number}</div>
+{/*             <div className="iw-timeline__step-number">{step.number}</div> */}
             <div className="iw-timeline__step-border-wrap">
               <div className="iw-timeline__step-icon">
                 {iconMap[step.iconKey]}

@@ -117,25 +117,25 @@ export const materials = [
 
 export const steps = [
   {
-    number: '01',
+
     title: 'Cuéntanos qué necesitas',
     desc: 'Producto, cantidad y características',
     iconKey: 'chat',
   },
   {
-    number: '02',
+
     title: 'Preparamos tu propuesta',
     desc: 'Asesoría, alternativas y cotización',
     iconKey: 'pen',
   },
   {
-    number: '03',
+
     title: 'Diseñamos y producimos',
     desc: 'Aprobación y producción',
     iconKey: 'customize',
   },
   {
-    number: '04',
+
     title: 'Entregamos tu pedido',
     desc: 'Coordinación y entrega',
     iconKey: 'truck',

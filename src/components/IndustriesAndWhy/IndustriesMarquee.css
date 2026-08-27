@@ -32,6 +32,8 @@
   flex: 0 0 100%; /* 1 visible on mobile */
   min-width: 0;
   padding-left: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ---- Card ---- */
@@ -45,9 +47,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: justify;
   gap: 12px;
   transition: var(--transition-premium);
+  height: 100%;
+  flex: 1 1 auto;
 }
 
 .iw-marquee__card:hover {
@@ -139,7 +143,7 @@
   font-size: calc(var(--mq-font-size) * 0.82);
   font-weight: 500;
   color: #ffffff;
-  text-align: center;
+  text-align: justify;
   line-height: 1.5;
   letter-spacing: 0.01em;
 }
@@ -199,6 +203,7 @@
   .iw-marquee__slide {
     flex: none !important;
     width: 100% !important;
+    height: 100% !important;
     padding-left: 0 !important;
   }
 }
