@@ -64,9 +64,9 @@ export default function CustomPackaging() {
   ];
 
   return (
-    <div className="service-detail-page animate-fade-in">
+    <div className="service-detail-page custom-packaging-page animate-fade-in">
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
-      <header className="service-detail-hero-fullbleed">
+      <header className="service-detail-hero-fullbleed custom-packaging-hero">
         <img
           src="/images/catalog/Packaging/bggroup_packaging_wideheadsec.jpg"
           alt="Empaques y etiquetas BarcaneGroup"
@@ -81,7 +81,7 @@ export default function CustomPackaging() {
           <div className="service-detail-hero-container">
             {/* Back link directly on top of image background */}
             <div className="service-detail-hero-nav">
-              <Link to="/" className="service-detail-hero-back-link">
+              <Link to="/#empaques-personalizados" className="service-detail-hero-back-link">
                 ← Volver a Servicios
               </Link>
             </div>
@@ -91,13 +91,12 @@ export default function CustomPackaging() {
               <h1 className="service-detail-hero-title">
                 Empaques y etiquetas
               </h1>
-              <p className="service-detail-hero-subtitle">
+              <p className="service-detail-hero-subtitle custom-packaging-subtitle" style={{ color: '#cd9fff' }}>
                 Packaging que presenta, protege y diferencia tu marca.
               </p>
-{/*               <p className="service-detail-hero-sub2">
-                Cajas plegadizas · Cajas corrugadas · Estuches · Bolsas ·
-                Packaging personalizado
-              </p> */}
+              <p className="service-detail-hero-desc">
+                Cajas plegadizas · Cajas corrugadas · Estuches · Bolsas · Packaging personalizado
+              </p>
             </div>
           </div>
         </div>

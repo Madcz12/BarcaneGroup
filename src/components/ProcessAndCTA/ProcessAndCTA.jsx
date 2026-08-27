@@ -9,7 +9,9 @@ export default function ProcessAndCTA() {
       <div className="process-bg-layer">
         <div
           className="process-bg-image"
-          style={{ backgroundImage: "url('/images/barcanegroup_processctaimg.webp')" }}
+          style={{
+            backgroundImage: "url('/images/barcanegroup_processctaimg.webp')",
+          }}
         />
         <div className="process-bg-overlay" />
       </div>
@@ -19,13 +21,13 @@ export default function ProcessAndCTA() {
         {/* Process Flow / Text Content */}
         <div className="process-side">
           <h2 className="process-main-heading">
-            ¿Buscas una solución gráfica <br />
-            <span className="text-highlight">hecha a tu medida?</span>
+            ¿Tienes una idea? <br />
+            <span className="text-highlight">Hagámosla realidad!</span>
           </h2>
 
           <p className="process-main-desc">
-            Cuéntanos qué necesitas y te ayudamos a encontrar la mejor
-            alternativa para tu proyecto.
+            Cuéntanos qué necesitas y encontraremos la mejor manera de
+            producirlo.
           </p>
 
           {/* Inline Action Elements: WhatsApp & Email Contact */}
@@ -37,7 +39,7 @@ export default function ProcessAndCTA() {
               className="btn btn-pink btn-process-whatsapp"
             >
               <WhatsAppIcon size={20} />
-              Solicitar cotización por WhatsApp
+              Cuéntanos tu proyecto
             </a>
           </div>
           <br />

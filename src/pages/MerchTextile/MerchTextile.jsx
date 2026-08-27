@@ -64,9 +64,9 @@ export default function MerchTextile() {
   ];
 
   return (
-    <div className="service-detail-page animate-fade-in">
+    <div className="service-detail-page merch-textile-page animate-fade-in">
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
-      <header className="service-detail-hero-fullbleed">
+      <header className="service-detail-hero-fullbleed merch-textile-hero">
         <img
           src="/images/catalog/MerchTextile/bcgroup_merch_cloth_widehead.webp"
           alt="Merchandising & textil BarcaneGroup"
@@ -81,7 +81,7 @@ export default function MerchTextile() {
           <div className="service-detail-hero-container">
             {/* Back link directly on top of image background */}
             <div className="service-detail-hero-nav">
-              <Link to="/" className="service-detail-hero-back-link">
+              <Link to="/#merchandising" className="service-detail-hero-back-link">
                 ← Volver a Servicios
               </Link>
             </div>
@@ -91,8 +91,11 @@ export default function MerchTextile() {
               <h1 className="service-detail-hero-title">
                 Merchandising & textil
               </h1>
-              <p className="service-detail-hero-subtitle">
+              <p className="service-detail-hero-subtitle merch-textile-subtitle" style={{ color: '#cd9fff' }}>
                 Productos que mantienen tu marca siempre presente.
+              </p>
+              <p className="service-detail-hero-desc">
+                Polos, gorras, tote bags, mugs, lanyards, termos y kits corporativos para tu marca.
               </p>
             </div>
           </div>

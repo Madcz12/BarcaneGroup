@@ -1,8 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Services.css';
 
 export default function Services() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          element.focus({ preventScroll: true });
+        }, 150);
+      }
+    }
+  }, [location]);
+
   const servicesList = [
     {
       id: "impresos-corporativos",
@@ -56,7 +71,7 @@ export default function Services() {
           )}
         </div>
         {isClickable ? (
-          <Link to={item.route} className="service-card service-card-link" id={item.id}>
+          <Link to={item.route} className="service-card service-card-link" id={item.id} tabIndex={-1}>
             <div className="service-card-image-wrap">
               <img 
                 src={item.image} 
@@ -72,7 +87,7 @@ export default function Services() {
             </div>
           </Link>
         ) : (
-          <article className="service-card" id={item.id}>
+          <article className="service-card" id={item.id} tabIndex={-1}>
             <div className="service-card-image-wrap">
               <img 
                 src={item.image} 
@@ -96,7 +111,7 @@ export default function Services() {
   };
 
   return (
-    <section id="que-hacemos" className="services-section section-padding">
+    <section id="que-hacemos" className="services-section section-padding" tabIndex={-1}>
       <div className="container services-container">
         <div className="services-group">
           <div className="services-header">

@@ -69,8 +69,9 @@ export default function Catalog() {
           Ideas que toman forma. Marcas que se hacen visibles.
         </h1>
         <p className="catalog-subtitle">
-          Explora nuestras principales líneas de productos y desarrollos
-          gráficos personalizados.
+          Producimos materiales gráficos, empaques, textiles y elementos
+          publicitarios para empresas que buscan comunicar mejor, dentro y fuera
+          de sus espacios.
         </p>
         <p className="catalog-subtext">
           Adaptamos materiales, formatos, cantidades y acabados a las

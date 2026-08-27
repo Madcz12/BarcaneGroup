@@ -9,7 +9,8 @@
 }
 
 /* Edge-to-Edge 100% Full Bleed Hero Header Banner - Ultra-Wide 3.22:1 Ratio */
-.service-detail-hero-fullbleed {
+/* Edge-to-Edge 100% Full Bleed Hero Header Banner - Ultra-Wide 3.22:1 Ratio */
+.corporate-prints-hero.service-detail-hero-fullbleed {
   position: relative;
   width: 100%;
   aspect-ratio: 3.22 / 1;
@@ -19,11 +20,11 @@
   padding: 0;
   overflow: hidden;
   background-color: #0f172a;
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: flex-start !important;
 }
 
-.service-detail-hero-img {
+.corporate-prints-hero .service-detail-hero-img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -34,7 +35,7 @@
 }
 
 /* Enhanced Dark Left-Side Contrast Overlay for Text Readability */
-.service-detail-hero-overlay {
+.corporate-prints-hero .service-detail-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -48,16 +49,16 @@
   pointer-events: none;
 }
 
-/* Content Container over Image Background */
-.service-detail-hero-content-wrap {
+/* Content Container over Image Background - Top Aligned to top of AURA letterhead paper */
+.corporate-prints-hero .service-detail-hero-content-wrap {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 40px 0;
+  padding: 10px 0 30px !important;
   transform: translateY(0);
 }
 
-.service-detail-hero-container {
+.corporate-prints-hero .service-detail-hero-container {
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -66,11 +67,12 @@
 }
 
 /* Back Link over Image Background */
-.service-detail-hero-nav {
-  margin-bottom: 32px;
+.corporate-prints-hero .service-detail-hero-nav {
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
-.service-detail-hero-back-link {
+.corporate-prints-hero .service-detail-hero-back-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -80,14 +82,15 @@
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
-  padding: 8px 18px;
+  padding: 12px 18px;
   border-radius: var(--radius-full);
   text-decoration: none;
   transition: var(--transition-fast);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 64px;
 }
 
-.service-detail-hero-back-link:hover {
+.corporate-prints-hero .service-detail-hero-back-link:hover {
   background: var(--clr-primary-pink);
   border-color: var(--clr-primary-pink);
   color: #ffffff;
@@ -95,40 +98,41 @@
 }
 
 /* Text Card positioned strictly in Left Zone */
-.service-detail-hero-card {
+.corporate-prints-hero .service-detail-hero-card {
   max-width: 600px;
   color: #ffffff;
   text-align: left;
 }
 
 /* 1. Título */
-.service-detail-hero-title {
+.corporate-prints-hero .service-detail-hero-title {
   font-size: 3.2rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   line-height: 1.18;
   letter-spacing: -0.5px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-/* 2. Subtítulo */
-.service-detail-hero-subtitle {
-  font-size: 1.55rem;
+/* 2. Subtítulo en tono lila #cd9fff */
+.corporate-prints-hero .service-detail-hero-subtitle,
+.corporate-prints-subtitle {
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #f1f5f9;
-  margin-bottom: 16px;
-  line-height: 1.4;
+  color: #cd9fff !important;
+  margin-bottom: 14px;
+  line-height: 1.35;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* 3. Segundo subtítulo */
-.service-detail-hero-sub2 {
-  font-size: 1.25rem;
+/* 3. Descripción */
+.corporate-prints-hero .service-detail-hero-desc {
+  font-size: 1.15rem;
   font-weight: 400;
-  color: #cbd5e1;
+  color: #e2e8f0;
   margin: 0;
-  line-height: 1.65;
+  line-height: 1.55;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 

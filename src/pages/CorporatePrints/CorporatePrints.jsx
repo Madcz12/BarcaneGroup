@@ -68,9 +68,9 @@ export default function CorporatePrints() {
   ];
 
   return (
-    <div className="service-detail-page animate-fade-in">
+    <div className="service-detail-page corporate-prints-page animate-fade-in">
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
-      <header className="service-detail-hero-fullbleed">
+      <header className="service-detail-hero-fullbleed corporate-prints-hero">
         <img
           src="/images/catalog/CorpPrints/bggroup_corpprint_wideheadsec.webp"
           alt="Impresos corporativos BarcaneGroup"
@@ -85,7 +85,7 @@ export default function CorporatePrints() {
           <div className="service-detail-hero-container">
             {/* Back link directly on top of image background */}
             <div className="service-detail-hero-nav">
-              <Link to="/" className="service-detail-hero-back-link">
+              <Link to="/#impresos-corporativos" className="service-detail-hero-back-link">
                 ← Volver a Servicios
               </Link>
             </div>
@@ -95,12 +95,12 @@ export default function CorporatePrints() {
               <h1 className="service-detail-hero-title">
                 Impresos corporativos
               </h1>
-              <p className="service-detail-hero-subtitle">
-                Materiales impresos que comunican, presentan y fortalecen la identidad de tu marca
+              <p className="service-detail-hero-subtitle corporate-prints-subtitle" style={{ color: '#cd9fff' }}>
+                Tu identidad presente en cada marca.
               </p>
-{/*               <p className="service-detail-hero-sub2">
-                Tarjetas de presentación · Hojas membretadas · Sobres · Carpetas · Blocks · Formularios
-              </p> */}
+              <p className="service-detail-hero-desc">
+                Materiales impresos que comunican, presentan y fortalecen la identidad de tu marca.
+              </p>
             </div>
           </div>
         </div>
