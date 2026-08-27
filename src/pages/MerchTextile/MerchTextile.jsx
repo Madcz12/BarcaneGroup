@@ -18,7 +18,7 @@ export default function MerchTextile() {
     {
       id: 'textil-corporativo',
       title: 'Textil corporativo',
-      image: null,
+      image: '/images/catalog/MerchTextile/bcgroup_textile_corporate.webp',
       items: [
         'Polos',
         'Camisas',
@@ -30,7 +30,7 @@ export default function MerchTextile() {
     {
       id: 'accesorios-textiles',
       title: 'Accesorios textiles',
-      image: null,
+      image: '/images/catalog/MerchTextile/bcgroup_corpo_adds_bags.webp',
       items: [
         'Gorras',
         'Tote bags',
@@ -41,7 +41,7 @@ export default function MerchTextile() {
     {
       id: 'merchandising',
       title: 'Merchandising',
-      image: null,
+      image: '/images/catalog/MerchTextile/bcgroup_merch_bottles.webp',
       items: [
         'Termos',
         'Botellas',
@@ -53,7 +53,7 @@ export default function MerchTextile() {
     {
       id: 'campanas-eventos',
       title: 'Campañas y eventos',
-      image: null,
+      image: '/images/catalog/MerchTextile/bcgroup_events_campaigns.webp',
       items: [
         'Kits corporativos',
         'Welcome packs',

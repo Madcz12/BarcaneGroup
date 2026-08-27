@@ -34,7 +34,7 @@ export const industries = [
   {
     name: 'Inmobiliarias y financieras',
     iconKey: 'real-estate',
-    label: 'INMOBILIARIAS, CONSTRUCTORAS Y PROYECTOS RESIDENCIALES O COMERCIALES',
+    label: 'INMOBILIARIAS, CONSTRUCTORAS, SEGUROS, ENTIDADES FINANCIERAS Y COMERCIALES',
     hoverCopy: 'Brochures, folders, paneles de venta, señalización y material promocional',
   },
   {
