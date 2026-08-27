@@ -25,7 +25,7 @@ export default function IndustriesAndWhy() {
           <div className="container">
             <div className="iw-section__block">
               <h2 className="block-title">
-                Soluciones gráficas para multiples industrias
+                Producción gráfica para multiples industrias
               </h2>
               <IndustriesMarquee reducedMotion={prefersReducedMotion} />
             </div>
@@ -37,7 +37,7 @@ export default function IndustriesAndWhy() {
           <div className="container">
             <div className="iw-section__block">
               <h2 className="block-title">
-                ¿Por qué elegir soluciones personalizadas para tu negocio?
+                ¿Por qué elegir una propuesta a medida para tu negocio?
               </h2>
               <p className="block-subtitle">
                 En Barcane Group desarrollamos materiales y soluciones que ayudan

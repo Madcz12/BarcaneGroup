@@ -65,12 +65,16 @@ export default function Catalog() {
     <section className="catalog-section">
       {/* Header section matching reference structure */}
       <div className="catalog-header">
-        <h1 className="catalog-title">Soluciones que hacen visible tu marca</h1>
+        <h1 className="catalog-title">
+          Ideas que toman forma. Marcas que se hacen visibles.
+        </h1>
         <p className="catalog-subtitle">
-          Explora nuestras principales líneas de productos y desarrollos gráficos personalizados.
+          Explora nuestras principales líneas de productos y desarrollos
+          gráficos personalizados.
         </p>
         <p className="catalog-subtext">
-          Adaptamos materiales, formatos, cantidades y acabados a las necesidades de cada proyecto.
+          Adaptamos materiales, formatos, cantidades y acabados a las
+          necesidades de cada proyecto.
         </p>
         <div className="catalog-underline" />
       </div>
@@ -80,7 +84,7 @@ export default function Catalog() {
         {CATEGORIES.map((cat) => (
           <button
             key={cat.id}
-            className={`catalog-filter-btn ${activeCategory === cat.id ? 'active' : ''}`}
+            className={`catalog-filter-btn ${activeCategory === cat.id ? "active" : ""}`}
             onClick={() => handleCategoryChange(cat.id)}
             type="button"
           >
@@ -93,7 +97,9 @@ export default function Catalog() {
       {isLoading ? (
         <div className="catalog-loader-container">
           <div className="catalog-spinner" />
-          <p className="catalog-loader-text">Cargando catálogo BarcaneGroup...</p>
+          <p className="catalog-loader-text">
+            Cargando catálogo BarcaneGroup...
+          </p>
         </div>
       ) : (
         <>
@@ -127,12 +133,21 @@ export default function Catalog() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         >
-                          <rect x="3" y="3" width="18" height="18" rx="3" ry="3" />
+                          <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="3"
+                            ry="3"
+                          />
                           <circle cx="8.5" cy="8.5" r="1.5" />
                           <polyline points="21 15 16 10 5 21" />
                         </svg>
                       </div>
-                      <span className="catalog-card-placeholder-text">Imagen próximamente</span>
+                      <span className="catalog-card-placeholder-text">
+                        Imagen próximamente
+                      </span>
                     </div>
                   )}
                 </div>
@@ -191,9 +206,12 @@ export default function Catalog() {
               <WhatsAppIcon size={24} />
             </div>
             <div className="catalog-cta-banner-content">
-              <h3 className="catalog-cta-banner-title">¿No encuentras exactamente lo que necesitas?</h3>
+              <h3 className="catalog-cta-banner-title">
+                ¿No encuentras exactamente lo que necesitas?
+              </h3>
               <p className="catalog-cta-banner-desc">
-                Cuéntanos tu idea. Desarrollamos soluciones personalizadas según tu producto, industria, presupuesto y objetivo.
+                Cuéntanos tu idea. Desarrollamos soluciones personalizadas según
+                tu producto, industria, presupuesto y objetivo.
               </p>
             </div>
             <a

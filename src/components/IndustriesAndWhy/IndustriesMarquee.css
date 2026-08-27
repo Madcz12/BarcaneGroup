@@ -179,7 +179,7 @@
   }
 }
 
-/* lg: 1024px → 4 columns grid (all 4 aligned in a single row) */
+/* lg: 1024px → 5 columns grid (all 5 aligned in a single row) */
 @media (min-width: 1024px) {
   .iw-marquee {
     --mq-card-padding: 24px 16px;
@@ -192,7 +192,7 @@
   }
   .iw-marquee__container {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns: repeat(5, 1fr) !important;
     gap: 16px !important;
     transform: none !important;
   }
@@ -203,7 +203,7 @@
   }
 }
 
-/* xl: 1200px → enhanced padding and icon sizes for 4 columns */
+/* xl: 1200px → enhanced padding and icon sizes for 5 columns */
 @media (min-width: 1200px) {
   .iw-marquee {
     --mq-card-padding: 28px 20px;

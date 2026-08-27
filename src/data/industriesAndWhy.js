@@ -6,7 +6,7 @@
  *  etc.).  Icon visuals stay in icons.jsx (lookup map keyed by iconKey).
  *
  *  Array sizes (spec contract):
- *    industries  → 4   { name, iconKey }
+ *    industries  → 5   { name, iconKey }
  *    reasons     → 6   { title, desc, iconKey }
  *    materials   → 9   { name, badge?, iconKey }
  *    steps       → 4   { number, title, desc, iconKey }
@@ -15,14 +15,14 @@
 export const industries = [
   {
     name: 'Alimentos, hoteles y turismo',
-    iconKey: 'restaurant-hotel',
+    iconKey: 'hospitality-food-tourism',
     label: 'RESTAURANTES, POLLERÍAS, CAFETERÍAS, FAST FOOD, HOTELES, RESORT, HOSPEDAJES Y NEGOCIOS DEL SECTOR TURISMO',
     hoverCopy: 'Menúes por cartas, uniformes, bolsas, papelería, señalética, merchandising y material publicitario',
   },
   {
     name: 'Educación',
     iconKey: 'education',
-    label: 'COLEGIOS, INSTITUTOS, ACADEMIAS Y CENTROS DE FORMACIÓN',
+    label: 'COLEGIOS, ACADEMIAS, INSTITUTOS Y CENTROS DE FORMACIÓN',
     hoverCopy: 'Agendas, cuadernos de control, folders, diplomas y material institucional',
   },
   {
@@ -32,10 +32,16 @@ export const industries = [
     hoverCopy: 'Papelería, señalización, carpetas, material informativo y piezas corporativas',
   },
   {
-    name: 'Inmobiliarias y construcción',
+    name: 'Inmobiliarias y financieras',
     iconKey: 'real-estate',
     label: 'INMOBILIARIAS, CONSTRUCTORAS Y PROYECTOS RESIDENCIALES O COMERCIALES',
     hoverCopy: 'Brochures, folders, paneles de venta, señalización y material promocional',
+  },
+  {
+    name: 'Otras industrias',
+    iconKey: 'other-industries',
+    label: 'COMERCIO, SERVICIOS, TECNOLOGÍA Y NEGOCIOS EN GENERAL',
+    hoverCopy: 'Soluciones gráficas y de empaque personalizadas para cualquier sector comercial o corporativo',
   },
 ];
 
@@ -53,7 +59,7 @@ export const reasons = [
     colorTheme: 'green',
   },
   {
-    title: 'Mayor recordación de marca',
+    title: 'Mayor impacto y recordatorio',
     desc: 'Tu logo y diseño permanecen en la mente de tus clientes.',
     iconKey: 'tag',
     colorTheme: 'amber',
