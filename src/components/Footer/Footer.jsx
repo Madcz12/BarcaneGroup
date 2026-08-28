@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSectionClick = (e, sectionId) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: sectionId } });
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+    } else {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
@@ -16,14 +32,18 @@ export default function Footer() {
       <div className="container footer-grid">
         {/* Logo and About Column */}
         <div className="footer-col-brand">
-          <a href="#inicio" className="footer-logo">
+          <Link 
+            to="/" 
+            className="footer-logo"
+            onClick={(e) => handleSectionClick(e, 'inicio')}
+          >
             <img
               src="/images/BarcaneGroupLogo-bgless.png"
               alt="Logo BarcaneGroup"
               className="logo-img-footer"
             />
             <span className="footer-col-brand-title">BarcaneGroup</span>
-          </a>
+          </Link>
           <p className="footer-brand-desc">
             Soluciones gráficas para empresas que quieren destacar.
           </p>
@@ -100,19 +120,27 @@ export default function Footer() {
           <h3 className="footer-title">Enlaces</h3>
           <ul className="footer-links">
             <li>
-              <a href="#nosotros">Nosotros</a>
+              <a href="#que-hacemos" onClick={(e) => handleSectionClick(e, 'que-hacemos')}>
+                Nosotros
+              </a>
             </li>
             <li>
-              <a href="#que-hacemos">Soluciones</a>
+              <a href="#que-hacemos" onClick={(e) => handleSectionClick(e, 'que-hacemos')}>
+                Soluciones
+              </a>
             </li>
             <li>
-              <a href="#industrias">Industrias</a>
+              <a href="#industrias-y-proceso" onClick={(e) => handleSectionClick(e, 'industrias-y-proceso')}>
+                Industrias
+              </a>
             </li>
             <li>
               <Link to="/productos">Productos</Link>
             </li>
             <li>
-              <a href="#contacto">Contacto</a>
+              <a href="#contacto" onClick={(e) => handleSectionClick(e, 'contacto')}>
+                Contacto
+              </a>
             </li>
           </ul>
         </div>
@@ -122,19 +150,24 @@ export default function Footer() {
           <h3 className="footer-title">Soluciones</h3>
           <ul className="footer-links">
             <li>
-              <a href="#cartones-y-corrugados">Packaging y corrugados</a>
+              <Link to="/servicios/impresos-corporativos">
+                Impresos corporativos
+              </Link>
             </li>
             <li>
-              <a href="#adhesivos-y-etiquetas">Papeles, adhesivos y etiquetas</a>
+              <Link to="/servicios/empaques-personalizados">
+                Empaques y etiquetas
+              </Link>
             </li>
             <li>
-              <a href="#impresos-corporativos">Impresión y editorial</a>
+              <Link to="/servicios/merchandising-y-textil">
+                Merchandising y textil
+              </Link>
             </li>
             <li>
-              <a href="#material-publicitario">Publicidad y gran formato</a>
-            </li>
-            <li>
-              <a href="#acabados-especiales">Acabados especiales</a>
+              <Link to="/servicios/publicidad-y-equipamiento">
+                Publicidad y equipamiento
+              </Link>
             </li>
           </ul>
         </div>

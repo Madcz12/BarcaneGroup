@@ -14,7 +14,7 @@
 
 export const industries = [
   {
-    name: 'Alimentos, hoteles y turismo',
+    name: 'Alimentos, hoteles\ny\nTurismo',
     iconKey: 'hospitality-food-tourism',
     label: 'RESTAURANTES, POLLERÍAS, CAFETERÍAS, FAST FOOD, HOTELES, RESORT, HOSPEDAJES Y NEGOCIOS DEL SECTOR TURISMO',
     hoverCopy: 'Empaques, cartas, uniformes, bolsas, papelería, señalética, merchandising y material publicitario',
@@ -32,7 +32,7 @@ export const industries = [
     hoverCopy: 'Papelería, señalización, carpetas, material informativo y piezas corporativas',
   },
   {
-    name: 'Inmobiliarias y financieras',
+    name: 'Inmobiliarias\ny\nfinancieras',
     iconKey: 'real-estate',
     label: 'INMOBILIARIAS, CONSTRUCTORAS, SEGUROS, ENTIDADES FINANCIERAS Y COMERCIALES',
     hoverCopy: 'Brochures, folders, paneles de venta, señalización y material promocional',

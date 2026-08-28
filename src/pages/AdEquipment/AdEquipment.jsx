@@ -16,48 +16,38 @@ export default function AdEquipment() {
 
   const productCategories = [
     {
-      id: 'expositores-banners',
-      title: 'Publicidad de gran formato',
-      image: '/images/catalog/Equipment/bccgroup_gigantic_format.webp',
+      id: "expositores-banners",
+      title: "Publicidad de gran formato",
+      image: "/images/catalog/Equipment/bccgroup_gigantic_format.webp",
+      items: ["Banners", "Gigantografías", "Lonas", "Viniles"],
+    },
+    {
+      id: "viniles-pavonados",
+      title: "Exhibición",
+      image: "/images/catalog/Equipment/bcgroup_evt_spaces.webp",
+      items: ["Roll Screens", "Displays", "Backings", "Photocalls"],
+    },
+    {
+      id: "banderas-totems",
+      title: "Punto de venta",
+      image: "/images/catalog/Equipment/bcgroup_pos.webp",
       items: [
-        'Banners',
-        'Gigantografías',
-        'Lonas',
-        'Viniles',
+        "Material POP",
+        "Exhibidores",
+        "Displays de producto",
+        "Elementos promocionales",
       ],
     },
     {
-      id: 'viniles-pavonados',
-      title: 'Exhibición',
-      image: null,
+      id: "estructuras-activaciones",
+      title: "Eventos y espacios",
+      image: "/images/catalog/Equipment/bcgroup_evt_snacks.webp",
       items: [
-        'Roll Screens',
-        'Displays',
-        'Backings',
-        'Photocalls',
-      ],
-    },
-    {
-      id: 'banderas-totems',
-      title: 'Punto de venta',
-      image: null,
-      items: [
-        'Material POP',
-        'Exhibidores',
-        'Displays de producto',
-        'Elementos promocionales',
-      ],
-    },
-    {
-      id: 'estructuras-activaciones',
-      title: 'Eventos y espacios',
-      image: '/images/catalog/Equipment/bcgroup_evt_spaces.webp',
-      items: [
-        'Stands',
-        'Módulos publicitarios',
-        'Counters',
-        'Señalética',
-        'Elementos para ferias',
+        "Stands",
+        "Módulos publicitarios",
+        "Counters",
+        "Señalética",
+        "Elementos para ferias",
       ],
     },
   ];
@@ -100,8 +90,11 @@ export default function AdEquipment() {
                 Hazte visible donde realmente importa.
               </p>
               <p className="service-detail-hero-desc">
-                Banner, viniles rollscreen, backing, pavonados, plumas, totem,
-                ruleta.
+                Banner, gigantografías, lonas, viniles, roll screens, displays, backings,
+                <br />
+                Photocalls, Material POP, Exhibiciones, Displays de producto, Elementos promocionales
+                <br />
+                Stands, módulos publicitarios, counters, señalética, elementos para ferias
               </p>
             </div>
           </div>
