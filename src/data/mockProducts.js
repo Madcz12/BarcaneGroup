@@ -1,5 +1,5 @@
 // Mock product catalog for BarcaneGroup packaging & corporate merch company.
-// Configured with the 10 catalog product items.
+// Configured with the 10 catalog product items in WebP format.
 
 const mockProducts = [
   {
@@ -11,7 +11,7 @@ const mockProducts = [
       'Bolsas de papel boutique y kraft de alta resistencia, diseñadas a medida para potenciar la presentación de tu marca.',
     feature: 'Acabados finos y asas a elección',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_boutique_bags.jpg',
+    image: '/images/catalog/Products/bcgroup_boutique_bags.webp',
   },
   {
     id: 'kits-corporativos',
@@ -22,7 +22,7 @@ const mockProducts = [
       'Sets personalizados de branding corporativo ideales para onboarding de colaboradores, regalos institucionales y eventos VIP.',
     feature: 'Combinaciones y empaques personalizados',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_corpokit.jpg',
+    image: '/images/catalog/Products/bcgroup_corpokit.webp',
   },
   {
     id: 'packaging-cajas-lujo',
@@ -33,7 +33,7 @@ const mockProducts = [
       'Cajas rígidas y empaques premium con acabados especiales, diseñados para destacar productos exclusivos.',
     feature: 'Estructuras rígidas y acabados premium',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_glam_packaging.jpg',
+    image: '/images/catalog/Products/bcgroup_glam_packaging.webp',
   },
   {
     id: 'hangtags-etiquetas-colgantes',
@@ -44,7 +44,7 @@ const mockProducts = [
       'Etiquetas colgantes en cartulinas finas para ropa, accesorios y productos retail con perforación y cordones.',
     feature: 'Variedad de cartulinas y formas troqueladas',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_hangtags.jpg',
+    image: '/images/catalog/Products/bcgroup_hangtags.webp',
   },
   {
     id: 'plegables-folletos-especiales',
@@ -55,7 +55,7 @@ const mockProducts = [
       'Impresos desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
     feature: 'Plegados y troquelados a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_individual_fold.jpg',
+    image: '/images/catalog/Products/bcgroup_individual_fold.webp',
   },
   {
     id: 'carpetas-corporativas',
@@ -66,7 +66,7 @@ const mockProducts = [
       'Carpetas de presentación con solapa para documentos, propuestas comerciales y entregas institucionales.',
     feature: 'Con solapa e hendidura para tarjeta',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_perso_folders.jpg',
+    image: '/images/catalog/Products/bcgroup_perso_folders.webp',
   },
   {
     id: 'photochecks-lanyards',
@@ -77,7 +77,7 @@ const mockProducts = [
       'Credenciales en PVC y cintas estampadas con el logo de tu empresa para control de acceso e identificación.',
     feature: 'Impresión en alta definición y accesorios duraderos',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_photocheck_lanyards.jpg',
+    image: '/images/catalog/Products/bcgroup_photocheck_lanyards.webp',
   },
   {
     id: 'stickers-relieve-acabados',
@@ -88,7 +88,7 @@ const mockProducts = [
       'Etiquetas adhesivas con efecto 3D, lacado UV selectivo y stamping metalizado para productos de alta gama.',
     feature: 'Texturas con relieve y brillo metálico',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_stickers_relieves.jpg',
+    image: '/images/catalog/Products/bcgroup_stickers_relieves.webp',
   },
   {
     id: 'stickers-etiquetas-autoadhesivas',
@@ -99,7 +99,7 @@ const mockProducts = [
       'Stickers troquelados en vinil o papel autoadhesivo para envases, cierres de empaques y branding publicitario.',
     feature: 'Corte preciso troquelado o en pliegos',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_stickers_two.jpg',
+    image: '/images/catalog/Products/bcgroup_stickers_two.webp',
   },
   {
     id: 'tripticos-blocks-flyers',
@@ -110,7 +110,7 @@ const mockProducts = [
       'Material informativo y promocional impreso en alta calidad para campañas comerciales, ferias y atención al cliente.',
     feature: 'Múltiples gramajes y acabados de superficie',
     price: 'Consultar cotización',
-    image: '/images/catalog/bcgroup_tripticblock_flyers.jpg',
+    image: '/images/catalog/Products/bcgroup_tripticblock_flyers.webp',
   },
 ];
 
