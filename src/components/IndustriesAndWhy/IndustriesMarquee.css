@@ -100,12 +100,13 @@
 
 /* ---- Label (subtitle beneath name) ---- */
 .iw-marquee__label {
-  font-size: calc(var(--mq-font-size) * 0.72);
+  font-size: calc(var(--mq-font-size) * 0.63);
   font-weight: 400;
   color: #000000;
   opacity: 1;
   line-height: 1.35;
   max-width: 260px;
+  text-align: center;
 }
 
 /* ---- Hover overlay ---- */

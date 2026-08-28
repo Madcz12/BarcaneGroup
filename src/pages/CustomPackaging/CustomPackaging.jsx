@@ -82,7 +82,7 @@ export default function CustomPackaging() {
             {/* Back link directly on top of image background */}
             <div className="service-detail-hero-nav">
               <Link to="/#empaques-personalizados" className="service-detail-hero-back-link">
-                ← Volver a Servicios
+                ← Volver a Lineas Comerciales
               </Link>
             </div>
 

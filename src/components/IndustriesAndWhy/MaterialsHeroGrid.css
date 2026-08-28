@@ -108,11 +108,11 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 6px 12px;
+  padding: 4px 10px;
   border-radius: var(--radius-md);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   margin-top: auto;
-  min-height: 62px;
+  min-height: 44px;
   transition: var(--transition-premium);
 }
 
@@ -249,22 +249,22 @@
   }
 
   .iw-material-card__bottom {
-    min-height: 68px;
+    min-height: 48px;
   }
 
   .iw-material-card__icon-wrapper {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
   }
 
   .iw-material-card__icon svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 
   .iw-material-card__icon-img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 
   .iw-material-card__name {
@@ -284,23 +284,23 @@
   }
 
   .iw-material-card__bottom {
-    padding: 7px 14px;
-    min-height: 70px;
+    padding: 5px 12px;
+    min-height: 50px;
   }
 
   .iw-material-card__icon-wrapper {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
   }
 
   .iw-material-card__icon svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .iw-material-card__icon-img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
   .iw-material-card__name {
@@ -320,13 +320,13 @@
   }
 
   .iw-material-card__bottom {
-    padding: 8px 14px;
-    min-height: 74px;
+    padding: 6px 12px;
+    min-height: 52px;
   }
 
   .iw-material-card__icon-wrapper {
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
   }
 
   .iw-material-card__icon svg {

@@ -53,6 +53,7 @@ export default function Services() {
       description:
         "Banner, viniles rollscreen, backing, pavonados, plumas, totem, ruleta.",
       image: "/images/items/bggroup_new_brand_equipment_notext.webp",
+      route: "/servicios/publicidad-y-equipamiento",
     },
   ];
 

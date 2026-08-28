@@ -1,75 +1,74 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
-import './MerchTextile.css';
+import './AdEquipment.css';
 
-export default function MerchTextile() {
+export default function AdEquipment() {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
   const buildWhatsAppLink = (categoryName) => {
-    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Merchandising y textil).`;
+    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Publicidad y equipamiento).`;
     return `https://wa.me/51943703905?text=${encodeURIComponent(message)}`;
   };
 
   const productCategories = [
     {
-      id: 'textil-corporativo',
-      title: 'Textil corporativo',
-      image: '/images/catalog/MerchTextile/bcgroup_textile_corporate.webp',
+      id: 'expositores-banners',
+      title: 'Publicidad de gran formato',
+      image: null,
       items: [
-        'Polos',
-        'Camisas',
-        'Hoodies',
-        'Chaquetas',
-        'Uniformes',
+        'Banners',
+        'Gigantografías',
+        'Lonas',
+        'Viniles',
       ],
     },
     {
-      id: 'accesorios-textiles',
-      title: 'Accesorios textiles',
-      image: '/images/catalog/MerchTextile/bcgroup_corpo_adds_bags.webp',
+      id: 'viniles-pavonados',
+      title: 'Exhibición',
+      image: null,
       items: [
-        'Gorras',
-        'Tote bags',
-        'Bolsos',
-        'Mochilas',
+        'Roll Screens',
+        'Displays',
+        'Backings',
+        'Photocalls',
       ],
     },
     {
-      id: 'merchandising',
-      title: 'Merchandising',
-      image: '/images/catalog/MerchTextile/bcgroup_merch_bottles.webp',
+      id: 'banderas-totems',
+      title: 'Punto de venta',
+      image: null,
       items: [
-        'Termos',
-        'Botellas',
-        'Tazas',
-        'Lanyards',
-        'Artículos promocionales',
+        'Material POP',
+        'Exhibidores',
+        'Displays de producto',
+        'Elementos promocionales',
       ],
     },
     {
-      id: 'campanas-eventos',
-      title: 'Campañas y eventos',
-      image: '/images/catalog/MerchTextile/bcgroup_events_campaigns.webp',
+      id: 'estructuras-activaciones',
+      title: 'Eventos y espacios',
+      image: null,
       items: [
-        'Kits corporativos',
-        'Welcome packs',
-        'Regalos empresariales',
-        'Productos para activaciones',
+        'Stands',
+        'Módulos publicitarios',
+        'Counters',
+        'Señalética',
+        'Elementos para ferias',
       ],
     },
   ];
 
   return (
-    <div className="service-detail-page merch-textile-page animate-fade-in">
+    <div className="service-detail-page ad-equipment-page animate-fade-in">
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
-      <header className="service-detail-hero-fullbleed merch-textile-hero">
+      <header className="service-detail-hero-fullbleed ad-equipment-hero">
         <img
-          src="/images/catalog/MerchTextile/bcgroup_merch_cloth_widehead.webp"
-          alt="Merchandising & textil BarcaneGroup"
+          src="/images/items/bggroup_new_brand_equipment_notext.webp"
+          alt="Publicidad y equipamiento BarcaneGroup"
           className="service-detail-hero-img"
         />
 
@@ -82,7 +81,7 @@ export default function MerchTextile() {
             {/* Back link directly on top of image background */}
             <div className="service-detail-hero-nav">
               <Link
-                to="/#merchandising"
+                to="/#material-publicitario"
                 className="service-detail-hero-back-link"
               >
                 ← Volver a Lineas Comerciales
@@ -92,17 +91,17 @@ export default function MerchTextile() {
             {/* Text Card aligned to the left zone */}
             <div className="service-detail-hero-card">
               <h1 className="service-detail-hero-title">
-                Merchandising & textil
+                Publicidad y equipamiento
               </h1>
               <p
-                className="service-detail-hero-subtitle merch-textile-subtitle"
+                className="service-detail-hero-subtitle ad-equipment-subtitle"
                 style={{ color: "#cd9fff" }}
               >
-                Productos que mantienen tu marca siempre presente.
+                Hazte visible donde realmente importa.
               </p>
               <p className="service-detail-hero-desc">
-                Polos, gorras, tote bags, mugs, lanyards, termos y kits
-                corporativos para tu marca.
+                Banner, viniles rollscreen, backing, pavonados, plumas, totem,
+                ruleta.
               </p>
             </div>
           </div>

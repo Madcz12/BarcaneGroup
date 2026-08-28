@@ -85,8 +85,11 @@ export default function CorporatePrints() {
           <div className="service-detail-hero-container">
             {/* Back link directly on top of image background */}
             <div className="service-detail-hero-nav">
-              <Link to="/#impresos-corporativos" className="service-detail-hero-back-link">
-                ← Volver a Servicios
+              <Link
+                to="/#impresos-corporativos"
+                className="service-detail-hero-back-link"
+              >
+                ← Volver a Lineas Comerciales
               </Link>
             </div>
 
@@ -95,11 +98,15 @@ export default function CorporatePrints() {
               <h1 className="service-detail-hero-title">
                 Impresos corporativos
               </h1>
-              <p className="service-detail-hero-subtitle corporate-prints-subtitle" style={{ color: '#cd9fff' }}>
+              <p
+                className="service-detail-hero-subtitle corporate-prints-subtitle"
+                style={{ color: "#cd9fff" }}
+              >
                 Tu identidad presente en cada marca.
               </p>
               <p className="service-detail-hero-desc">
-                Materiales impresos que comunican, presentan y fortalecen la identidad de tu marca.
+                Materiales impresos que comunican, presentan y fortalecen la
+                identidad de tu marca.
               </p>
             </div>
           </div>
@@ -119,7 +126,11 @@ export default function CorporatePrints() {
                       src={category.image}
                       alt={category.title}
                       className="corporate-card-img"
-                      style={category.objectPosition ? { objectPosition: category.objectPosition } : undefined}
+                      style={
+                        category.objectPosition
+                          ? { objectPosition: category.objectPosition }
+                          : undefined
+                      }
                     />
                   ) : (
                     <div className="corporate-placeholder-inner">
@@ -132,11 +143,20 @@ export default function CorporatePrints() {
                         strokeWidth="1.5"
                         className="corporate-placeholder-icon"
                       >
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <rect
+                          x="3"
+                          y="3"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                        />
                         <circle cx="8.5" cy="8.5" r="1.5" />
                         <polyline points="21 15 16 10 5 21" />
                       </svg>
-                      <span className="corporate-placeholder-text">Imagen próximamente</span>
+                      <span className="corporate-placeholder-text">
+                        Imagen próximamente
+                      </span>
                     </div>
                   )}
                 </div>
@@ -145,7 +165,7 @@ export default function CorporatePrints() {
                 <div className="corporate-card-info">
                   <h2 className="corporate-card-title">{category.title}</h2>
                   <p className="corporate-card-items">
-                    {category.items.join(' · ')}
+                    {category.items.join(" · ")}
                   </p>
                   <div className="corporate-card-footer">
                     <a

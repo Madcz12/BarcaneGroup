@@ -97,7 +97,7 @@ export default function Navbar() {
     },
     {
       id: "material-publicitario",
-      route: null,
+      route: "/servicios/publicidad-y-equipamiento",
       title: "Publicidad y equipamiento",
       desc: "Banner, viniles rollscreen, backing, pavonados, plumas, totem, ruleta.",
       icon: (
