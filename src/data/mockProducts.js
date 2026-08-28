@@ -1,94 +1,116 @@
 // Mock product catalog for BarcaneGroup packaging & corporate merch company.
-// Aligned with official product lines from catalog structure reference.
+// Configured with the 10 catalog product items.
 
 const mockProducts = [
   {
-    id: 'packaging-cajas-personalizadas',
-    name: 'Packaging & cajas personalizadas',
+    id: 'bolsas-boutique-kraft',
+    name: 'Bolsas Boutique & Kraft Personalizadas',
     category: 'packaging',
     tag: 'PACKAGING',
     description:
-      'Cajas, estuches y desarrollos especiales diseñados para proteger, presentar y diferenciar tus productos.',
-    feature: 'A medida de tu proyecto',
+      'Bolsas de papel boutique y kraft de alta resistencia, diseñadas a medida para potenciar la presentación de tu marca.',
+    feature: 'Acabados finos y asas a elección',
     price: 'Consultar cotización',
-    image: '/images/catalog/bgroup_packages.webp',
+    image: '/images/catalog/bcgroup_boutique_bags.jpg',
   },
   {
-    id: 'papeles-especiales',
-    name: 'Papeles especiales',
-    category: 'papeles',
-    tag: 'PAPELES',
-    description:
-      'Papel antigrasa, papeles personalizados, cartulinas y otras alternativas para aplicaciones comerciales y gastronómicas.',
-    feature: 'Materiales y formatos personalizados',
-    price: 'Consultar cotización',
-    image: '/images/items/bggroup_special_papers.webp',
-  },
-  {
-    id: 'etiquetas-adhesivos',
-    name: 'Etiquetas & adhesivos',
-    category: 'etiquetas',
-    tag: 'ETIQUETAS',
-    description:
-      'Etiquetas autoadhesivas, stickers, viniles y soluciones personalizadas para productos, empaques y comunicación de marca.',
-    feature: 'Diferentes materiales y acabados',
-    price: 'Consultar cotización',
-    image: '/images/catalog/bgroup_catstickers.webp',
-  },
-  {
-    id: 'bolsas-corporativas',
-    name: 'Bolsas corporativas',
-    category: 'packaging',
-    tag: 'PACKAGING',
-    description:
-      'Bolsas de papel, kraft y otros materiales personalizadas con la identidad de tu empresa.',
-    feature: 'Diseños, tamaños y materiales a medida',
-    price: 'Consultar cotización',
-    image: '/images/catalog/bgroup_corpbags.webp',
-  },
-  {
-    id: 'roll-screens-banners-gigantografias',
-    name: 'Roll screens, banners & gigantografías',
-    category: 'gran-formato',
-    tag: 'GRAN FORMATO',
-    description:
-      'Soluciones de gran formato para eventos, puntos de venta, oficinas, activaciones y espacios comerciales.',
-    feature: 'Alto impacto visual',
-    price: 'Consultar cotización',
-    image: null,
-  },
-  {
-    id: 'editorial-papeleria-corporativa',
-    name: 'Editorial & papelería corporativa',
-    category: 'editorial',
-    tag: 'EDITORIAL',
-    description:
-      'Cuadernos, agendas, calendarios, catálogos, brochures y piezas impresas desarrolladas para tu empresa.',
-    feature: 'Producción personalizada',
-    price: 'Consultar cotización',
-    image: '/images/catalog/bgroup_editorial_papers.webp',
-  },
-  {
-    id: 'merchandising-corporativo',
-    name: 'Merchandising corporativo',
+    id: 'kits-corporativos',
+    name: 'Kits Corporativos & Bienvenida',
     category: 'merchandising',
     tag: 'MERCHANDISING',
     description:
-      'Productos personalizados para campañas, eventos, equipos de trabajo, clientes y acciones promocionales.',
-    feature: 'Fortalece la presencia de tu marca',
+      'Sets personalizados de branding corporativo ideales para onboarding de colaboradores, regalos institucionales y eventos VIP.',
+    feature: 'Combinaciones y empaques personalizados',
     price: 'Consultar cotización',
-    image: '/images/catalog/bgroup_corpmerch.webp',
+    image: '/images/catalog/bcgroup_corpokit.jpg',
   },
   {
-    id: 'acabados-especiales',
-    name: 'Acabados especiales',
-    category: 'acabados',
-    tag: 'ACABADOS',
+    id: 'packaging-cajas-lujo',
+    name: 'Packaging & Cajas de Lujo',
+    category: 'packaging',
+    tag: 'PACKAGING',
     description:
-      'Laminados mate y brillante, stamping, plastificados, troquelados y acabados que aportan diferenciación a cada pieza.',
-    feature: 'El detalle que transforma el resultado',
+      'Cajas rígidas y empaques premium con acabados especiales, diseñados para destacar productos exclusivos.',
+    feature: 'Estructuras rígidas y acabados premium',
     price: 'Consultar cotización',
-    image: '/images/items/bggroup_prints_new.webp',
+    image: '/images/catalog/bcgroup_glam_packaging.jpg',
+  },
+  {
+    id: 'hangtags-etiquetas-colgantes',
+    name: 'Hangtags & Etiquetas Colgantes',
+    category: 'etiquetas',
+    tag: 'ETIQUETAS',
+    description:
+      'Etiquetas colgantes en cartulinas finas para ropa, accesorios y productos retail con perforación y cordones.',
+    feature: 'Variedad de cartulinas y formas troqueladas',
+    price: 'Consultar cotización',
+    image: '/images/catalog/bcgroup_hangtags.jpg',
+  },
+  {
+    id: 'plegables-folletos-especiales',
+    name: 'Plegables & Folletos Especiales',
+    category: 'editorial',
+    tag: 'EDITORIAL',
+    description:
+      'Impresos desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
+    feature: 'Plegados y troquelados a medida',
+    price: 'Consultar cotización',
+    image: '/images/catalog/bcgroup_individual_fold.jpg',
+  },
+  {
+    id: 'carpetas-corporativas',
+    name: 'Carpetas Corporativas Personalizadas',
+    category: 'editorial',
+    tag: 'EDITORIAL',
+    description:
+      'Carpetas de presentación con solapa para documentos, propuestas comerciales y entregas institucionales.',
+    feature: 'Con solapa e hendidura para tarjeta',
+    price: 'Consultar cotización',
+    image: '/images/catalog/bcgroup_perso_folders.jpg',
+  },
+  {
+    id: 'photochecks-lanyards',
+    name: 'Photochecks & Lanyards Corporativos',
+    category: 'merchandising',
+    tag: 'MERCHANDISING',
+    description:
+      'Credenciales en PVC y cintas estampadas con el logo de tu empresa para control de acceso e identificación.',
+    feature: 'Impresión en alta definición y accesorios duraderos',
+    price: 'Consultar cotización',
+    image: '/images/catalog/bcgroup_photocheck_lanyards.jpg',
+  },
+  {
+    id: 'stickers-relieve-acabados',
+    name: 'Stickers con Relieve & Acabados Especiales',
+    category: 'etiquetas',
+    tag: 'ETIQUETAS',
+    description:
+      'Etiquetas adhesivas con efecto 3D, lacado UV selectivo y stamping metalizado para productos de alta gama.',
+    feature: 'Texturas con relieve y brillo metálico',
+    price: 'Consultar cotización',
+    image: '/images/catalog/bcgroup_stickers_relieves.jpg',
+  },
+  {
+    id: 'stickers-etiquetas-autoadhesivas',
+    name: 'Stickers & Etiquetas Autoadhesivas',
+    category: 'etiquetas',
+    tag: 'ETIQUETAS',
+    description:
+      'Stickers troquelados en vinil o papel autoadhesivo para envases, cierres de empaques y branding publicitario.',
+    feature: 'Corte preciso troquelado o en pliegos',
+    price: 'Consultar cotización',
+    image: '/images/catalog/bcgroup_stickers_two.jpg',
+  },
+  {
+    id: 'tripticos-blocks-flyers',
+    name: 'Trípticos, Blocks & Flyers',
+    category: 'editorial',
+    tag: 'EDITORIAL',
+    description:
+      'Material informativo y promocional impreso en alta calidad para campañas comerciales, ferias y atención al cliente.',
+    feature: 'Múltiples gramajes y acabados de superficie',
+    price: 'Consultar cotización',
+    image: '/images/catalog/bcgroup_tripticblock_flyers.jpg',
   },
 ];
 
@@ -98,10 +120,12 @@ function getProductById(id) {
   if (found) return found;
 
   const idMap = {
-    'impresos-corporativos': 'editorial-papeleria-corporativa',
-    'empaques-personalizados': 'packaging-cajas-personalizadas',
-    'merchandising': 'merchandising-corporativo',
-    'material-publicitario': 'etiquetas-adhesivos',
+    'impresos-corporativos': 'carpetas-corporativas',
+    'empaques-personalizados': 'packaging-cajas-lujo',
+    'merchandising': 'kits-corporativos',
+    'material-publicitario': 'stickers-etiquetas-autoadhesivas',
+    'papeles-especiales': 'tripticos-blocks-flyers',
+    'acabados-especiales': 'stickers-relieve-acabados',
   };
   if (idMap[id]) {
     return mockProducts.find((product) => product.id === idMap[id]);
