@@ -115,7 +115,8 @@ export default function Services() {
       <div className="container services-container">
         <div className="services-group">
           <div className="services-header">
-            <h2 className="services-title">¿Qué ofrecemos?</h2>
+            <h2 className="services-title">Líneas Comerciales</h2>
+            <p className="services-subtitle">Una idea. Muchas formas de hacerla visible.</p>
             <div className="title-underline"></div>
           </div>
           <div className="services-grid services-grid-4">

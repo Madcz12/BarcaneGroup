@@ -17,7 +17,7 @@ export const industries = [
     name: 'Alimentos, hoteles y turismo',
     iconKey: 'hospitality-food-tourism',
     label: 'RESTAURANTES, POLLERÍAS, CAFETERÍAS, FAST FOOD, HOTELES, RESORT, HOSPEDAJES Y NEGOCIOS DEL SECTOR TURISMO',
-    hoverCopy: 'Menúes por cartas, uniformes, bolsas, papelería, señalética, merchandising y material publicitario',
+    hoverCopy: 'Empaques, cartas, uniformes, bolsas, papelería, señalética, merchandising y material publicitario',
   },
   {
     name: 'Educación',
