@@ -87,14 +87,12 @@ export default function AdEquipment() {
                 className="service-detail-hero-subtitle ad-equipment-subtitle"
                 style={{ color: "#cd9fff" }}
               >
-                Hazte visible donde realmente importa.
+                Hazte visible donde realmente importa, destaca tu marca en
+                cualquier espacio.
               </p>
               <p className="service-detail-hero-desc">
-                Banner, gigantografías, lonas, viniles, roll screens, displays, backings,
-                <br />
-                Photocalls, Material POP, Exhibiciones, Displays de producto, Elementos promocionales
-                <br />
-                Stands, módulos publicitarios, counters, señalética, elementos para ferias
+                Elementos gráficos visuales y estructuras para puntos de venta,
+                eventos, exhibiciones y espacios comerciales.
               </p>
             </div>
           </div>

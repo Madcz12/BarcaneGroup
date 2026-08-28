@@ -46,7 +46,7 @@ export default function CustomPackaging() {
       items: [
         'Etiquetas adhesivas',
         'Stickers',
-        'Etiquetas en rollo',
+        'Etiquetas troqueladas',
         'Etiquetas especiales',
       ],
     },
@@ -81,7 +81,10 @@ export default function CustomPackaging() {
           <div className="service-detail-hero-container">
             {/* Back link directly on top of image background */}
             <div className="service-detail-hero-nav">
-              <Link to="/#empaques-personalizados" className="service-detail-hero-back-link">
+              <Link
+                to="/#empaques-personalizados"
+                className="service-detail-hero-back-link"
+              >
                 ← Volver a Lineas Comerciales
               </Link>
             </div>
@@ -91,11 +94,16 @@ export default function CustomPackaging() {
               <h1 className="service-detail-hero-title">
                 Empaques y etiquetas
               </h1>
-              <p className="service-detail-hero-subtitle custom-packaging-subtitle" style={{ color: '#cd9fff' }}>
+              <p
+                className="service-detail-hero-subtitle custom-packaging-subtitle"
+                style={{ color: "#cd9fff" }}
+              >
                 Packaging que presenta, protege y diferencia tu marca.
               </p>
               <p className="service-detail-hero-desc">
-                Cajas plegadizas · Cajas corrugadas · Estuches · Bolsas · Packaging personalizado
+                Desde cajas y envoltorios hasta etiquetas y desarrollos
+                especiales que convierten cada entrega en parte de la
+                experiencia del cliente.
               </p>
             </div>
           </div>

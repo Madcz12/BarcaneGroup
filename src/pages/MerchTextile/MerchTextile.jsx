@@ -101,8 +101,8 @@ export default function MerchTextile() {
                 Productos que mantienen tu marca siempre presente.
               </p>
               <p className="service-detail-hero-desc">
-                Polos, gorras, tote bags, mugs, lanyards, termos y kits
-                corporativos para tu marca.
+                Productos personalizados y soluciones textiles que llevan tu
+                marca más allá de lo convencional.
               </p>
             </div>
           </div>
