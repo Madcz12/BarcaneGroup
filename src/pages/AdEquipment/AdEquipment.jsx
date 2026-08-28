@@ -18,7 +18,7 @@ export default function AdEquipment() {
     {
       id: 'expositores-banners',
       title: 'Publicidad de gran formato',
-      image: null,
+      image: '/images/catalog/Equipment/bccgroup_gigantic_format.webp',
       items: [
         'Banners',
         'Gigantografías',
@@ -51,7 +51,7 @@ export default function AdEquipment() {
     {
       id: 'estructuras-activaciones',
       title: 'Eventos y espacios',
-      image: null,
+      image: '/images/catalog/Equipment/bcgroup_evt_spaces.webp',
       items: [
         'Stands',
         'Módulos publicitarios',
@@ -67,7 +67,7 @@ export default function AdEquipment() {
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner */}
       <header className="service-detail-hero-fullbleed ad-equipment-hero">
         <img
-          src="/images/items/bggroup_new_brand_equipment_notext.webp"
+          src="/images/catalog/Equipment/bcgroup_backinggirl_equipment.webp"
           alt="Publicidad y equipamiento BarcaneGroup"
           className="service-detail-hero-img"
         />

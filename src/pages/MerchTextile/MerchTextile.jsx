@@ -41,7 +41,7 @@ export default function MerchTextile() {
     {
       id: 'merchandising',
       title: 'Merchandising',
-      image: '/images/catalog/MerchTextile/bcgroup_merch_bottles.webp',
+      image: '/images/catalog/MerchTextile/bcgroup_new_lens_bottles_merch.webp',
       items: [
         'Termos',
         'Botellas',
@@ -53,7 +53,7 @@ export default function MerchTextile() {
     {
       id: 'campanas-eventos',
       title: 'Campañas y eventos',
-      image: '/images/catalog/MerchTextile/bcgroup_events_campaigns.webp',
+      image: '/images/catalog/MerchTextile/bcgroup_merch_bottles.webp',
       items: [
         'Kits corporativos',
         'Welcome packs',
