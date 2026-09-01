@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import mockProducts from '../../data/mockProducts';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
@@ -16,6 +16,248 @@ const CATEGORIES = [
   { id: 'acabados', label: 'Acabados' },
 ];
 
+function CatalogCard({ product }) {
+  const items = useMemo(() => {
+    if (product.items && product.items.length > 0) {
+      return product.items;
+    }
+    return [
+      {
+        id: product.id,
+        name: product.name,
+        image: product.image,
+        tag: product.tag,
+        feature: product.feature,
+        description: product.description,
+      },
+    ];
+  }, [product]);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const touchStartX = useRef(null);
+  const touchDeltaX = useRef(0);
+
+  const activeItem = items[activeIndex] || items[0];
+
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setActiveIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+  };
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setActiveIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleSelectDot = (e, index) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setActiveIndex(index);
+  };
+
+  const handlePointerDown = (e) => {
+    touchStartX.current = e.clientX || (e.touches && e.touches[0]?.clientX) || 0;
+    touchDeltaX.current = 0;
+    setIsDragging(false);
+  };
+
+  const handlePointerMove = (e) => {
+    if (touchStartX.current === null) return;
+    const currentX = e.clientX || (e.touches && e.touches[0]?.clientX) || 0;
+    const diff = currentX - touchStartX.current;
+    touchDeltaX.current = diff;
+    if (Math.abs(diff) > 10) {
+      setIsDragging(true);
+    }
+  };
+
+  const handlePointerUp = (e) => {
+    if (touchStartX.current !== null && Math.abs(touchDeltaX.current) > 35) {
+      if (touchDeltaX.current < 0) {
+        handleNext(e);
+      } else {
+        handlePrev(e);
+      }
+    }
+    touchStartX.current = null;
+    touchDeltaX.current = 0;
+    setTimeout(() => setIsDragging(false), 50);
+  };
+
+  const handleCardClick = (e) => {
+    if (isDragging) {
+      e.preventDefault();
+    }
+  };
+
+  return (
+    <Link
+      to={`/productos/${activeItem.id}`}
+      className="catalog-card"
+      onClick={handleCardClick}
+    >
+      {/* Image Carousel Wrap */}
+      <div
+        className="catalog-card-image-wrap"
+        onMouseDown={handlePointerDown}
+        onMouseMove={handlePointerMove}
+        onMouseUp={handlePointerUp}
+        onMouseLeave={handlePointerUp}
+        onTouchStart={handlePointerDown}
+        onTouchMove={handlePointerMove}
+        onTouchEnd={handlePointerUp}
+      >
+        <div
+          className="catalog-card-carousel-track"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {items.map((item, idx) => (
+            <div className="catalog-card-slide" key={item.id || idx}>
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="catalog-card-image"
+                  loading="lazy"
+                  draggable="false"
+                />
+              ) : (
+                <div className="catalog-card-placeholder">
+                  <div className="catalog-card-placeholder-icon">
+                    <svg
+                      width="38"
+                      height="38"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="3" ry="3" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
+                  </div>
+                  <span className="catalog-card-placeholder-text">
+                    Imagen próximamente
+                  </span>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Carousel Navigation Arrows */}
+        {items.length > 1 && (
+          <>
+            <button
+              type="button"
+              className="catalog-card-arrow catalog-card-arrow-left"
+              onClick={handlePrev}
+              aria-label="Anterior producto"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              className="catalog-card-arrow catalog-card-arrow-right"
+              onClick={handleNext}
+              aria-label="Siguiente producto"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+
+            {/* Carousel Dots */}
+            <div className="catalog-card-dots">
+              {items.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  className={`catalog-card-dot ${idx === activeIndex ? 'active' : ''}`}
+                  onClick={(e) => handleSelectDot(e, idx)}
+                  aria-label={`Ir al producto ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Card Content Body */}
+      <div className="catalog-card-body">
+        <span className="catalog-card-tag">{activeItem.tag}</span>
+        <h3 className="catalog-card-name">{activeItem.name}</h3>
+        <p className="catalog-card-desc">{activeItem.description}</p>
+
+        {/* Feature item */}
+        <div className="catalog-card-feature">
+          <span className="catalog-card-check-icon">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </span>
+          <span>{activeItem.feature}</span>
+        </div>
+
+        {/* Solicitar cotizacion CTA */}
+        <div className="catalog-card-cta">
+          <span>Solicitar cotización</span>
+          <svg
+            className="catalog-card-cta-arrow"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
 export default function Catalog() {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get('categoria');
@@ -29,7 +271,6 @@ export default function Catalog() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
 
-    // Initial loader timeout for smooth user feedback on entry
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 450);
@@ -107,97 +348,7 @@ export default function Catalog() {
           {/* Product cards grid */}
           <div className="catalog-grid animate-fade-in">
             {filteredProducts.map((product) => (
-              <Link
-                key={product.id}
-                to={`/productos/${product.id}`}
-                className="catalog-card"
-              >
-                {/* Image Placeholder Area */}
-                <div className="catalog-card-image-wrap">
-                  {product.image ? (
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="catalog-card-image"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="catalog-card-placeholder">
-                      <div className="catalog-card-placeholder-icon">
-                        <svg
-                          width="38"
-                          height="38"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
-                            rx="3"
-                            ry="3"
-                          />
-                          <circle cx="8.5" cy="8.5" r="1.5" />
-                          <polyline points="21 15 16 10 5 21" />
-                        </svg>
-                      </div>
-                      <span className="catalog-card-placeholder-text">
-                        Imagen próximamente
-                      </span>
-                    </div>
-                  )}
-                </div>
-
-                {/* Card Content Body */}
-                <div className="catalog-card-body">
-                  <span className="catalog-card-tag">{product.tag}</span>
-                  <h3 className="catalog-card-name">{product.name}</h3>
-                  <p className="catalog-card-desc">{product.description}</p>
-
-                  {/* Pink check feature item */}
-                  <div className="catalog-card-feature">
-                    <span className="catalog-card-check-icon">
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    </span>
-                    <span>{product.feature}</span>
-                  </div>
-
-                  {/* Solicitar cotizacion CTA */}
-                  <div className="catalog-card-cta">
-                    <span>Solicitar cotización</span>
-                    <svg
-                      className="catalog-card-cta-arrow"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
+              <CatalogCard key={product.id} product={product} />
             ))}
           </div>
 
