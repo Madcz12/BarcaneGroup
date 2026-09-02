@@ -20,19 +20,34 @@ export default function IndustriesAndWhy() {
   return (
     <LazyMotion features={domAnimation} strict>
       <div id="industrias-y-proceso" className="iw-wrapper">
-        {/* ---- Block 1: Industries marquee ---- */}
+        {/* ---- Block 1: How we work (process) ---- */}
         <section className="iw-section section-padding">
           <div className="container">
             <div className="iw-section__block">
-              <h2 className="block-title">
-                Producción gráfica para multiples industrias
-              </h2>
-              <IndustriesMarquee reducedMotion={prefersReducedMotion} />
+              <h2 className="block-title">¿Cómo hacemos realidad tu proyecto?</h2>
+              <br />
+              <br />
+              <ProcessTimeline reducedMotion={prefersReducedMotion} />
             </div>
           </div>
         </section>
 
-        {/* ---- Block 2: Why personalize (benefits) — Dark Navy ---- */}
+        {/* ---- Block 2: Materials & finishes ---- */}
+        <section className="iw-section iw-section--materials section-padding">
+          <div className="container">
+            <div className="iw-section__block">
+              <h2 className="block-title">
+                Calidad que se siente en cada detalle
+              </h2>
+              <p className="block-subtitle">
+                Trabajamos con diferentes materiales, formatos y acabados para desarrollar soluciones adaptadas a las necesidades de cada proyecto.
+              </p>
+              <MaterialsHeroGrid reducedMotion={prefersReducedMotion} />
+            </div>
+          </div>
+        </section>
+
+        {/* ---- Block 3: Why personalize (benefits) — Dark Navy ---- */}
         <section className="iw-section iw-section--why-dark section-padding">
           <div className="container">
             <div className="iw-section__block">
@@ -49,26 +64,14 @@ export default function IndustriesAndWhy() {
           </div>
         </section>
 
-        {/* ---- Block 3 & 4: Materials & Process ---- */}
+        {/* ---- Block 4: Industries marquee ---- */}
         <section className="iw-section section-padding">
           <div className="container">
-            {/* ---- Block 3: Materials & finishes ---- */}
             <div className="iw-section__block">
               <h2 className="block-title">
-                Calidad que se siente en cada detalle
+                Producción gráfica para multiples industrias
               </h2>
-              <p className="block-subtitle">
-                Trabajamos con diferentes materiales, formatos y acabados para desarrollar soluciones adaptadas a las necesidades de cada proyecto.
-              </p>
-              <MaterialsHeroGrid reducedMotion={prefersReducedMotion} />
-            </div>
-
-            {/* ---- Block 4: How we work (process) ---- */}
-            <div className="iw-section__block" style={{ marginTop: '50px' }}>
-              <h2 className="block-title">¿Cómo hacemos realidad tu proyecto?</h2>
-              <br />
-              <br />
-              <ProcessTimeline reducedMotion={prefersReducedMotion} />
+              <IndustriesMarquee reducedMotion={prefersReducedMotion} />
             </div>
           </div>
         </section>

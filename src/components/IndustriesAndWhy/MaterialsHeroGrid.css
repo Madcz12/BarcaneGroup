@@ -18,6 +18,12 @@
 }
 
 /* ---- Shared Card Styles ---- */
+.iw-material-card-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .iw-material-card {
   position: relative;
   overflow: hidden;
@@ -25,11 +31,13 @@
   border: none;
   border-radius: 0;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 12px;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
   transition: var(--transition-premium);
   z-index: 1;
   scroll-margin-top: 110px;
@@ -37,7 +45,8 @@
 
 .iw-material-card:hover {
   border-color: transparent;
-  box-shadow: 0 16px 36px rgba(233, 30, 99, 0.14);
+  box-shadow: 0 16px 36px rgba(233, 30, 99, 0.18);
+  transform: translateY(-2px);
 }
 
 /* ---- Image Background ---- */
@@ -205,10 +214,6 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 16px 20px;
-  background-color: rgba(255, 116, 0, 0.04);
-  border: 1px dashed rgba(255, 116, 0, 0.2);
-  border-radius: var(--radius-md);
   margin-top: 8px;
 }
 
@@ -243,8 +248,11 @@
     gap: 16px;
   }
 
-  .iw-material-card {
+  .iw-material-card-wrapper {
     grid-column: span 3;
+  }
+
+  .iw-material-card {
     padding: 16px;
   }
 

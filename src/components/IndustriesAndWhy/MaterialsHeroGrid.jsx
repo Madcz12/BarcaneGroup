@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import { materials } from '../../data/industriesAndWhy';
 import iconMap from './icons';
@@ -37,40 +38,46 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
           <m.div
             key={idx}
             id={mat.id}
-            className="iw-material-card"
+            className="iw-material-card-wrapper"
             viewport={{ once: true, amount: 0.1 }}
             variants={cardVariants}
             {...animateProps}
           >
-            {/* Background Image */}
-            <div className="iw-material-card__image-wrapper">
-              <img
-                src={mat.image}
-                alt={mat.name}
-                className="iw-material-card__image"
-                loading="lazy"
-              />
-            </div>
+            <Link
+              to="/materiales"
+              className="iw-material-card"
+              aria-label={`Ver información y asesoría sobre ${mat.name}`}
+            >
+              {/* Background Image */}
+              <div className="iw-material-card__image-wrapper">
+                <img
+                  src={mat.image}
+                  alt={mat.name}
+                  className="iw-material-card__image"
+                  loading="lazy"
+                />
+              </div>
 
-            {/* Badge (if applicable) */}
-            {mat.badge && (
-              <span className="iw-material-card__badge">{mat.badge}</span>
-            )}
+              {/* Badge (if applicable) */}
+              {mat.badge && (
+                <span className="iw-material-card__badge">{mat.badge}</span>
+              )}
 
-            {/* Bottom Content (Icon + Title + Subtitle) */}
-            <div className="iw-material-card__bottom">
-              <div className="iw-material-card__icon-wrapper">
-                <div className="iw-material-card__icon">
-                  {iconMap[mat.iconKey]}
+              {/* Bottom Content (Icon + Title + Subtitle) */}
+              <div className="iw-material-card__bottom">
+                <div className="iw-material-card__icon-wrapper">
+                  <div className="iw-material-card__icon">
+                    {iconMap[mat.iconKey]}
+                  </div>
+                </div>
+                <div className="iw-material-card__text-wrapper">
+                  <h3 className="iw-material-card__name">{mat.name}</h3>
+                  {mat.subtitle && (
+                    <p className="iw-material-card__subtitle">{mat.subtitle}</p>
+                  )}
                 </div>
               </div>
-              <div className="iw-material-card__text-wrapper">
-                <h3 className="iw-material-card__name">{mat.name}</h3>
-                {mat.subtitle && (
-                  <p className="iw-material-card__subtitle">{mat.subtitle}</p>
-                )}
-              </div>
-            </div>
+            </Link>
           </m.div>
         ))}
       </div>

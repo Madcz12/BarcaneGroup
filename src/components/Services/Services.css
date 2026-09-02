@@ -99,16 +99,10 @@
 
 .service-card-header-subtitle {
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 400;
   color: #000000;
   margin: 0;
   line-height: 1.4;
-  text-shadow: 
-    -1px -1px 0 #ffffff,
-     1px -1px 0 #ffffff,
-    -1px  1px 0 #ffffff,
-     1px  1px 0 #ffffff,
-     2px  2px 3px rgba(0, 0, 0, 0.45);
 }
 
 /* ---- Card — clean image with label badge ---- */
@@ -177,6 +171,16 @@
 #empaques-personalizados .service-card-image,
 #merchandising .service-card-image {
   object-position: left center;
+}
+
+/* Zoom-in on "Publicidad y equipamiento": brings banners/stands to the foreground */
+#material-publicitario .service-card-image {
+  transform: scale(1.35);
+  object-position: center 62%;
+}
+
+#material-publicitario:hover .service-card-image {
+  transform: scale(1.41);
 }
 
 

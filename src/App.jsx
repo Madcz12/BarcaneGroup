@@ -8,6 +8,7 @@ import CorporatePrints from './pages/CorporatePrints/CorporatePrints';
 import CustomPackaging from './pages/CustomPackaging/CustomPackaging';
 import MerchTextile from './pages/MerchTextile/MerchTextile';
 import AdEquipment from './pages/AdEquipment/AdEquipment';
+import MaterialsPage from './pages/MaterialsPage/MaterialsPage';
 import './App.css';
 
 // Route configuration: MainLayout wraps every page with Navbar + Footer.
@@ -22,6 +23,9 @@ function App() {
         <Route path="servicios/empaques-personalizados" element={<CustomPackaging />} />
         <Route path="servicios/merchandising-y-textil" element={<MerchTextile />} />
         <Route path="servicios/publicidad-y-equipamiento" element={<AdEquipment />} />
+        <Route path="materiales" element={<MaterialsPage />} />
+        <Route path="materiales-y-acabados" element={<MaterialsPage />} />
+        <Route path="servicios/materiales" element={<MaterialsPage />} />
       </Route>
     </Routes>
   );
