@@ -364,7 +364,9 @@ export default function Catalog() {
           Adaptamos materiales, formatos, cantidades y acabados a las
           necesidades de cada proyecto.
         </p>
-        <div className="catalog-underline" />
+        <p className="catalog-underline">
+          Comunica → Presenta → Conecta → Se hace visible
+        </p>
       </div>
 
       {/* Filter pills bar */}
