@@ -38,7 +38,7 @@ function CatalogCard({ product }) {
   const touchStartX = useRef(null);
   const touchDeltaX = useRef(0);
 
-  const activeItem = items[activeIndex] || items[0];
+  const firstItem = items[0];
 
   const handlePrev = (e) => {
     e.stopPropagation();
@@ -95,7 +95,7 @@ function CatalogCard({ product }) {
 
   return (
     <Link
-      to={`/productos/${activeItem.id}`}
+      to={`/productos/${firstItem.id}`}
       className="catalog-card"
       onClick={handleCardClick}
     >
@@ -212,9 +212,9 @@ function CatalogCard({ product }) {
 
       {/* Card Content Body */}
       <div className="catalog-card-body">
-        <span className="catalog-card-tag">{activeItem.tag}</span>
-        <h3 className="catalog-card-name">{activeItem.name}</h3>
-        <p className="catalog-card-desc">{activeItem.description}</p>
+        <span className="catalog-card-tag">{firstItem.tag}</span>
+        <h3 className="catalog-card-name">{firstItem.name}</h3>
+        <p className="catalog-card-desc">{firstItem.description}</p>
 
         {/* Feature item */}
         <div className="catalog-card-feature">
@@ -232,7 +232,7 @@ function CatalogCard({ product }) {
               <polyline points="20 6 9 17 4 12" />
             </svg>
           </span>
-          <span>{activeItem.feature}</span>
+          <span>{firstItem.feature}</span>
         </div>
 
         {/* Solicitar cotizacion CTA */}
