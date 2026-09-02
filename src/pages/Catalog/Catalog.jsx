@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
 import { Link, useSearchParams } from 'react-router-dom';
 import mockProducts from '../../data/mockProducts';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
@@ -40,7 +39,6 @@ function CatalogCard({ product }) {
   const touchDeltaX = useRef(0);
 
   const [showPopover, setShowPopover] = useState(false);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
   const firstItem = items[0];
   const activeItem = items[activeIndex] || items[0];
@@ -70,14 +68,7 @@ function CatalogCard({ product }) {
   };
 
   const handlePointerMove = (e) => {
-    // Hide popover if cursor is over arrows or dots so they are fully visible & clickable
-    if (e.target && e.target.closest && e.target.closest('.catalog-card-arrow, .catalog-card-dots')) {
-      setShowPopover(false);
-      return;
-    }
-
     if (e.pointerType !== 'touch' && (!e.touches || e.touches.length === 0)) {
-      setCursorPos({ x: e.clientX, y: e.clientY });
       setShowPopover(true);
     }
 
@@ -103,6 +94,12 @@ function CatalogCard({ product }) {
     setTimeout(() => setIsDragging(false), 50);
   };
 
+  const handleMouseEnter = (e) => {
+    if (e.pointerType !== 'touch' && (!e.touches || e.touches.length === 0)) {
+      setShowPopover(true);
+    }
+  };
+
   const handleMouseLeave = (e) => {
     handlePointerUp(e);
     setShowPopover(false);
@@ -114,13 +111,6 @@ function CatalogCard({ product }) {
     }
   };
 
-  const popoverWidth = typeof window !== 'undefined' && window.innerWidth < 1100 ? 350 : 420;
-  const popoverHeight = Math.round(popoverWidth * 0.75);
-  const halfW = popoverWidth / 2;
-  const halfH = popoverHeight / 2;
-  const clampedX = typeof window !== 'undefined' ? Math.max(halfW + 12, Math.min(window.innerWidth - halfW - 12, cursorPos.x)) : cursorPos.x;
-  const clampedY = typeof window !== 'undefined' ? Math.max(halfH + 12, Math.min(window.innerHeight - halfH - 12, cursorPos.y)) : cursorPos.y;
-
   return (
     <Link
       to={`/productos/${firstItem.id}`}
@@ -130,6 +120,7 @@ function CatalogCard({ product }) {
       {/* Image Carousel Wrap */}
       <div
         className="catalog-card-image-wrap"
+        onMouseEnter={handleMouseEnter}
         onMouseDown={handlePointerDown}
         onMouseMove={handlePointerMove}
         onMouseUp={handlePointerUp}
@@ -138,137 +129,132 @@ function CatalogCard({ product }) {
         onTouchMove={handlePointerMove}
         onTouchEnd={handlePointerUp}
       >
-        <div
-          className="catalog-card-carousel-track"
-          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-        >
-          {items.map((item, idx) => (
-            <div className="catalog-card-slide" key={item.id || idx}>
-              {item.image ? (
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="catalog-card-image"
-                  loading="lazy"
-                  draggable="false"
-                />
-              ) : (
-                <div className="catalog-card-placeholder">
-                  <div className="catalog-card-placeholder-icon">
-                    <svg
-                      width="38"
-                      height="38"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect x="3" y="3" width="18" height="18" rx="3" ry="3" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>
+        {/* Viewport for clipping horizontal sliding items */}
+        <div className="catalog-card-track-viewport">
+          <div
+            className="catalog-card-carousel-track"
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          >
+            {items.map((item, idx) => (
+              <div className="catalog-card-slide" key={item.id || idx}>
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="catalog-card-image"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                ) : (
+                  <div className="catalog-card-placeholder">
+                    <div className="catalog-card-placeholder-icon">
+                      <svg
+                        width="38"
+                        height="38"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="3" ry="3" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <polyline points="21 15 16 10 5 21" />
+                      </svg>
+                    </div>
+                    <span className="catalog-card-placeholder-text">
+                      Imagen próximamente
+                    </span>
                   </div>
-                  <span className="catalog-card-placeholder-text">
-                    Imagen próximamente
-                  </span>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Carousel Navigation Arrows */}
+        {/* Carousel Dots on Card Thumbnail */}
         {items.length > 1 && (
-          <>
-            <button
-              type="button"
-              className="catalog-card-arrow catalog-card-arrow-left"
-              onClick={handlePrev}
-              onMouseEnter={(e) => {
-                e.stopPropagation();
-                setShowPopover(false);
-              }}
-              aria-label="Anterior producto"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
+          <div className="catalog-card-dots">
+            {items.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                className={`catalog-card-dot ${idx === activeIndex ? 'active' : ''}`}
+                onClick={(e) => handleSelectDot(e, idx)}
+                aria-label={`Ir al producto ${idx + 1}`}
+              />
+            ))}
+          </div>
+        )}
 
-            <button
-              type="button"
-              className="catalog-card-arrow catalog-card-arrow-right"
-              onClick={handleNext}
-              onMouseEnter={(e) => {
-                e.stopPropagation();
-                setShowPopover(false);
-              }}
-              aria-label="Siguiente producto"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </button>
+        {/* Enlarged Popover Window Fixed at the Center of the Image */}
+        {showPopover && activeItem.image && !isDragging && (
+          <div className="catalog-card-zoom-popover">
+            <img
+              src={activeItem.image}
+              alt={activeItem.name}
+              className="catalog-card-zoom-popover-img"
+            />
 
-            {/* Carousel Dots */}
-            <div
-              className="catalog-card-dots"
-              onMouseEnter={(e) => {
-                e.stopPropagation();
-                setShowPopover(false);
-              }}
-            >
-              {items.map((_, idx) => (
+            {items.length > 1 && (
+              <>
                 <button
-                  key={idx}
                   type="button"
-                  className={`catalog-card-dot ${idx === activeIndex ? 'active' : ''}`}
-                  onClick={(e) => handleSelectDot(e, idx)}
-                  aria-label={`Ir al producto ${idx + 1}`}
-                />
-              ))}
-            </div>
-          </>
+                  className="catalog-card-popover-arrow catalog-card-popover-arrow-left"
+                  onClick={handlePrev}
+                  aria-label="Anterior producto"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+
+                <button
+                  type="button"
+                  className="catalog-card-popover-arrow catalog-card-popover-arrow-right"
+                  onClick={handleNext}
+                  aria-label="Siguiente producto"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+
+                <div className="catalog-card-popover-dots">
+                  {items.map((_, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      className={`catalog-card-popover-dot ${idx === activeIndex ? 'active' : ''}`}
+                      onClick={(e) => handleSelectDot(e, idx)}
+                      aria-label={`Ir al producto ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         )}
       </div>
-
-      {/* External Full Image Preview Popover Window at Cursor Position */}
-      {showPopover && activeItem.image && !isDragging && createPortal(
-        <div
-          className="catalog-card-zoom-popover"
-          style={{
-            left: `${clampedX}px`,
-            top: `${clampedY}px`,
-          }}
-        >
-          <img
-            src={activeItem.image}
-            alt={activeItem.name}
-            className="catalog-card-zoom-popover-img"
-          />
-        </div>,
-        document.body
-      )}
 
       {/* Card Content Body */}
       <div className="catalog-card-body">
