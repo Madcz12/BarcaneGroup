@@ -70,6 +70,12 @@ function CatalogCard({ product }) {
   };
 
   const handlePointerMove = (e) => {
+    // Hide popover if cursor is over arrows or dots so they are fully visible & clickable
+    if (e.target && e.target.closest && e.target.closest('.catalog-card-arrow, .catalog-card-dots')) {
+      setShowPopover(false);
+      return;
+    }
+
     if (e.pointerType !== 'touch' && (!e.touches || e.touches.length === 0)) {
       setCursorPos({ x: e.clientX, y: e.clientY });
       setShowPopover(true);
@@ -180,6 +186,10 @@ function CatalogCard({ product }) {
               type="button"
               className="catalog-card-arrow catalog-card-arrow-left"
               onClick={handlePrev}
+              onMouseEnter={(e) => {
+                e.stopPropagation();
+                setShowPopover(false);
+              }}
               aria-label="Anterior producto"
             >
               <svg
@@ -200,6 +210,10 @@ function CatalogCard({ product }) {
               type="button"
               className="catalog-card-arrow catalog-card-arrow-right"
               onClick={handleNext}
+              onMouseEnter={(e) => {
+                e.stopPropagation();
+                setShowPopover(false);
+              }}
               aria-label="Siguiente producto"
             >
               <svg
@@ -217,7 +231,13 @@ function CatalogCard({ product }) {
             </button>
 
             {/* Carousel Dots */}
-            <div className="catalog-card-dots">
+            <div
+              className="catalog-card-dots"
+              onMouseEnter={(e) => {
+                e.stopPropagation();
+                setShowPopover(false);
+              }}
+            >
               {items.map((_, idx) => (
                 <button
                   key={idx}
