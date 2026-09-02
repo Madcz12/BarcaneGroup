@@ -172,7 +172,7 @@
   flex-direction: column;
   background-color: #0d121f;
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(255, 255, 255, 0.07);
   cursor: pointer;
   text-decoration: none;
@@ -185,24 +185,76 @@
   transform: translateY(-5px);
   border-color: rgba(233, 30, 99, 0.45);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(233, 30, 99, 0.25);
+  z-index: 35;
 }
 
-/* Card Image Area (Larger frame for complete product image visibility) */
+/* Card Image Area */
 .catalog-card-image-wrap {
   width: 100%;
   aspect-ratio: 4 / 3;
   min-height: 220px;
   overflow: hidden;
+  border-radius: 16px 16px 0 0;
   background: linear-gradient(135deg, #121927 0%, #1a2338 100%);
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   touch-action: pan-y;
-  cursor: grab;
+  cursor: pointer;
   user-select: none;
 }
 
 .catalog-card-image-wrap:active {
   cursor: grabbing;
+}
+
+/* Floating Full Image Preview Popover Window at Cursor Position */
+.catalog-card-zoom-popover {
+  position: fixed;
+  width: 420px;
+  height: 315px;
+  border-radius: 16px;
+  border: 2px solid var(--clr-primary-pink);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 28px rgba(233, 30, 99, 0.4);
+  background-color: #0d121f;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  animation: popoverFadeIn 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-card-zoom-popover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1100px) {
+  .catalog-card-zoom-popover {
+    width: 350px;
+    height: 262px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-card-zoom-popover {
+    display: none;
+  }
+}
+
+@keyframes popoverFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /* Carousel Track & Slides */
@@ -231,12 +283,12 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
 
 .catalog-card:hover .catalog-card-image {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 /* Carousel Navigation Arrows */

@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useSearchParams } from 'react-router-dom';
 import mockProducts from '../../data/mockProducts';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
@@ -38,7 +39,11 @@ function CatalogCard({ product }) {
   const touchStartX = useRef(null);
   const touchDeltaX = useRef(0);
 
+  const [showPopover, setShowPopover] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+
   const firstItem = items[0];
+  const activeItem = items[activeIndex] || items[0];
 
   const handlePrev = (e) => {
     e.stopPropagation();
@@ -65,6 +70,11 @@ function CatalogCard({ product }) {
   };
 
   const handlePointerMove = (e) => {
+    if (e.pointerType !== 'touch' && (!e.touches || e.touches.length === 0)) {
+      setCursorPos({ x: e.clientX, y: e.clientY });
+      setShowPopover(true);
+    }
+
     if (touchStartX.current === null) return;
     const currentX = e.clientX || (e.touches && e.touches[0]?.clientX) || 0;
     const diff = currentX - touchStartX.current;
@@ -87,11 +97,23 @@ function CatalogCard({ product }) {
     setTimeout(() => setIsDragging(false), 50);
   };
 
+  const handleMouseLeave = (e) => {
+    handlePointerUp(e);
+    setShowPopover(false);
+  };
+
   const handleCardClick = (e) => {
     if (isDragging) {
       e.preventDefault();
     }
   };
+
+  const popoverWidth = typeof window !== 'undefined' && window.innerWidth < 1100 ? 350 : 420;
+  const popoverHeight = Math.round(popoverWidth * 0.75);
+  const halfW = popoverWidth / 2;
+  const halfH = popoverHeight / 2;
+  const clampedX = typeof window !== 'undefined' ? Math.max(halfW + 12, Math.min(window.innerWidth - halfW - 12, cursorPos.x)) : cursorPos.x;
+  const clampedY = typeof window !== 'undefined' ? Math.max(halfH + 12, Math.min(window.innerHeight - halfH - 12, cursorPos.y)) : cursorPos.y;
 
   return (
     <Link
@@ -105,7 +127,7 @@ function CatalogCard({ product }) {
         onMouseDown={handlePointerDown}
         onMouseMove={handlePointerMove}
         onMouseUp={handlePointerUp}
-        onMouseLeave={handlePointerUp}
+        onMouseLeave={handleMouseLeave}
         onTouchStart={handlePointerDown}
         onTouchMove={handlePointerMove}
         onTouchEnd={handlePointerUp}
@@ -209,6 +231,24 @@ function CatalogCard({ product }) {
           </>
         )}
       </div>
+
+      {/* External Full Image Preview Popover Window at Cursor Position */}
+      {showPopover && activeItem.image && !isDragging && createPortal(
+        <div
+          className="catalog-card-zoom-popover"
+          style={{
+            left: `${clampedX}px`,
+            top: `${clampedY}px`,
+          }}
+        >
+          <img
+            src={activeItem.image}
+            alt={activeItem.name}
+            className="catalog-card-zoom-popover-img"
+          />
+        </div>,
+        document.body
+      )}
 
       {/* Card Content Body */}
       <div className="catalog-card-body">
