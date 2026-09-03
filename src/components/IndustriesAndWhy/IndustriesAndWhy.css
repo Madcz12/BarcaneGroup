@@ -53,16 +53,6 @@
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* ---- Warm orange/peach section variant (Materials) ---- */
-.iw-section--materials {
-  background: #FBCEB1 !important;
-  background-image: none !important;
-}
-
-.iw-section--materials h2.block-title,
-.iw-section--materials .block-subtitle {
-  color: var(--clr-navy-deep) !important;
-}
 
 @media (min-width: 768px) {
   .iw-section {

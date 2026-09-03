@@ -20,21 +20,14 @@ export default function IndustriesAndWhy() {
   return (
     <LazyMotion features={domAnimation} strict>
       <div id="industrias-y-proceso" className="iw-wrapper">
-        {/* ---- Block 1: How we work (process) ---- */}
+        {/* ---- Unified Section: Process & Materials ---- */}
         <section className="iw-section section-padding">
           <div className="container">
             <div className="iw-section__block">
               <h2 className="block-title">¿Cómo hacemos realidad tu proyecto?</h2>
-              <br />
-              <br />
               <ProcessTimeline reducedMotion={prefersReducedMotion} />
             </div>
-          </div>
-        </section>
 
-        {/* ---- Block 2: Materials & finishes ---- */}
-        <section className="iw-section iw-section--materials section-padding">
-          <div className="container">
             <div className="iw-section__block">
               <h2 className="block-title">
                 Calidad que se siente en cada detalle

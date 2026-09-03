@@ -1,7 +1,7 @@
 /* Product catalog page — dark navy background with pink accent highlights matching official design reference */
 
 .catalog-section {
-  background-color: #000053;
+  background-color: #4477CE;
   width: 100%;
   padding: 125px 24px 100px;
   box-sizing: border-box;
@@ -43,7 +43,7 @@
 }
 
 .catalog-subtext {
-  color: var(--clr-text-muted);
+  color: white;
   font-size: 0.95rem;
   max-width: 680px;
   margin: 0 auto 20px;
