@@ -210,7 +210,7 @@ export default function MaterialsPage() {
               </h1>
               <p
                 className="service-detail-hero-subtitle materials-hero-subtitle"
-                style={{ color: '#6f2da8' }}
+                style={{ color: '#7b2cbf' }}
               >
                 {slides[selectedIndex]?.subtitle || 'Soluciones a tu medida'}
               </p>
