@@ -13,13 +13,15 @@ function buildWhatsAppLink(productName) {
 
 export default function ProductDetail() {
   const { id } = useParams();
-  const product = getProductById(id);
+  const initialProduct = getProductById(id);
+  const [currentProduct, setCurrentProduct] = useState(initialProduct);
   const [isLoading, setIsLoading] = useState(true);
 
   // Scroll to top on mount/id change and show smooth entry loader
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
     setIsLoading(true);
+    setCurrentProduct(getProductById(id));
 
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -27,6 +29,8 @@ export default function ProductDetail() {
 
     return () => clearTimeout(timer);
   }, [id]);
+
+  const product = currentProduct || initialProduct;
 
   // Loading state
   if (isLoading) {
@@ -63,17 +67,44 @@ export default function ProductDetail() {
   return (
     <section className="detail-section">
       <div className="detail-container animate-fade-in">
-        {/* Image column */}
-        <div className="detail-image-wrap">
-          {product.image ? (
-            <img
-              src={product.image}
-              alt={product.name}
-              className="detail-image"
-            />
-          ) : (
-            <div className="catalog-card-placeholder">
-              <span className="catalog-card-placeholder-text">Imagen próximamente</span>
+        {/* Image / Gallery column */}
+        <div className="detail-gallery-column">
+          <div className="detail-image-wrap">
+            {product.image ? (
+              <img
+                src={product.image}
+                alt={product.name}
+                className="detail-image"
+              />
+            ) : (
+              <div className="catalog-card-placeholder">
+                <span className="catalog-card-placeholder-text">Imagen próximamente</span>
+              </div>
+            )}
+          </div>
+
+          {/* Gallery thumbnails if product has multiple items */}
+          {product.items && product.items.length > 1 && (
+            <div className="detail-thumbnails">
+              {product.items.map((item, idx) => {
+                const isActive =
+                  item.id === product.id || item.image === product.image;
+                return (
+                  <button
+                    key={item.id || idx}
+                    type="button"
+                    className={`detail-thumb-btn ${isActive ? 'active' : ''}`}
+                    onClick={() => setCurrentProduct({ ...product, ...item })}
+                    aria-label={`Ver ${item.name}`}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="detail-thumb-img"
+                    />
+                  </button>
+                );
+              })}
             </div>
           )}
         </div>
@@ -88,6 +119,26 @@ export default function ProductDetail() {
           <h1 className="detail-name">{product.name}</h1>
           <span className="detail-price">{product.price}</span>
           <p className="detail-desc">{product.description}</p>
+
+          {product.feature && (
+            <div className="detail-feature-badge">
+              <span className="detail-feature-check">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <span>{product.feature}</span>
+            </div>
+          )}
 
           <div className="detail-cta">
             <a

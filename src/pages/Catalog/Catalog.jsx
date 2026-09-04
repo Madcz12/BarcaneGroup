@@ -113,7 +113,7 @@ function CatalogCard({ product }) {
 
   return (
     <Link
-      to={`/productos/${firstItem.id}`}
+      to={`/productos/${activeItem.id}`}
       className="catalog-card"
       onClick={handleCardClick}
     >

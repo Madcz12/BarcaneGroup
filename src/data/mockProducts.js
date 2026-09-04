@@ -129,6 +129,24 @@ const mockProducts = [
         description:
           'Presentación higiénica y personalizada para alimentos, repostería y regalos finos.',
       },
+      {
+        id: 'cajas-plegables-individuales',
+        name: 'Cajas Plegables & Estructuras Especiales',
+        image: '/images/catalog/Products/bcgroup_individual_fold.webp',
+        tag: 'PACKAGING',
+        feature: 'Troquelado de precisión y armado rápido',
+        description:
+          'Cajas y empaques plegables personalizados con acabados a medida para productos exclusivos.',
+      },
+      {
+        id: 'cajas-tematicas-festivas',
+        name: 'Cajas Temáticas & Edición Especial',
+        image: '/images/catalog/bggroup_xmas_boxes.webp',
+        tag: 'PACKAGING',
+        feature: 'Diseños temáticos y acabados festivos',
+        description:
+          'Empaques para campañas especiales, fiestas navideñas y regalos corporativos.',
+      },
     ],
   },
   {
@@ -322,25 +340,34 @@ const mockProducts = [
       'Desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
     feature: 'Cortes y troqueles interactivos a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/Products/bcgroup_individual_fold.webp',
+    image: '/images/catalog/bggroup_mold.webp',
     items: [
       {
         id: 'plegables-especiales',
         name: 'Plegables Especiales',
-        image: '/images/catalog/Products/bcgroup_individual_fold.webp',
+        image: '/images/catalog/bggroup_mold.webp',
         tag: 'EDITORIAL',
         feature: 'Cortes y troqueles interactivos a medida',
         description:
           'Desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
       },
       {
-        id: 'desplegables-interactivos',
-        name: 'Desplegables & Cartas de Presentación',
-        image: '/images/catalog/CorpPrints/bggroup_corp_impr_item4.webp',
+        id: 'cajas-kraft-plegables',
+        name: 'Cajas Kraft Plegables',
+        image: '/images/catalog/bggroup_new_kraft_boxes.webp',
         tag: 'EDITORIAL',
-        feature: 'Formatos acordonados y troquelados',
+        feature: 'Estructuras plegables en kraft ecológico',
         description:
-          'Material promocional único para activaciones de marca y lanzamientos de productos.',
+          'Modelos plegables resistentes y ecológicos para empaques comerciales e institucionales.',
+      },
+      {
+        id: 'sellos-cierres-especiales',
+        name: 'Sellos & Cierres Especiales',
+        image: '/images/catalog/bggroup_seals.webp',
+        tag: 'EDITORIAL',
+        feature: 'Acabados y sellos personalizados',
+        description:
+          'Soluciones especiales de doblado, troquelado y sellado para presentaciones de marca.',
       },
     ],
   },
@@ -363,15 +390,6 @@ const mockProducts = [
         feature: 'Alta resolución y resistencia para exteriores e interiores',
         description:
           'De alta resolución y resistentes diseñados para hacer destacar tu marca en cualquier espacio.',
-      },
-      {
-        id: 'viniles-decorativos-comerciales',
-        name: 'Viniles Decorativos & Comerciales',
-        image: '/images/catalog/Equipment/bcgroup_evt_spaces.webp',
-        tag: 'GRAN FORMATO',
-        feature: 'Adherencia duradera y acabado mate o brillo',
-        description:
-          'Viniles adhesivos de alta adherencia y calidad fotográfica para muros, vidrios y vehículos.',
       },
     ],
   },
@@ -424,34 +442,16 @@ const mockProducts = [
       'Uniformes, prendas y accesorios personalizados para promocionar tu marca y fidelizar clientes.',
     feature: 'Bordados, estampados y confección de calidad',
     price: 'Consultar cotización',
-    image: '/images/catalog/MerchTextile/bcgroup_textile_corporate.webp',
+    image: '/images/catalog/bggroup_shirt_equipment.webp',
     items: [
       {
         id: 'textiles',
         name: 'Textiles',
-        image: '/images/catalog/MerchTextile/bcgroup_textile_corporate.webp',
+        image: '/images/catalog/bggroup_shirt_equipment.webp',
         tag: 'MERCHANDISING',
         feature: 'Bordados, estampados y confección de calidad',
         description:
           'Uniformes, prendas y accesorios personalizados para promocionar tu marca y fidelizar clientes.',
-      },
-      {
-        id: 'uniformes-prendas-corporativas',
-        name: 'Uniformes & Prendas Corporativas',
-        image: '/images/items/card_merch_cloth.webp',
-        tag: 'MERCHANDISING',
-        feature: 'Polos, camisas, casacas y chalecos',
-        description:
-          'Prendas de alta durabilidad con bordado o estampado computarizado de precisión.',
-      },
-      {
-        id: 'accesorios-textiles-promocionales',
-        name: 'Accesorios Textiles Promocionales',
-        image: '/images/catalog/MerchTextile/bcgroup_campaign_events.webp',
-        tag: 'MERCHANDISING',
-        feature: 'Gorros, tote bags y accesorios',
-        description:
-          'Gorros, bolsas ecológicas de tela y accesorios para eventos y campañas de fidelización.',
       },
     ],
   },
