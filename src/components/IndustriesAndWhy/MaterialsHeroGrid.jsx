@@ -44,7 +44,8 @@ export default function MaterialsHeroGrid({ reducedMotion = false }) {
             {...animateProps}
           >
             <Link
-              to="/materiales"
+              to={`/materiales?id=${mat.id}`}
+              state={{ materialId: mat.id }}
               className="iw-material-card"
               aria-label={`Ver información y asesoría sobre ${mat.name}`}
             >

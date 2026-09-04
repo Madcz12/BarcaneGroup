@@ -10,15 +10,25 @@ export default function Footer() {
 
   const handleSectionClick = (e, sectionId) => {
     e.preventDefault();
+
+    const performScroll = () => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const navEl = document.querySelector('.navbar-header');
+        const navHeight = navEl ? navEl.offsetHeight : 80;
+        const targetPos = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+        window.scrollTo({
+          top: targetPos,
+          behavior: 'smooth',
+        });
+      }
+    };
+
     if (location.pathname !== '/') {
       navigate('/', { state: { scrollTo: sectionId } });
-      setTimeout(() => {
-        const el = document.getElementById(sectionId);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 150);
+      setTimeout(performScroll, 150);
     } else {
-      const el = document.getElementById(sectionId);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      performScroll();
     }
   };
 
@@ -130,12 +140,12 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#industrias-y-proceso" onClick={(e) => handleSectionClick(e, 'industrias-y-proceso')}>
-                Industrias
-              </a>
+              <Link to="/productos">Productos</Link>
             </li>
             <li>
-              <Link to="/productos">Productos</Link>
+              <a href="#industrias" onClick={(e) => handleSectionClick(e, 'industrias')}>
+                Industrias
+              </a>
             </li>
             <li>
               <a href="#contacto" onClick={(e) => handleSectionClick(e, 'contacto')}>

@@ -58,7 +58,7 @@ export default function IndustriesAndWhy() {
         </section>
 
         {/* ---- Block 4: Industries marquee ---- */}
-        <section className="iw-section section-padding">
+        <section id="industrias" className="iw-section iw-section--industries section-padding" tabIndex={-1}>
           <div className="container">
             <div className="iw-section__block">
               <h2 className="block-title">

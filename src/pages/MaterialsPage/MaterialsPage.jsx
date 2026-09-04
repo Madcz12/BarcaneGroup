@@ -1,15 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
 import './MaterialsPage.css';
 
 export default function MaterialsPage() {
-  // Scroll to top on mount
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }, []);
+  const location = useLocation();
 
   // Carousel images configuration
   const slides = [
@@ -17,12 +14,14 @@ export default function MaterialsPage() {
       id: 'papeles-especiales',
       image: '/images/items/InfoMaterials/bggroup_material_info_papers.webp',
       title: 'Papeles y cartulinas finas',
+      subtitle: 'Bond, couche, antigrasa, seda y otras alternativas',
       tag: 'Bond · Couche · Antigrasa · Seda',
     },
     {
       id: 'kraft-y-ecologicos',
       image: '/images/items/InfoMaterials/bggroup_material_info_boxes.webp',
       title: 'Fibras ecológicas y cartones corrugados',
+      subtitle: 'Resistencia, funcionalidad y apariencia natural en materiales responsables',
       tag: 'Kraft · Microcorrugado · Biodegradable',
       objectPosition: 'center top',
     },
@@ -30,15 +29,27 @@ export default function MaterialsPage() {
       id: 'adhesivos-y-etiquetas',
       image: '/images/items/InfoMaterials/bggroup_material_info_stickers.webp',
       title: 'Adhesivos y etiquetas de seguridad',
+      subtitle: 'La adherencia ideal para aplicaciones comerciales y corporativas',
       tag: 'Adhesivos · Seguridad · Troquelados',
     },
     {
       id: 'acabados-especiales',
       image: '/images/items/InfoMaterials/bggroup_material_info_prints.webp',
       title: 'Acabados especiales',
+      subtitle: 'Laminados, stamping, relieves y troquelados',
       tag: 'Stamping · Barniz UV · Relieves · Laminados',
     },
   ];
+
+  const searchParams = new URLSearchParams(location.search);
+  const requestedId = searchParams.get('id') || location.state?.materialId || location.hash?.replace('#', '');
+  const initialIndex = slides.findIndex((s) => s.id === requestedId);
+  const startingSlide = initialIndex >= 0 ? initialIndex : 0;
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
 
   // Embla setup
   const autoplay = useRef(
@@ -46,12 +57,20 @@ export default function MaterialsPage() {
   );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, duration: 25 },
+    { loop: true, duration: 25, startIndex: startingSlide },
     [autoplay.current]
   );
 
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(startingSlide);
   const [scrollSnaps, setScrollSnaps] = useState([]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    if (initialIndex >= 0) {
+      emblaApi.scrollTo(initialIndex, true);
+      setSelectedIndex(initialIndex);
+    }
+  }, [emblaApi, initialIndex]);
 
   const scrollTo = useCallback(
     (index) => emblaApi && emblaApi.scrollTo(index),
@@ -187,13 +206,13 @@ export default function MaterialsPage() {
             {/* Text Card aligned to the left */}
             <div className="service-detail-hero-card">
               <h1 className="service-detail-hero-title">
-                Materiales y Asesoría
+                {slides[selectedIndex]?.title || 'Materiales y Asesoría'}
               </h1>
               <p
                 className="service-detail-hero-subtitle materials-hero-subtitle"
-                style={{ color: '#cd9fff' }}
+                style={{ color: '#6f2da8' }}
               >
-                {slides[selectedIndex]?.title || 'Soluciones a tu medida'}
+                {slides[selectedIndex]?.subtitle || 'Soluciones a tu medida'}
               </p>
               <p className="service-detail-hero-desc">
                 Te ayudamos a encontrar materiales, formatos y acabados adecuados para que cada pieza destaque con la máxima calidad.

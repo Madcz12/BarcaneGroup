@@ -22,8 +22,10 @@
    ========================================================================== */
 
 /* ---- Section Shell & Wrapper ---- */
-.iw-wrapper {
-  scroll-margin-top: 100px;
+.iw-wrapper,
+#industrias,
+.iw-section[id] {
+  scroll-margin-top: 95px;
 }
 
 .iw-section {
@@ -43,6 +45,13 @@
   background-image: none !important;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---- Industries Section Variant (matches Services background) ---- */
+.iw-section--industries,
+#industrias.iw-section {
+  background: #e4cbd0 !important;
+  background-image: none !important;
 }
 
 .iw-section--why-dark h2.block-title {

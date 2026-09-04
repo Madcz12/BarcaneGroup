@@ -14,16 +14,26 @@ export default function Navbar() {
   const scrollToSection = (sectionId) => {
     setIsOpen(false);
     setDropdownOpen(false);
+
+    const performScroll = () => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const navEl = document.querySelector('.navbar-header');
+        const navHeight = navEl ? navEl.offsetHeight : 80;
+        const targetPos = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+        window.scrollTo({
+          top: targetPos,
+          behavior: 'smooth',
+        });
+      }
+    };
+
     if (location.pathname !== '/') {
       navigate('/');
       // Wait for the homepage to render, then scroll
-      setTimeout(() => {
-        const el = document.getElementById(sectionId);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 120);
+      setTimeout(performScroll, 150);
     } else {
-      const el = document.getElementById(sectionId);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      performScroll();
     }
   };
 
@@ -231,10 +241,10 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a href="#industrias-y-proceso" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('industrias-y-proceso'); }}>Industrias</a>
+              <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Productos</Link>
             </li>
             <li className="nav-item">
-              <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Productos</Link>
+              <a href="#industrias" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('industrias'); }}>Industrias</a>
             </li>
             <li className="nav-item">
               <a href="#contacto" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }}>Contacto</a>
