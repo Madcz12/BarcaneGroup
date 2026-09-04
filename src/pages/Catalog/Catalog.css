@@ -24,13 +24,35 @@
 }
 
 .catalog-title {
-  color: var(--clr-primary-pink);
+  display: inline-block;
   font-size: clamp(1.85rem, 4.5vw, 2.75rem);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 16px;
   margin-top: 0;
   letter-spacing: -0.01em;
+  background: linear-gradient(
+    110deg,
+    var(--clr-primary-pink) 0%,
+    var(--clr-primary-pink) 35%,
+    #ffffff 50%,
+    var(--clr-primary-pink) 65%,
+    var(--clr-primary-pink) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .catalog-subtitle {
@@ -52,12 +74,25 @@
 }
 
 .catalog-underline {
-  color: #6f2da8;
+  display: inline-block;
   font-weight: 700;
   white-space: nowrap;
   margin: 0 auto;
   font-size: clamp(1.18rem, 2.5vw, 1.4rem);
   letter-spacing: 0.5px;
+  background: linear-gradient(
+    110deg,
+    #6f2da8 0%,
+    #6f2da8 35%,
+    #ffffff 50%,
+    #6f2da8 65%,
+    #6f2da8 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4.5s linear infinite;
 }
 
 /* Filter Bar */
