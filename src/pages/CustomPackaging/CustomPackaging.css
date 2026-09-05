@@ -290,6 +290,7 @@
 @media (max-width: 768px) {
   .service-detail-page {
     padding-top: 0;
+    overflow-x: hidden;
   }
 
   .service-detail-hero-fullbleed {
@@ -299,24 +300,51 @@
 
   .service-detail-hero-content-wrap {
     transform: translateY(0);
-    padding: 32px 0;
+    padding: 24px 0 32px;
   }
 
   .service-detail-hero-container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .custom-packaging-hero .service-detail-hero-back-link {
+    margin-top: 60px;
+    font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+    padding: 10px 16px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .service-detail-hero-card {
     max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .service-detail-hero-title {
-    font-size: 2.25rem;
+    font-size: clamp(1.65rem, 6.2vw, 2.1rem);
+    line-height: 1.15;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin-bottom: 10px;
   }
 
   .service-detail-hero-subtitle {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 4.2vw, 1.35rem);
+    line-height: 1.35;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .service-detail-hero-desc {
+    font-size: clamp(0.92rem, 3.2vw, 1.05rem);
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .service-detail-hero-sub2 {
