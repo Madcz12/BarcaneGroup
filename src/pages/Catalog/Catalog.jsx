@@ -1,8 +1,15 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import mockProducts from '../../data/mockProducts';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
 import './Catalog.css';
+
+// Builds the WhatsApp quote link with the product name pre-filled.
+function buildWhatsAppLink(productName) {
+  const base = 'https://wa.me/51943703905';
+  const message = `Hola BarcaneGroup, quisiera solicitar una cotización para ${productName}`;
+  return `${base}?text=${encodeURIComponent(message)}`;
+}
 
 // Category filter options aligned with reference catalog structure
 const CATEGORIES = [
@@ -105,18 +112,8 @@ function CatalogCard({ product }) {
     setShowPopover(false);
   };
 
-  const handleCardClick = (e) => {
-    if (isDragging) {
-      e.preventDefault();
-    }
-  };
-
   return (
-    <Link
-      to={`/productos/${activeItem.id}`}
-      className="catalog-card"
-      onClick={handleCardClick}
-    >
+    <div className="catalog-card">
       {/* Image Carousel Wrap */}
       <div
         className="catalog-card-image-wrap"
@@ -282,7 +279,12 @@ function CatalogCard({ product }) {
         </div>
 
         {/* Solicitar cotizacion CTA */}
-        <div className="catalog-card-cta">
+        <a
+          href={buildWhatsAppLink(activeItem.name || firstItem.name)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="catalog-card-cta"
+        >
           <span>Solicitar cotización</span>
           <svg
             className="catalog-card-cta-arrow"
@@ -298,9 +300,9 @@ function CatalogCard({ product }) {
             <line x1="5" y1="12" x2="19" y2="12" />
             <polyline points="12 5 19 12 12 19" />
           </svg>
-        </div>
+        </a>
       </div>
-    </Link>
+    </div>
   );
 }
 

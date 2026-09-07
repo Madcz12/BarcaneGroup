@@ -374,6 +374,15 @@ const mockProducts = [
         description:
           'Credenciales en PVC y cintas estampadas con el logo de tu empresa para control de acceso e identificación.',
       },
+      {
+        id: 'lanyards-cintas-personalizadas',
+        name: 'Cintas y Lanyards Sublimados',
+        image: '/images/catalog/Products/lanyard2.webp',
+        tag: 'MERCHANDISING',
+        feature: 'Cintas sublimadas con mosquetón y broches',
+        description:
+          'Lanyards corporativos con impresión nítida a full color y accesorios de sujeción resistentes.',
+      },
     ],
   },
   {
@@ -395,6 +404,24 @@ const mockProducts = [
         feature: 'Cortes y troqueles interactivos a medida',
         description:
           'Desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
+      },
+      {
+        id: 'plegables-especiales-desplegables',
+        name: 'Desplegables y Folletos Troquelados',
+        image: '/images/catalog/SpecialFolding/SpecialFolding1.webp',
+        tag: 'EDITORIAL',
+        feature: 'Formatos creativos y acabados especiales',
+        description:
+          'Piezas plegables personalizadas con cortes dinámicos para marketing de alto impacto.',
+      },
+      {
+        id: 'plegables-especiales-formatos',
+        name: 'Plegables Creativos de Alto Impacto',
+        image: '/images/catalog/SpecialFolding/SpecialFolding2.webp',
+        tag: 'EDITORIAL',
+        feature: 'Troqueles de precisión y dobleces especiales',
+        description:
+          'Soluciones editoriales interactivas para lanzamientos, eventos y presentaciones de marca.',
       },
     ],
   },
