@@ -1,6 +1,8 @@
-/* Services Section — Category Cards (clean image + white label badge) */
+/* Services Section — Stylized Soft Fuchsia Gradient */
 .services-section {
-  background-color: #e4cbd0;
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(160deg, hsl(335, 88%, 56%) 0%, hsl(335, 85%, 50%) 45%, hsl(335, 80%, 38%) 100%);
 }
 
 .services-section.section-padding {
@@ -34,7 +36,7 @@
 
 .services-title {
   font-size: 1.8rem;
-  color: #6f2da8;
+  color: var(--clr-white);
   font-weight: 800;
   letter-spacing: -0.5px;
   text-align: center;
@@ -43,19 +45,19 @@
 
 .services-subtitle {
   font-size: 1.25rem;
-  color: var(--clr-navy-deep);
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 600;
   text-align: center;
   margin-top: 8px;
   margin-bottom: 0;
   line-height: 1.35;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .title-underline {
   width: 50px;
   height: 4px;
-  background-color: var(--clr-primary-pink);
+  background-color: var(--clr-white);
   margin: 10px auto 0;
   border-radius: var(--radius-full);
 }
@@ -87,7 +89,7 @@
 .service-card-header-title {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #000000;
+  color: var(--clr-white);
   margin: 0;
   line-height: 1.3;
 }
@@ -100,7 +102,7 @@
 .service-card-header-subtitle {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #000000;
+  color: rgba(255, 255, 255, 0.95);
   margin: 0;
   line-height: 1.4;
 }
@@ -132,7 +134,7 @@
 }
 
 .service-card-header-link:hover .service-card-header-title {
-  color: var(--clr-primary-pink);
+  color: rgba(255, 255, 255, 0.8);
   transition: color var(--transition-fast);
 }
 
