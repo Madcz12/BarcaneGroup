@@ -11,12 +11,12 @@ const mockProducts = [
       'En diferentes materiales de papel y de alta resistencia, diseñadas a medida para potenciar la presentación de tu marca.',
     feature: 'Acabados finos y asas a elección',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/BAGS/1_BOL.png',
+    image: '/images/catalog/CatalogFinale/BAGS/1_BAG.webp',
     items: [
       {
         id: 'bolsas-comerciales-1',
         name: 'Bolsas especiales',
-        image: '/images/catalog/CatalogFinale/BAGS/1_BOL.png',
+        image: '/images/catalog/CatalogFinale/BAGS/1_BAG.webp',
         tag: 'PACKAGING',
         feature: 'Acabados finos y asas a elección',
         description:
@@ -25,7 +25,7 @@ const mockProducts = [
       {
         id: 'bolsas-comerciales-2',
         name: 'Bolsas Ecológicas con Asas',
-        image: '/images/catalog/CatalogFinale/BAGS/2_BOL.png',
+        image: '/images/catalog/CatalogFinale/BAGS/2_BOL.webp',
         tag: 'PACKAGING',
         feature: 'Asas de cordón y acabado premium',
         description:
@@ -34,7 +34,7 @@ const mockProducts = [
       {
         id: 'bolsas-comerciales-3',
         name: 'Bolsas Kraft Sostenibles',
-        image: '/images/catalog/CatalogFinale/BAGS/3_BOL.png',
+        image: '/images/catalog/CatalogFinale/BAGS/3_BOL.webp',
         tag: 'PACKAGING',
         feature: 'Papel kraft 100% reciclable',
         description:
@@ -51,12 +51,12 @@ const mockProducts = [
       'Sets personalizados de productos branding ideales para bienvenida de colaboradores, regalos institucionales y eventos VIP.',
     feature: 'Combinaciones y empaques personalizados',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/KITS/1_KIT.png',
+    image: '/images/catalog/CatalogFinale/KITS/1_KIT.webp',
     items: [
       {
         id: 'kits-corporativos-1',
         name: 'Kits Corporativos – Merchandising',
-        image: '/images/catalog/CatalogFinale/KITS/1_KIT.png',
+        image: '/images/catalog/CatalogFinale/KITS/1_KIT.webp',
         tag: 'MERCHANDISING',
         feature: 'Combinaciones y empaques personalizados',
         description:
@@ -65,7 +65,7 @@ const mockProducts = [
       {
         id: 'kits-corporativos-2',
         name: 'Welcome Packs & Cajas Onboarding',
-        image: '/images/catalog/CatalogFinale/KITS/2_KIT.png',
+        image: '/images/catalog/CatalogFinale/KITS/2_KIT.webp',
         tag: 'MERCHANDISING',
         feature: 'Cajas branding y artículos corporativos',
         description:
@@ -74,7 +74,7 @@ const mockProducts = [
       {
         id: 'kits-corporativos-3',
         name: 'Kits Ejecutivos Premium',
-        image: '/images/catalog/CatalogFinale/KITS/3_KIT.png',
+        image: '/images/catalog/CatalogFinale/KITS/3_KIT.webp',
         tag: 'MERCHANDISING',
         feature: 'Presentación de lujo y branding institucional',
         description:
@@ -83,7 +83,7 @@ const mockProducts = [
       {
         id: 'kits-corporativos-4',
         name: 'Kits para Eventos & Ferias',
-        image: '/images/catalog/CatalogFinale/KITS/4_KIT.png',
+        image: '/images/catalog/CatalogFinale/KITS/4_KIT.webp',
         tag: 'MERCHANDISING',
         feature: 'Artículos promocionales coordinados',
         description:
@@ -92,7 +92,7 @@ const mockProducts = [
       {
         id: 'kits-corporativos-5',
         name: 'Toma-todos & Botellas Promocionales',
-        image: '/images/catalog/CatalogFinale/KITS/5_KIT.png',
+        image: '/images/catalog/CatalogFinale/KITS/5_KIT.webp',
         tag: 'MERCHANDISING',
         feature: 'Grabado láser y tampografía duradera',
         description:
@@ -101,7 +101,7 @@ const mockProducts = [
       {
         id: 'kits-corporativos-6',
         name: 'Accesorios & Bolsas Promocionales',
-        image: '/images/catalog/CatalogFinale/KITS/6_KIT.png',
+        image: '/images/catalog/CatalogFinale/KITS/6_KIT.webp',
         tag: 'MERCHANDISING',
         feature: 'Prendas y accesorios con bordado o estampado',
         description:
@@ -110,7 +110,7 @@ const mockProducts = [
       {
         id: 'kits-corporativos-7',
         name: 'Merchandising para Campañas',
-        image: '/images/catalog/CatalogFinale/KITS/7_KIT.png',
+        image: '/images/catalog/CatalogFinale/KITS/7_KIT.webp',
         tag: 'MERCHANDISING',
         feature: 'Artículos promocionales de alto impacto',
         description:
@@ -127,12 +127,12 @@ const mockProducts = [
       'Cajas rígidas y empaques premium con acabados especiales, diseñados para destacar tus productos.',
     feature: 'Estructuras rígidas y acabados premium',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/PACKAGES/1_EMP.jpeg',
+    image: '/images/catalog/CatalogFinale/PACKAGES/1_EMP.webp',
     items: [
       {
         id: 'empaques-packaging-1',
         name: 'Empaques - Packaging',
-        image: '/images/catalog/CatalogFinale/PACKAGES/1_EMP.jpeg',
+        image: '/images/catalog/CatalogFinale/PACKAGES/1_EMP.webp',
         tag: 'PACKAGING',
         feature: 'Estructuras rígidas y acabados premium',
         description:
@@ -141,7 +141,7 @@ const mockProducts = [
       {
         id: 'empaques-packaging-2',
         name: 'Cajas Rígidas y Estuches de Lujo',
-        image: '/images/catalog/CatalogFinale/PACKAGES/2_EMP.png',
+        image: '/images/catalog/CatalogFinale/PACKAGES/2_EMP.webp',
         tag: 'PACKAGING',
         feature: 'Cierre magnético e interiores a medida',
         description:
@@ -150,7 +150,7 @@ const mockProducts = [
       {
         id: 'empaques-packaging-3',
         name: 'Cajas Kraft & Empaques Ecológicos',
-        image: '/images/catalog/CatalogFinale/PACKAGES/3_EMP.png',
+        image: '/images/catalog/CatalogFinale/PACKAGES/3_EMP.webp',
         tag: 'PACKAGING',
         feature: 'Material reciclable y alta resistencia',
         description:
@@ -159,7 +159,7 @@ const mockProducts = [
       {
         id: 'empaques-packaging-4',
         name: 'Cajas Rígidas con Acabados Finos',
-        image: '/images/catalog/CatalogFinale/PACKAGES/4_EMP.png',
+        image: '/images/catalog/CatalogFinale/PACKAGES/4_EMP.webp',
         tag: 'PACKAGING',
         feature: 'Espuma troquelada o guata a medida',
         description:
@@ -176,12 +176,12 @@ const mockProducts = [
       'Etiquetas colgantes en diferentes materiales para ropa, accesorios y productos retail.',
     feature: 'Variedad de cartulinas y formas troqueladas',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/HANGTAGS/1_HANG.png',
+    image: '/images/catalog/CatalogFinale/HANGTAGS/1_HANG.webp',
     items: [
       {
         id: 'hangtags-1',
         name: 'HANGTAGS',
-        image: '/images/catalog/CatalogFinale/HANGTAGS/1_HANG.png',
+        image: '/images/catalog/CatalogFinale/HANGTAGS/1_HANG.webp',
         tag: 'ETIQUETAS',
         feature: 'Variedad de cartulinas y formas troqueladas',
         description:
@@ -190,7 +190,7 @@ const mockProducts = [
       {
         id: 'hangtags-2',
         name: 'Etiquetas para Ropa & Retail',
-        image: '/images/catalog/CatalogFinale/HANGTAGS/2_HANG.png',
+        image: '/images/catalog/CatalogFinale/HANGTAGS/2_HANG.webp',
         tag: 'ETIQUETAS',
         feature: 'Perforación y acabados especiales',
         description:
@@ -199,7 +199,7 @@ const mockProducts = [
       {
         id: 'hangtags-3',
         name: 'Hangtags con Lanyard & Ojalillo',
-        image: '/images/catalog/CatalogFinale/HANGTAGS/3_HANG.png',
+        image: '/images/catalog/CatalogFinale/HANGTAGS/3_HANG.webp',
         tag: 'ETIQUETAS',
         feature: 'Ojal metálico y cordón personalizado',
         description:
@@ -216,12 +216,12 @@ const mockProducts = [
       'Impresos para propuestas comerciales y entregas institucionales.',
     feature: 'Con solapa, hendiduras y troqueles a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/1_FOLL.png',
+    image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/1_FOLL.webp',
     items: [
       {
         id: 'folletos-jalavistas-1',
         name: 'Folletos, Jalavistas, Tripticos, Cuadernillos, Carpetas',
-        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/1_FOLL.png',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/1_FOLL.webp',
         tag: 'EDITORIAL',
         feature: 'Con solapa, hendiduras y troqueles a medida',
         description:
@@ -230,7 +230,7 @@ const mockProducts = [
       {
         id: 'folletos-jalavistas-2',
         name: 'Carpetas Institucionales Executive',
-        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/2_FOLL.png',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/2_FOLL.webp',
         tag: 'EDITORIAL',
         feature: 'Laminado mate y reserva UV',
         description:
@@ -239,7 +239,7 @@ const mockProducts = [
       {
         id: 'folletos-jalavistas-3',
         name: 'Folletos & Jalavistas Publicitarios',
-        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/3_FOLL.png',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/3_FOLL.webp',
         tag: 'EDITORIAL',
         feature: 'Papel cuché brillo o mate',
         description:
@@ -248,7 +248,7 @@ const mockProducts = [
       {
         id: 'folletos-jalavistas-4',
         name: 'Trípticos, Cuadernillos y Blocks',
-        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/4_FOLL.png',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/4_FOLL.webp',
         tag: 'EDITORIAL',
         feature: 'Doblados de precisión y acabados a medida',
         description:
@@ -265,12 +265,12 @@ const mockProducts = [
       'Material informativo y promocional impreso en alta calidad para campañas comerciales, ferias y atención al cliente.',
     feature: 'Múltiples gramajes, encuadernados y acabados',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/1_CUA.png',
+    image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/1_CUA.webp',
     items: [
       {
         id: 'calendarios-blocks-1',
         name: 'Calendarios, blocks, Revistas, Cuadernos, Libros',
-        image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/1_CUA.png',
+        image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/1_CUA.webp',
         tag: 'EDITORIAL',
         feature: 'Múltiples gramajes, encuadernados y acabados',
         description:
@@ -279,7 +279,7 @@ const mockProducts = [
       {
         id: 'calendarios-blocks-2',
         name: 'Planificadores & Calendarios Corporativos',
-        image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/2_CUA.png',
+        image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/2_CUA.webp',
         tag: 'EDITORIAL',
         feature: 'Encuadernación anillada o de escritorio',
         description:
@@ -296,12 +296,12 @@ const mockProducts = [
       'Etiquetas en papel, adhesivo o vinil para envases, cierres de empaques y branding publicitario; con acabados rectos, troquelados y con relieve.',
     feature: 'Acabados rectos, troquelados y con relieve',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.png',
+    image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.webp',
     items: [
       {
         id: 'etiquetas-1',
         name: 'Etiquetas',
-        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.png',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.webp',
         tag: 'ETIQUETAS',
         feature: 'Acabados rectos, troquelados y con relieve',
         description:
@@ -310,7 +310,7 @@ const mockProducts = [
       {
         id: 'etiquetas-2',
         name: 'Etiquetas Adhesivas Personalizadas',
-        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/2_ETIQ.png',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/2_ETIQ.webp',
         tag: 'ETIQUETAS',
         feature: 'Cortes troquelados y colores vibrantes',
         description:
@@ -319,7 +319,7 @@ const mockProducts = [
       {
         id: 'etiquetas-3',
         name: 'Stickers en Rollo & Empaques',
-        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/3_ETIQ.png',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/3_ETIQ.webp',
         tag: 'ETIQUETAS',
         feature: 'Dispensado fácil y adhesión permanente',
         description:
@@ -328,7 +328,7 @@ const mockProducts = [
       {
         id: 'etiquetas-4',
         name: 'Etiquetas Troqueladas de Alta Definición',
-        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/4_ETIQ.png',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/4_ETIQ.webp',
         tag: 'ETIQUETAS',
         feature: 'Texturas con relieve y brillo metálico',
         description:
@@ -337,7 +337,7 @@ const mockProducts = [
       {
         id: 'etiquetas-5',
         name: 'Etiquetas y Stickers Especiales',
-        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/5_ETIQ.png',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/5_ETIQ.webp',
         tag: 'ETIQUETAS',
         feature: 'Material autoadhesivo y acabados premium',
         description:
@@ -354,12 +354,12 @@ const mockProducts = [
       'Credenciales en PVC y cintas estampadas con el logo de tu empresa para control de acceso e identificación.',
     feature: 'Impresión en alta definición y accesorios duraderos',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/1_FOTO.png',
+    image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/1_FOTO.webp',
     items: [
       {
         id: 'photochecks-y-lanyards-1',
         name: 'Fotochecks y Lanyards',
-        image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/1_FOTO.png',
+        image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/1_FOTO.webp',
         tag: 'MERCHANDISING',
         feature: 'Impresión en alta definición y accesorios duraderos',
         description:
@@ -368,7 +368,7 @@ const mockProducts = [
       {
         id: 'photochecks-y-lanyards-2',
         name: 'Cintas y Lanyards Sublimados',
-        image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/2_FOTO.png',
+        image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/2_FOTO.webp',
         tag: 'MERCHANDISING',
         feature: 'Cintas sublimadas con mosquetón y broches',
         description:
@@ -385,12 +385,12 @@ const mockProducts = [
       'Desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
     feature: 'Cortes y troqueles interactivos a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/SPECIALFOLDING/1_PLE.png',
+    image: '/images/catalog/CatalogFinale/SPECIALFOLDING/1_PLE.webp',
     items: [
       {
         id: 'plegables-especiales-1',
         name: 'Plegables especiales',
-        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/1_PLE.png',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/1_PLE.webp',
         tag: 'EDITORIAL',
         feature: 'Cortes y troqueles interactivos a medida',
         description:
@@ -399,7 +399,7 @@ const mockProducts = [
       {
         id: 'plegables-especiales-2',
         name: 'Desplegables y Folletos Troquelados',
-        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/2_PLE.png',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/2_PLE.webp',
         tag: 'EDITORIAL',
         feature: 'Formatos creativos y acabados especiales',
         description:
@@ -408,7 +408,7 @@ const mockProducts = [
       {
         id: 'plegables-especiales-3',
         name: 'Plegables Creativos de Alto Impacto',
-        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/3_PLE.png',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/3_PLE.webp',
         tag: 'EDITORIAL',
         feature: 'Troqueles de precisión y dobleces especiales',
         description:
@@ -417,7 +417,7 @@ const mockProducts = [
       {
         id: 'plegables-especiales-4',
         name: 'Plegados Especiales Personalizados',
-        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/4_PLE.png',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/4_PLE.webp',
         tag: 'EDITORIAL',
         feature: 'Diseños dinámicos y acabados de precisión',
         description:
@@ -426,7 +426,7 @@ const mockProducts = [
       {
         id: 'plegables-especiales-5',
         name: 'Formatos Desplegables Promocionales',
-        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/5_PLE.png',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/5_PLE.webp',
         tag: 'EDITORIAL',
         feature: 'Troqueles e ingeniería en papel',
         description:
@@ -443,12 +443,12 @@ const mockProducts = [
       'De alta resolución y resistentes diseñados para hacer destacar tu marca en cualquier espacio.',
     feature: 'Alta resolución y resistencia para exteriores e interiores',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/VINILS-BANERS/1_BANN.png',
+    image: '/images/catalog/CatalogFinale/VINILS-BANERS/1_BANN.webp',
     items: [
       {
         id: 'banners-y-viniles-1',
         name: 'Banners y Viniles',
-        image: '/images/catalog/CatalogFinale/VINILS-BANERS/1_BANN.png',
+        image: '/images/catalog/CatalogFinale/VINILS-BANERS/1_BANN.webp',
         tag: 'GRAN FORMATO',
         feature: 'Alta resolución y resistencia para exteriores e interiores',
         description:
@@ -457,7 +457,7 @@ const mockProducts = [
       {
         id: 'banners-y-viniles-2',
         name: 'Viniles y Gráfica Gran Formato',
-        image: '/images/catalog/CatalogFinale/VINILS-BANERS/2_BANN.png',
+        image: '/images/catalog/CatalogFinale/VINILS-BANERS/2_BANN.webp',
         tag: 'GRAN FORMATO',
         feature: 'Adherencia premium en paredes y cristales',
         description:
@@ -466,7 +466,7 @@ const mockProducts = [
       {
         id: 'banners-y-viniles-3',
         name: 'Banners Publicitarios para Eventos',
-        image: '/images/catalog/CatalogFinale/VINILS-BANERS/3_BANN.png',
+        image: '/images/catalog/CatalogFinale/VINILS-BANERS/3_BANN.webp',
         tag: 'GRAN FORMATO',
         feature: 'Lona de alta durabilidad e impresión HD',
         description:
@@ -483,12 +483,12 @@ const mockProducts = [
       'Estructuras metálicas y de madera ideal para la comunicación visual de reuniones, lanzamientos y otros eventos.',
     feature: 'Estructuras metálicas y de madera a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/DISPLAYS/1_DIS.png',
+    image: '/images/catalog/CatalogFinale/DISPLAYS/1_DIS.webp',
     items: [
       {
         id: 'displays-exhibidores-1',
         name: 'Displays para interiores y exteriores, exhibidores, materiales POP',
-        image: '/images/catalog/CatalogFinale/DISPLAYS/1_DIS.png',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/1_DIS.webp',
         tag: 'GRAN FORMATO',
         feature: 'Estructuras metálicas y de madera a medida',
         description:
@@ -497,7 +497,7 @@ const mockProducts = [
       {
         id: 'displays-exhibidores-2',
         name: 'Exhibidores & Displays Promocionales',
-        image: '/images/catalog/CatalogFinale/DISPLAYS/2_DIS.png',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/2_DIS.webp',
         tag: 'GRAN FORMATO',
         feature: 'Stands y módulos de exhibición de alto impacto',
         description:
@@ -506,7 +506,7 @@ const mockProducts = [
       {
         id: 'displays-exhibidores-3',
         name: 'Módulos y Backings para Eventos',
-        image: '/images/catalog/CatalogFinale/DISPLAYS/3_DIS.png',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/3_DIS.webp',
         tag: 'GRAN FORMATO',
         feature: 'Fácil montaje y transporte',
         description:
@@ -515,7 +515,7 @@ const mockProducts = [
       {
         id: 'displays-exhibidores-4',
         name: 'Tótem y Displays Publicitarios',
-        image: '/images/catalog/CatalogFinale/DISPLAYS/4_DIS.jpeg',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/4_DIS.webp',
         tag: 'GRAN FORMATO',
         feature: 'Estructuras ligeras y de alto impacto',
         description:
@@ -524,7 +524,7 @@ const mockProducts = [
       {
         id: 'displays-exhibidores-5',
         name: 'Exhibidores de Punto de Venta',
-        image: '/images/catalog/CatalogFinale/DISPLAYS/5_DIS.jpeg',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/5_DIS.webp',
         tag: 'GRAN FORMATO',
         feature: 'Materiales resistentes y acabados a color',
         description:
@@ -533,7 +533,7 @@ const mockProducts = [
       {
         id: 'displays-exhibidores-6',
         name: 'Stands y Paneles Informativos',
-        image: '/images/catalog/CatalogFinale/DISPLAYS/6_DIS.jpeg',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/6_DIS.webp',
         tag: 'GRAN FORMATO',
         feature: 'Fácil armado y gráfica intercambiable',
         description:
@@ -550,12 +550,12 @@ const mockProducts = [
       'Uniformes, prendas y accesorios personalizados para promocionar tu marca y fidelizar clientes.',
     feature: 'Bordados, estampados y confección de calidad',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/TEXTILS/1_TEX.png',
+    image: '/images/catalog/CatalogFinale/TEXTILS/1_TEX.webp',
     items: [
       {
         id: 'textiles-1',
         name: 'Textiles',
-        image: '/images/catalog/CatalogFinale/TEXTILS/1_TEX.png',
+        image: '/images/catalog/CatalogFinale/TEXTILS/1_TEX.webp',
         tag: 'MERCHANDISING',
         feature: 'Bordados, estampados y confección de calidad',
         description:
@@ -564,7 +564,7 @@ const mockProducts = [
       {
         id: 'textiles-2',
         name: 'Prendas y Uniformes Corporativos',
-        image: '/images/catalog/CatalogFinale/TEXTILS/2_TEX.jpeg',
+        image: '/images/catalog/CatalogFinale/TEXTILS/2_TEX.webp',
         tag: 'MERCHANDISING',
         feature: 'Algodón pima, pique y bordado computarizado',
         description:
@@ -573,7 +573,7 @@ const mockProducts = [
       {
         id: 'textiles-3',
         name: 'Polos y Camisas Institucionales',
-        image: '/images/catalog/CatalogFinale/TEXTILS/3_TEX.png',
+        image: '/images/catalog/CatalogFinale/TEXTILS/3_TEX.webp',
         tag: 'MERCHANDISING',
         feature: 'Algodón suave y estampado duradero',
         description:
@@ -582,7 +582,7 @@ const mockProducts = [
       {
         id: 'textiles-4',
         name: 'Casacas y Chalecos Corporativos',
-        image: '/images/catalog/CatalogFinale/TEXTILS/4_TEX.png',
+        image: '/images/catalog/CatalogFinale/TEXTILS/4_TEX.webp',
         tag: 'MERCHANDISING',
         feature: 'Material térmico e impermeable',
         description:
@@ -591,7 +591,7 @@ const mockProducts = [
       {
         id: 'textiles-5',
         name: 'Gorras y Accesorios Textiles',
-        image: '/images/catalog/CatalogFinale/TEXTILS/5_TEX.jpg.jpeg',
+        image: '/images/catalog/CatalogFinale/TEXTILS/5_TEX.webp',
         tag: 'MERCHANDISING',
         feature: 'Bordado 3D y broches ajustables',
         description:
@@ -600,7 +600,7 @@ const mockProducts = [
       {
         id: 'textiles-6',
         name: 'Bolsas y Mochilas de Tela',
-        image: '/images/catalog/CatalogFinale/TEXTILS/6_TEX.png',
+        image: '/images/catalog/CatalogFinale/TEXTILS/6_TEX.webp',
         tag: 'MERCHANDISING',
         feature: 'Material reciclable y alta resistencia',
         description:

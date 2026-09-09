@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import mockProducts from '../../data/mockProducts';
 import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
 import './Catalog.css';
@@ -10,18 +9,6 @@ function buildWhatsAppLink(productName) {
   const message = `Hola BarcaneGroup, quisiera solicitar una cotización para ${productName}`;
   return `${base}?text=${encodeURIComponent(message)}`;
 }
-
-// Category filter options aligned with reference catalog structure
-const CATEGORIES = [
-  { id: 'all', label: 'Todos' },
-  { id: 'packaging', label: 'Packaging' },
-  { id: 'papeles', label: 'Papeles' },
-  { id: 'etiquetas', label: 'Etiquetas' },
-  { id: 'gran-formato', label: 'Gran formato' },
-  { id: 'editorial', label: 'Editorial' },
-  { id: 'merchandising', label: 'Merchandising' },
-  { id: 'acabados', label: 'Acabados' },
-];
 
 function CatalogCard({ product }) {
   const items = useMemo(() => {
@@ -307,12 +294,6 @@ function CatalogCard({ product }) {
 }
 
 export default function Catalog() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const categoryFromUrl = searchParams.get('categoria');
-  const activeCategory = CATEGORIES.some((c) => c.id === categoryFromUrl)
-    ? categoryFromUrl
-    : 'all';
-
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -337,19 +318,6 @@ export default function Catalog() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleCategoryChange = (categoryId) => {
-    if (categoryId === 'all') {
-      setSearchParams({});
-    } else {
-      setSearchParams({ categoria: categoryId });
-    }
-  };
-
-  const filteredProducts = useMemo(() => {
-    if (activeCategory === 'all') return mockProducts;
-    return mockProducts.filter((product) => product.category === activeCategory);
-  }, [activeCategory]);
-
   return (
     <section className="catalog-section">
       {/* Header section matching reference structure */}
@@ -371,20 +339,6 @@ export default function Catalog() {
         </p>
       </div>
 
-      {/* Filter pills bar */}
-      <div className="catalog-filters">
-        {CATEGORIES.map((cat) => (
-          <button
-            key={cat.id}
-            className={`catalog-filter-btn ${activeCategory === cat.id ? "active" : ""}`}
-            onClick={() => handleCategoryChange(cat.id)}
-            type="button"
-          >
-            {cat.label}
-          </button>
-        ))}
-      </div>
-
       {/* Loader indicator or Catalog Content */}
       {isLoading ? (
         <div className="catalog-loader-container">
@@ -397,7 +351,7 @@ export default function Catalog() {
         <>
           {/* Product cards grid */}
           <div className="catalog-grid animate-fade-in">
-            {filteredProducts.map((product) => (
+            {mockProducts.map((product) => (
               <CatalogCard key={product.id} product={product} />
             ))}
           </div>
