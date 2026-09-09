@@ -4,37 +4,37 @@
 const mockProducts = [
   {
     id: 'bolsas-comerciales',
-    name: 'Bolsas Comerciales',
+    name: 'Bolsas especiales',
     category: 'packaging',
     tag: 'PACKAGING',
     description:
       'En diferentes materiales de papel y de alta resistencia, diseñadas a medida para potenciar la presentación de tu marca.',
     feature: 'Acabados finos y asas a elección',
     price: 'Consultar cotización',
-    image: '/images/catalog/Ecobags/Firefly fondo blanco y colocarle asas a la bolsa.webp',
+    image: '/images/catalog/CatalogFinale/BAGS/1_BOL.png',
     items: [
       {
-        id: 'bolsas-comerciales',
-        name: 'Bolsas Comerciales',
-        image: '/images/catalog/Ecobags/Firefly fondo blanco y colocarle asas a la bolsa.webp',
+        id: 'bolsas-comerciales-1',
+        name: 'Bolsas especiales',
+        image: '/images/catalog/CatalogFinale/BAGS/1_BOL.png',
         tag: 'PACKAGING',
         feature: 'Acabados finos y asas a elección',
         description:
           'En diferentes materiales de papel y de alta resistencia, diseñadas a medida para potenciar la presentación de tu marca.',
       },
       {
-        id: 'bolsas-ecobags-externos',
+        id: 'bolsas-comerciales-2',
         name: 'Bolsas Ecológicas con Asas',
-        image: '/images/catalog/Ecobags/Firefly-quitar-los-textos-externos.webp',
+        image: '/images/catalog/CatalogFinale/BAGS/2_BOL.png',
         tag: 'PACKAGING',
         feature: 'Asas de cordón y acabado premium',
         description:
           'Empaques ejecutivos elegantes con solapa reforzada y acabados de lujo para boutiques.',
       },
       {
-        id: 'bolsas-kraft-sostenibles',
+        id: 'bolsas-comerciales-3',
         name: 'Bolsas Kraft Sostenibles',
-        image: '/images/catalog/Ecobags/Firefly-retirar-la-descripcion-inferior.webp',
+        image: '/images/catalog/CatalogFinale/BAGS/3_BOL.png',
         tag: 'PACKAGING',
         feature: 'Papel kraft 100% reciclable',
         description:
@@ -51,79 +51,70 @@ const mockProducts = [
       'Sets personalizados de productos branding ideales para bienvenida de colaboradores, regalos institucionales y eventos VIP.',
     feature: 'Combinaciones y empaques personalizados',
     price: 'Consultar cotización',
-    image: '/images/catalog/MerchTextile/merch_kit1.webp',
+    image: '/images/catalog/CatalogFinale/KITS/1_KIT.png',
     items: [
       {
-        id: 'kits-corporativos-merchandising',
+        id: 'kits-corporativos-1',
         name: 'Kits Corporativos – Merchandising',
-        image: '/images/catalog/MerchTextile/merch_kit1.webp',
+        image: '/images/catalog/CatalogFinale/KITS/1_KIT.png',
         tag: 'MERCHANDISING',
         feature: 'Combinaciones y empaques personalizados',
         description:
           'Sets personalizados de productos branding ideales para bienvenida de colaboradores, regalos institucionales y eventos VIP.',
       },
       {
-        id: 'merch-kit-welcome-pack',
+        id: 'kits-corporativos-2',
         name: 'Welcome Packs & Cajas Onboarding',
-        image: '/images/catalog/MerchTextile/merch_kit2.webp',
+        image: '/images/catalog/CatalogFinale/KITS/2_KIT.png',
         tag: 'MERCHANDISING',
         feature: 'Cajas branding y artículos corporativos',
         description:
           'Packs corporativos de bienvenida para colaboradores con libretas, termos y accesorios.',
       },
       {
-        id: 'merch-kit-premium-box',
+        id: 'kits-corporativos-3',
         name: 'Kits Ejecutivos Premium',
-        image: '/images/catalog/MerchTextile/merch_kit3.webp',
+        image: '/images/catalog/CatalogFinale/KITS/3_KIT.png',
         tag: 'MERCHANDISING',
         feature: 'Presentación de lujo y branding institucional',
         description:
           'Kits corporativos de alta gama para regalos institucionales, fin de año y clientes VIP.',
       },
       {
-        id: 'merch-kit-eventos',
+        id: 'kits-corporativos-4',
         name: 'Kits para Eventos & Ferias',
-        image: '/images/catalog/MerchTextile/merch_kit4.webp',
+        image: '/images/catalog/CatalogFinale/KITS/4_KIT.png',
         tag: 'MERCHANDISING',
         feature: 'Artículos promocionales coordinados',
         description:
           'Soluciones publicitarias integrales para conferencias, convenciones y lanzamientos.',
       },
       {
-        id: 'botellas-tazas-promocionales',
+        id: 'kits-corporativos-5',
         name: 'Toma-todos & Botellas Promocionales',
-        image: '/images/catalog/MerchTextile/bcgroup_merch_bottles.webp',
+        image: '/images/catalog/CatalogFinale/KITS/5_KIT.png',
         tag: 'MERCHANDISING',
         feature: 'Grabado láser y tampografía duradera',
         description:
           'Productos reutilizables y tomatodos metálicos o plásticos para eventos y oficina.',
       },
       {
-        id: 'merch-textil-accesorios',
+        id: 'kits-corporativos-6',
         name: 'Accesorios & Bolsas Promocionales',
-        image: '/images/catalog/MerchTextile/bcgroup_corpo_adds_bags.webp',
+        image: '/images/catalog/CatalogFinale/KITS/6_KIT.png',
         tag: 'MERCHANDISING',
         feature: 'Prendas y accesorios con bordado o estampado',
         description:
           'Textiles corporativos y accesorios personalizados para la imagen de tu empresa.',
       },
       {
-        id: 'merch-eventos-campanas',
+        id: 'kits-corporativos-7',
         name: 'Merchandising para Campañas',
-        image: '/images/catalog/MerchTextile/bcgroup_campaign_events.webp',
+        image: '/images/catalog/CatalogFinale/KITS/7_KIT.png',
         tag: 'MERCHANDISING',
         feature: 'Artículos promocionales de alto impacto',
         description:
           'Materiales publicitarios para ferias, conferencias y lanzamientos institucionales.',
-      },
-      {
-        id: 'merch-cartucheras-tocuyo',
-        name: 'Cartucheras & Accesorios de Tocuyo',
-        image: '/images/catalog/MerchTextile/Firefly cambiar esa bolsa por una cartuchera de tocuyo.webp',
-        tag: 'MERCHANDISING',
-        feature: 'Tela de tocuyo 100% ecológica',
-        description:
-          'Accesorios sustentables para kits corporativos y regalos institucionales.',
       },
     ],
   },
@@ -136,88 +127,79 @@ const mockProducts = [
       'Cajas rígidas y empaques premium con acabados especiales, diseñados para destacar tus productos.',
     feature: 'Estructuras rígidas y acabados premium',
     price: 'Consultar cotización',
-    image: '/images/catalog/Packaging/packaging1.webp',
+    image: '/images/catalog/CatalogFinale/PACKAGES/1_EMP.jpeg',
     items: [
       {
-        id: 'empaques-packaging',
+        id: 'empaques-packaging-1',
         name: 'Empaques - Packaging',
-        image: '/images/catalog/Packaging/packaging1.webp',
+        image: '/images/catalog/CatalogFinale/PACKAGES/1_EMP.jpeg',
         tag: 'PACKAGING',
         feature: 'Estructuras rígidas y acabados premium',
         description:
           'Cajas rígidas y empaques premium con acabados especiales, diseñados para destacar tus productos.',
       },
       {
-        id: 'packaging-cajas-lujo',
+        id: 'empaques-packaging-2',
         name: 'Cajas Rígidas y Estuches de Lujo',
-        image: '/images/catalog/Packaging/packaging2.webp',
+        image: '/images/catalog/CatalogFinale/PACKAGES/2_EMP.png',
         tag: 'PACKAGING',
         feature: 'Cierre magnético e interiores a medida',
         description:
           'Empaques de alta gama con acabados finos para productos de edición especial.',
       },
       {
-        id: 'packaging-cajas-kraft',
+        id: 'empaques-packaging-3',
         name: 'Cajas Kraft & Empaques Ecológicos',
-        image: '/images/catalog/Packaging/packaging3.webp',
+        image: '/images/catalog/CatalogFinale/PACKAGES/3_EMP.png',
         tag: 'PACKAGING',
         feature: 'Material reciclable y alta resistencia',
         description:
           'Empaques resistentes y ecológicos para envíos, tiendas y productos artesanales.',
       },
       {
-        id: 'cajas-rigidas-iman',
+        id: 'empaques-packaging-4',
         name: 'Cajas Rígidas con Acabados Finos',
-        image: '/images/catalog/Packaging/bggroup_packaging_boxes.webp',
+        image: '/images/catalog/CatalogFinale/PACKAGES/4_EMP.png',
         tag: 'PACKAGING',
         feature: 'Espuma troquelada o guata a medida',
         description:
           'Empaques exclusivos con acabados mate, brillo y reserva UV.',
       },
-      {
-        id: 'envolturas-grado-alimenticio',
-        name: 'Papel Antigrasa & Envolturas Food',
-        image: '/images/catalog/Packaging/bcgroup_food_wrappers.webp',
-        tag: 'PACKAGING',
-        feature: 'Papel antigrasa certificado y personalizado',
-        description:
-          'Envolturas para gastronomía, hamburgueserías y repostería con impresión inocua de alta calidad.',
-      },
     ],
   },
   {
     id: 'hangtags',
-    name: 'Hangtags',
+    name: 'HANGTAGS',
     category: 'etiquetas',
     tag: 'ETIQUETAS',
     description:
       'Etiquetas colgantes en diferentes materiales para ropa, accesorios y productos retail.',
     feature: 'Variedad de cartulinas y formas troqueladas',
     price: 'Consultar cotización',
-    image: '/images/catalog/Hangtags/Firefly la imagen mas luz o nitida.webp',
+    image: '/images/catalog/CatalogFinale/HANGTAGS/1_HANG.png',
     items: [
       {
-        id: 'hangtags',
-        name: 'Hangtags',
-        image: '/images/catalog/Hangtags/Firefly la imagen mas luz o nitida.webp',
+        id: 'hangtags-1',
+        name: 'HANGTAGS',
+        image: '/images/catalog/CatalogFinale/HANGTAGS/1_HANG.png',
         tag: 'ETIQUETAS',
         feature: 'Variedad de cartulinas y formas troqueladas',
         description:
           'Etiquetas colgantes en diferentes materiales para ropa, accesorios y productos retail.',
       },
       {
-        id: 'etiquetas-ropa-troqueladas',
+        id: 'hangtags-2',
         name: 'Etiquetas para Ropa & Retail',
-        image: '/images/catalog/Hangtags/bcgroup_hangtags.jpg',
+        image: '/images/catalog/CatalogFinale/HANGTAGS/2_HANG.png',
         tag: 'ETIQUETAS',
         feature: 'Perforación y acabados especiales',
         description:
           'Branding de prendas y accesorios con acabado fino, plastificado mate y relieve.',
       },
       {
-        id: 'hangtags-cordon-lanyard',
+        id: 'hangtags-3',
         name: 'Hangtags con Lanyard & Ojalillo',
-        image: '/images/catalog/Hangtags/Firefly mejorar la imagen aadirle un lanyard.webp',
+        image: '/images/catalog/CatalogFinale/HANGTAGS/3_HANG.png',
         tag: 'ETIQUETAS',
         feature: 'Ojal metálico y cordón personalizado',
         description:
@@ -234,39 +216,39 @@ const mockProducts = [
       'Impresos para propuestas comerciales y entregas institucionales.',
     feature: 'Con solapa, hendiduras y troqueles a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/BooksFoldersTriptics/bggroup_corp_impr_item1.webp',
+    image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/1_FOLL.png',
     items: [
       {
-        id: 'folletos-jalavistas-tripticos-carpetas',
+        id: 'folletos-jalavistas-1',
         name: 'Folletos, Jalavistas, Tripticos, Cuadernillos, Carpetas',
-        image: '/images/catalog/BooksFoldersTriptics/bggroup_corp_impr_item1.webp',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/1_FOLL.png',
         tag: 'EDITORIAL',
         feature: 'Con solapa, hendiduras y troqueles a medida',
         description:
           'Impresos para propuestas comerciales y entregas institucionales.',
       },
       {
-        id: 'carpetas-institucionales-executive',
+        id: 'folletos-jalavistas-2',
         name: 'Carpetas Institucionales Executive',
-        image: '/images/catalog/BooksFoldersTriptics/bggroup_corp_impr_item2.webp',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/2_FOLL.png',
         tag: 'EDITORIAL',
         feature: 'Laminado mate y reserva UV',
         description:
           'Carpetas profesionales de alta rigidez para licitaciones, propuestas y documentación corporativa.',
       },
       {
-        id: 'folletos-promocionales',
+        id: 'folletos-jalavistas-3',
         name: 'Folletos & Jalavistas Publicitarios',
-        image: '/images/catalog/BooksFoldersTriptics/bggroup_corp_impr_item3.webp',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/3_FOLL.png',
         tag: 'EDITORIAL',
         feature: 'Papel cuché brillo o mate',
         description:
           'Piezas publicitarias de alta resolución para punto de venta y captación de clientes.',
       },
       {
-        id: 'tripticos-blocks-flyers-corporativos',
+        id: 'folletos-jalavistas-4',
         name: 'Trípticos, Cuadernillos y Blocks',
-        image: '/images/catalog/BooksFoldersTriptics/bcgroup_tripticblock_flyers.jpg',
+        image: '/images/catalog/CatalogFinale/FLYERS-FOLDERS/4_FOLL.png',
         tag: 'EDITORIAL',
         feature: 'Doblados de precisión y acabados a medida',
         description:
@@ -276,28 +258,28 @@ const mockProducts = [
   },
   {
     id: 'calendarios-blocks-revistas-cuadernos-libros',
-    name: 'Calendarios, Blocks, Revistas, Cuadernos, Libros',
+    name: 'Calendarios, blocks, Revistas, Cuadernos, Libros',
     category: 'editorial',
     tag: 'EDITORIAL',
     description:
       'Material informativo y promocional impreso en alta calidad para campañas comerciales, ferias y atención al cliente.',
     feature: 'Múltiples gramajes, encuadernados y acabados',
     price: 'Consultar cotización',
-    image: '/images/catalog/Calendars/calendar1.webp',
+    image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/1_CUA.png',
     items: [
       {
-        id: 'calendarios-blocks-revistas-cuadernos-libros',
-        name: 'Calendarios, Blocks, Revistas, Cuadernos, Libros',
-        image: '/images/catalog/Calendars/calendar1.webp',
+        id: 'calendarios-blocks-1',
+        name: 'Calendarios, blocks, Revistas, Cuadernos, Libros',
+        image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/1_CUA.png',
         tag: 'EDITORIAL',
         feature: 'Múltiples gramajes, encuadernados y acabados',
         description:
           'Material informativo y promocional impreso en alta calidad para campañas comerciales, ferias y atención al cliente.',
       },
       {
-        id: 'carpetas-calendarios-corporativos',
+        id: 'calendarios-blocks-2',
         name: 'Planificadores & Calendarios Corporativos',
-        image: '/images/catalog/Calendars/bcgroup_perso_folders.jpg',
+        image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/2_CUA.png',
         tag: 'EDITORIAL',
         feature: 'Encuadernación anillada o de escritorio',
         description:
@@ -314,70 +296,79 @@ const mockProducts = [
       'Etiquetas en papel, adhesivo o vinil para envases, cierres de empaques y branding publicitario; con acabados rectos, troquelados y con relieve.',
     feature: 'Acabados rectos, troquelados y con relieve',
     price: 'Consultar cotización',
-    image: '/images/catalog/PrintTags/tag1.webp',
+    image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.png',
     items: [
       {
-        id: 'etiquetas',
+        id: 'etiquetas-1',
         name: 'Etiquetas',
-        image: '/images/catalog/PrintTags/tag1.webp',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.png',
         tag: 'ETIQUETAS',
         feature: 'Acabados rectos, troquelados y con relieve',
         description:
           'Etiquetas en papel, adhesivo o vinil para envases, cierres de empaques y branding publicitario; con acabados rectos, troquelados y con relieve.',
       },
       {
-        id: 'etiquetas-tag-2',
+        id: 'etiquetas-2',
         name: 'Etiquetas Adhesivas Personalizadas',
-        image: '/images/catalog/PrintTags/tag2.webp',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/2_ETIQ.png',
         tag: 'ETIQUETAS',
         feature: 'Cortes troquelados y colores vibrantes',
         description:
           'Etiquetas adhesivas resistentes para botellas, envases cosméticos y alimentos.',
       },
       {
-        id: 'etiquetas-tag-3',
+        id: 'etiquetas-3',
         name: 'Stickers en Rollo & Empaques',
-        image: '/images/catalog/PrintTags/tag3.webp',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/3_ETIQ.png',
         tag: 'ETIQUETAS',
         feature: 'Dispensado fácil y adhesión permanente',
         description:
           'Stickers para cierre de bolsas, sellado de empaques y branding en punto de venta.',
       },
       {
-        id: 'etiquetas-tag-4',
+        id: 'etiquetas-4',
         name: 'Etiquetas Troqueladas de Alta Definición',
-        image: '/images/catalog/PrintTags/tag4.webp',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/4_ETIQ.png',
         tag: 'ETIQUETAS',
         feature: 'Texturas con relieve y brillo metálico',
         description:
           'Etiquetas de alta gama con laminado UV y acabados metalizados para marcas exclusivas.',
       },
+      {
+        id: 'etiquetas-5',
+        name: 'Etiquetas y Stickers Especiales',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/5_ETIQ.png',
+        tag: 'ETIQUETAS',
+        feature: 'Material autoadhesivo y acabados premium',
+        description:
+          'Soluciones adhesivas de alta resistencia para packaging y productos retail.',
+      },
     ],
   },
   {
     id: 'photochecks-y-lanyards',
-    name: 'Photochecks y Lanyards',
+    name: 'Fotochecks y Lanyards',
     category: 'merchandising',
     tag: 'MERCHANDISING',
     description:
       'Credenciales en PVC y cintas estampadas con el logo de tu empresa para control de acceso e identificación.',
     feature: 'Impresión en alta definición y accesorios duraderos',
     price: 'Consultar cotización',
-    image: '/images/catalog/Products/bcgroup_photocheck_lanyards.webp',
+    image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/1_FOTO.png',
     items: [
       {
-        id: 'photochecks-y-lanyards',
-        name: 'Photochecks y Lanyards',
-        image: '/images/catalog/Products/bcgroup_photocheck_lanyards.webp',
+        id: 'photochecks-y-lanyards-1',
+        name: 'Fotochecks y Lanyards',
+        image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/1_FOTO.png',
         tag: 'MERCHANDISING',
         feature: 'Impresión en alta definición y accesorios duraderos',
         description:
           'Credenciales en PVC y cintas estampadas con el logo de tu empresa para control de acceso e identificación.',
       },
       {
-        id: 'lanyards-cintas-personalizadas',
+        id: 'photochecks-y-lanyards-2',
         name: 'Cintas y Lanyards Sublimados',
-        image: '/images/catalog/Products/lanyard2.webp',
+        image: '/images/catalog/CatalogFinale/PHOTOS-LANYARDS/2_FOTO.png',
         tag: 'MERCHANDISING',
         feature: 'Cintas sublimadas con mosquetón y broches',
         description:
@@ -387,41 +378,59 @@ const mockProducts = [
   },
   {
     id: 'plegables-especiales',
-    name: 'Plegables Especiales',
+    name: 'Plegables especiales',
     category: 'editorial',
     tag: 'EDITORIAL',
     description:
       'Desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
     feature: 'Cortes y troqueles interactivos a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/bggroup_mold.webp',
+    image: '/images/catalog/CatalogFinale/SPECIALFOLDING/1_PLE.png',
     items: [
       {
-        id: 'plegables-especiales',
-        name: 'Plegables Especiales',
-        image: '/images/catalog/bggroup_mold.webp',
+        id: 'plegables-especiales-1',
+        name: 'Plegables especiales',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/1_PLE.png',
         tag: 'EDITORIAL',
         feature: 'Cortes y troqueles interactivos a medida',
         description:
           'Desplegables con cortes y troqueles interactivos para presentaciones comerciales de alto impacto.',
       },
       {
-        id: 'plegables-especiales-desplegables',
+        id: 'plegables-especiales-2',
         name: 'Desplegables y Folletos Troquelados',
-        image: '/images/catalog/SpecialFolding/SpecialFolding1.webp',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/2_PLE.png',
         tag: 'EDITORIAL',
         feature: 'Formatos creativos y acabados especiales',
         description:
           'Piezas plegables personalizadas con cortes dinámicos para marketing de alto impacto.',
       },
       {
-        id: 'plegables-especiales-formatos',
+        id: 'plegables-especiales-3',
         name: 'Plegables Creativos de Alto Impacto',
-        image: '/images/catalog/SpecialFolding/SpecialFolding2.webp',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/3_PLE.png',
         tag: 'EDITORIAL',
         feature: 'Troqueles de precisión y dobleces especiales',
         description:
           'Soluciones editoriales interactivas para lanzamientos, eventos y presentaciones de marca.',
+      },
+      {
+        id: 'plegables-especiales-4',
+        name: 'Plegados Especiales Personalizados',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/4_PLE.png',
+        tag: 'EDITORIAL',
+        feature: 'Diseños dinámicos y acabados de precisión',
+        description:
+          'Estructuras plegables interactivas que destacan el valor de tu marca.',
+      },
+      {
+        id: 'plegables-especiales-5',
+        name: 'Formatos Desplegables Promocionales',
+        image: '/images/catalog/CatalogFinale/SPECIALFOLDING/5_PLE.png',
+        tag: 'EDITORIAL',
+        feature: 'Troqueles e ingeniería en papel',
+        description:
+          'Piezas gráficas innovadoras para campañas de marketing y presentaciones exclusivas.',
       },
     ],
   },
@@ -434,65 +443,101 @@ const mockProducts = [
       'De alta resolución y resistentes diseñados para hacer destacar tu marca en cualquier espacio.',
     feature: 'Alta resolución y resistencia para exteriores e interiores',
     price: 'Consultar cotización',
-    image: '/images/catalog/VInils/vinil1.webp',
+    image: '/images/catalog/CatalogFinale/VINILS-BANERS/1_BANN.png',
     items: [
       {
-        id: 'banners-y-viniles',
+        id: 'banners-y-viniles-1',
         name: 'Banners y Viniles',
-        image: '/images/catalog/VInils/vinil1.webp',
+        image: '/images/catalog/CatalogFinale/VINILS-BANERS/1_BANN.png',
         tag: 'GRAN FORMATO',
         feature: 'Alta resolución y resistencia para exteriores e interiores',
         description:
           'De alta resolución y resistentes diseñados para hacer destacar tu marca en cualquier espacio.',
       },
       {
-        id: 'viniles-rotulacion-gran-formato',
+        id: 'banners-y-viniles-2',
         name: 'Viniles y Gráfica Gran Formato',
-        image: '/images/catalog/VInils/vinil2.webp',
+        image: '/images/catalog/CatalogFinale/VINILS-BANERS/2_BANN.png',
         tag: 'GRAN FORMATO',
         feature: 'Adherencia premium en paredes y cristales',
         description:
           'Rotulación y ambientación de oficinas, vitrinas y fachadas comerciales de alto impacto.',
       },
+      {
+        id: 'banners-y-viniles-3',
+        name: 'Banners Publicitarios para Eventos',
+        image: '/images/catalog/CatalogFinale/VINILS-BANERS/3_BANN.png',
+        tag: 'GRAN FORMATO',
+        feature: 'Lona de alta durabilidad e impresión HD',
+        description:
+          'Banners resistentes para señalización, eventos y promociones exteriores.',
+      },
     ],
   },
   {
     id: 'displays-exhibidores-materiales-pop',
-    name: 'Displays para interiores y exteriores, Exhibidores, Materiales POP',
+    name: 'Displays para interiores y exteriores, exhibidores, materiales POP',
     category: 'gran-formato',
     tag: 'GRAN FORMATO',
     description:
       'Estructuras metálicas y de madera ideal para la comunicación visual de reuniones, lanzamientos y otros eventos.',
     feature: 'Estructuras metálicas y de madera a medida',
     price: 'Consultar cotización',
-    image: '/images/catalog/ExteriorDisplay/ext_display1.webp',
+    image: '/images/catalog/CatalogFinale/DISPLAYS/1_DIS.png',
     items: [
       {
-        id: 'displays-exhibidores-materiales-pop',
-        name: 'Displays para interiores y exteriores, Exhibidores, Materiales POP',
-        image: '/images/catalog/ExteriorDisplay/ext_display1.webp',
+        id: 'displays-exhibidores-1',
+        name: 'Displays para interiores y exteriores, exhibidores, materiales POP',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/1_DIS.png',
         tag: 'GRAN FORMATO',
         feature: 'Estructuras metálicas y de madera a medida',
         description:
           'Estructuras metálicas y de madera ideal para la comunicación visual de reuniones, lanzamientos y otros eventos.',
       },
       {
-        id: 'exhibidores-display-2',
+        id: 'displays-exhibidores-2',
         name: 'Exhibidores & Displays Promocionales',
-        image: '/images/catalog/ExteriorDisplay/ext_display2.webp',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/2_DIS.png',
         tag: 'GRAN FORMATO',
         feature: 'Stands y módulos de exhibición de alto impacto',
         description:
           'Módulos y displays de exhibición para punto de venta y ferias comerciales.',
       },
       {
-        id: 'exhibidores-display-3',
+        id: 'displays-exhibidores-3',
         name: 'Módulos y Backings para Eventos',
-        image: '/images/catalog/ExteriorDisplay/ext_display3.webp',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/3_DIS.png',
         tag: 'GRAN FORMATO',
         feature: 'Fácil montaje y transporte',
         description:
           'Estructuras modulares para branding en conferencias, lanzamientos y eventos.',
+      },
+      {
+        id: 'displays-exhibidores-4',
+        name: 'Tótem y Displays Publicitarios',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/4_DIS.jpeg',
+        tag: 'GRAN FORMATO',
+        feature: 'Estructuras ligeras y de alto impacto',
+        description:
+          'Sistemas portátiles y tótems ideales para ferias, activaciones y recepciones.',
+      },
+      {
+        id: 'displays-exhibidores-5',
+        name: 'Exhibidores de Punto de Venta',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/5_DIS.jpeg',
+        tag: 'GRAN FORMATO',
+        feature: 'Materiales resistentes y acabados a color',
+        description:
+          'Exhibidores diseñados para destacar productos en retail y centros comerciales.',
+      },
+      {
+        id: 'displays-exhibidores-6',
+        name: 'Stands y Paneles Informativos',
+        image: '/images/catalog/CatalogFinale/DISPLAYS/6_DIS.jpeg',
+        tag: 'GRAN FORMATO',
+        feature: 'Fácil armado y gráfica intercambiable',
+        description:
+          'Paneles y stands modulares para eventos corporativos y ferias.',
       },
     ],
   },
@@ -505,25 +550,61 @@ const mockProducts = [
       'Uniformes, prendas y accesorios personalizados para promocionar tu marca y fidelizar clientes.',
     feature: 'Bordados, estampados y confección de calidad',
     price: 'Consultar cotización',
-    image: '/images/catalog/Textils/textil1.webp',
+    image: '/images/catalog/CatalogFinale/TEXTILS/1_TEX.png',
     items: [
       {
-        id: 'textiles',
+        id: 'textiles-1',
         name: 'Textiles',
-        image: '/images/catalog/Textils/textil1.webp',
+        image: '/images/catalog/CatalogFinale/TEXTILS/1_TEX.png',
         tag: 'MERCHANDISING',
         feature: 'Bordados, estampados y confección de calidad',
         description:
           'Uniformes, prendas y accesorios personalizados para promocionar tu marca y fidelizar clientes.',
       },
       {
-        id: 'textiles-prendas-corporativas-2',
+        id: 'textiles-2',
         name: 'Prendas y Uniformes Corporativos',
-        image: '/images/catalog/Textils/textil2.webp',
+        image: '/images/catalog/CatalogFinale/TEXTILS/2_TEX.jpeg',
         tag: 'MERCHANDISING',
         feature: 'Algodón pima, pique y bordado computarizado',
         description:
           'Prendas corporativas de alta calidad para colaboradores y personal de atención.',
+      },
+      {
+        id: 'textiles-3',
+        name: 'Polos y Camisas Institucionales',
+        image: '/images/catalog/CatalogFinale/TEXTILS/3_TEX.png',
+        tag: 'MERCHANDISING',
+        feature: 'Algodón suave y estampado duradero',
+        description:
+          'Prendas cómodas con bordado o estampado de tu identidad corporativa.',
+      },
+      {
+        id: 'textiles-4',
+        name: 'Casacas y Chalecos Corporativos',
+        image: '/images/catalog/CatalogFinale/TEXTILS/4_TEX.png',
+        tag: 'MERCHANDISING',
+        feature: 'Material térmico e impermeable',
+        description:
+          'Prendas ejecutivas y operativas para el personal en todo clima.',
+      },
+      {
+        id: 'textiles-5',
+        name: 'Gorras y Accesorios Textiles',
+        image: '/images/catalog/CatalogFinale/TEXTILS/5_TEX.jpg.jpeg',
+        tag: 'MERCHANDISING',
+        feature: 'Bordado 3D y broches ajustables',
+        description:
+          'Gorros y complementos ideales para merchandising promocional y eventos.',
+      },
+      {
+        id: 'textiles-6',
+        name: 'Bolsas y Mochilas de Tela',
+        image: '/images/catalog/CatalogFinale/TEXTILS/6_TEX.png',
+        tag: 'MERCHANDISING',
+        feature: 'Material reciclable y alta resistencia',
+        description:
+          'Tote bags y mochilas textiles para branding sustentable.',
       },
     ],
   },
@@ -550,6 +631,7 @@ function getProductById(id) {
 
   const idMap = {
     'bolsas-boutique-kraft': 'bolsas-comerciales',
+    'bolsas-especiales': 'bolsas-comerciales',
     'kits-corporativos': 'kits-corporativos-merchandising',
     'packaging-cajas-lujo': 'empaques-packaging',
     'hangtags-etiquetas-colgantes': 'hangtags',
