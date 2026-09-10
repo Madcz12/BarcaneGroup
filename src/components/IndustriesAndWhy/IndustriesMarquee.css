@@ -147,7 +147,7 @@
   font-size: calc(var(--mq-font-size) * 0.82);
   font-weight: 500;
   color: #ffffff;
-  text-align: justify;
+  text-align: center;
   line-height: 1.5;
   letter-spacing: 0.01em;
 }
