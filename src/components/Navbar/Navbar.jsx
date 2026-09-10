@@ -241,7 +241,7 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Productos</Link>
+              <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Catálogo</Link>
             </li>
             <li className="nav-item">
               <a href="#industrias" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('industrias'); }}>Industrias</a>

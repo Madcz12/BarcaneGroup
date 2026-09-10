@@ -40,6 +40,33 @@ const mockProducts = [
         description:
           'Bolsas ecológicas de gran durabilidad ideales para envíos, tiendas y delivery comercial.',
       },
+      {
+        id: 'bolsas-comerciales-4',
+        name: 'Bolsas Comerciales Personalizadas',
+        image: '/images/catalog/CatalogFinale/BAGS/4_BOL.webp',
+        tag: 'PACKAGING',
+        feature: 'Impresión de alta definición y asas reforzadas',
+        description:
+          'Bolsas a medida para eventos, tiendas retail y presentación de marca corporativa.',
+      },
+      {
+        id: 'bolsas-comerciales-5',
+        name: 'Bolsas de Papel con Acabados Especiales',
+        image: '/images/catalog/CatalogFinale/BAGS/5_BOL.webp',
+        tag: 'PACKAGING',
+        feature: 'Acabados mate, brillo y sectorizado',
+        description:
+          'Empaques de alta gama con máxima resistencia y detalles exclusivos para boutiques.',
+      },
+      {
+        id: 'bolsas-comerciales-6',
+        name: 'Bolsas de Lujo para Boutiques',
+        image: '/images/catalog/CatalogFinale/BAGS/6_BOL.webp',
+        tag: 'PACKAGING',
+        feature: 'Cordón de algodón y solapa reforzada',
+        description:
+          'Presentación premium para tiendas exclusivas, joyerías y marcas de moda.',
+      },
     ],
   },
   {
@@ -285,6 +312,15 @@ const mockProducts = [
         description:
           'Calendarios de mesa y pared personalizados para regalos corporativos de fin de año.',
       },
+      {
+        id: 'calendarios-blocks-3',
+        name: 'Cuadernos y Libretas Institucionales',
+        image: '/images/catalog/CatalogFinale/CALENDARS-BOOKS/3_CUA.webp',
+        tag: 'EDITORIAL',
+        feature: 'Tapa dura, anillado doble ring y hojas membretadas',
+        description:
+          'Cuadernos personalizados y agendas corporativas para colaboradores y eventos.',
+      },
     ],
   },
   {
@@ -296,12 +332,12 @@ const mockProducts = [
       'Etiquetas en papel, adhesivo o vinil para envases, cierres de empaques y branding publicitario; con acabados rectos, troquelados y con relieve.',
     feature: 'Acabados rectos, troquelados y con relieve',
     price: 'Consultar cotización',
-    image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.webp',
+    image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQUETA.webp',
     items: [
       {
         id: 'etiquetas-1',
         name: 'Etiquetas',
-        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQ.webp',
+        image: '/images/catalog/CatalogFinale/TAGS-STICKERS/1_ETIQUETA.webp',
         tag: 'ETIQUETAS',
         feature: 'Acabados rectos, troquelados y con relieve',
         description:
