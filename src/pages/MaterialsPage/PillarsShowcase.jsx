@@ -75,7 +75,7 @@ export const SpotlightCard = ({
 export const PillarsShowcase = () => {
   return (
     <div className="pillars-showcase-section">
-      <h1 className="pillars-main-heading">Nuestra metodología</h1>
+      <h1 className="pillars-main-heading">Nuestro proceso</h1>
       <div className="pillars-grid">
         {/* Card 1: Pensamos contigo (7 columnas) */}
         <SpotlightCard

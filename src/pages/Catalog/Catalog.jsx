@@ -325,6 +325,8 @@ export default function Catalog() {
         <h1 className="catalog-title">
           Ideas que toman forma. Marcas que se hacen visibles.
         </h1>
+        <br />
+        <br />
         <p className="catalog-subtitle">
           Producimos materiales gráficos, empaques, textiles y elementos
           publicitarios para empresas que buscan comunicar mejor, dentro y fuera
