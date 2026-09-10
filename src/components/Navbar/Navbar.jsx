@@ -243,12 +243,13 @@ export default function Navbar() {
             <li className="nav-item">
               <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Catálogo</Link>
             </li>
+                        <li className="nav-item">
+              <a href="#materiales" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('materiales'); }}>Materiales</a>
+            </li>
             <li className="nav-item">
               <a href="#industrias" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('industrias'); }}>Industrias</a>
             </li>
-            <li className="nav-item">
-              <a href="#materiales" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('materiales'); }}>Materiales</a>
-            </li>
+
             <li className="nav-item">
               <a href="#contacto" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }}>Contacto</a>
             </li>
