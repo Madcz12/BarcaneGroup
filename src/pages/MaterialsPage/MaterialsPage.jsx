@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import WhatsAppIcon from '../../components/icons/WhatsAppIcon';
+import PillarsShowcase from './PillarsShowcase';
 import './MaterialsPage.css';
 
 export default function MaterialsPage() {
@@ -104,49 +104,6 @@ export default function MaterialsPage() {
     };
   }, [emblaApi, onSelect]);
 
-  const valueProps = [
-    {
-      num: '01',
-      title: 'Pensamos contigo',
-      subtitle:
-        'No todo proyecto empieza con un archivo listo para imprimir. Te ayudamos a encontrar materiales, formatos y acabados adecuados.',
-      icon: (
-        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/>
-          <line x1="9" y1="21" x2="15" y2="21"/>
-        </svg>
-      ),
-    },
-    {
-      num: '02',
-      title: 'Producimos con criterio',
-      subtitle:
-        'Elegimos cada alternativa considerando uso, presentación, presupuesto y resultado final.',
-      icon: (
-        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
-      ),
-    },
-    {
-      num: '03',
-      title: 'Resolvemos en un solo lugar',
-      subtitle:
-        'Desde impresos y packaging hasta merchandising, textiles y elementos para tus espacios.',
-      icon: (
-        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-        </svg>
-      ),
-    },
-  ];
-
-  const whatsappMessage = encodeURIComponent(
-    'Hola BarcaneGroup, quisiera asesoría personalizada para elegir materiales, formatos y acabados para mi proyecto.'
-  );
-
   return (
     <div className="service-detail-page materials-page animate-fade-in">
       {/* Edge-to-Edge 100% Full-Bleed Hero Banner with Carousel */}
@@ -237,38 +194,10 @@ export default function MaterialsPage() {
         </div>
       </header>
 
-      {/* Main Blog-Style Section with Archivo Black Typography */}
+      {/* Main Pillars Showcase Section */}
       <section className="materials-content-section">
-        <div className="materials-blog-container">
-          
-          <div className="materials-blog-list">
-            {valueProps.map((item, idx) => (
-              <article className="materials-blog-article" key={item.num || idx}>
-                <h1 className="materials-blog-title">{item.title}</h1>
-                <h2 className="materials-blog-subtitle">{item.subtitle}</h2>
-              </article>
-            ))}
-          </div>
-
-          {/* Direct CTA Banner */}
-{/*           <div className="materials-cta-box">
-            <div className="materials-cta-content">
-              <h3 className="materials-cta-title">¿Tienes un proyecto en mente?</h3>
-              <p className="materials-cta-desc">
-                Conversemos directamente por WhatsApp y te asesoramos con muestras, materiales y cotización sin compromiso.
-              </p>
-            </div>
-            <a
-              href={`https://wa.me/51943703905?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="materials-cta-button"
-            >
-              <WhatsAppIcon size={20} />
-              Consultar con un Asesor
-            </a>
-          </div> */}
-
+        <div className="container">
+          <PillarsShowcase />
         </div>
       </section>
     </div>

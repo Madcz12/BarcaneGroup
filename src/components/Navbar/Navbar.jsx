@@ -247,6 +247,9 @@ export default function Navbar() {
               <a href="#industrias" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('industrias'); }}>Industrias</a>
             </li>
             <li className="nav-item">
+              <a href="#materiales" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('materiales'); }}>Materiales</a>
+            </li>
+            <li className="nav-item">
               <a href="#contacto" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }}>Contacto</a>
             </li>
           </ul>

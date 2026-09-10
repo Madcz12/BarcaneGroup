@@ -35,7 +35,7 @@
 }
 
 .services-title {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   color: #0f172a;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -88,7 +88,7 @@
 .service-card-header-title {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--clr-primary-pink);
   margin: 0;
   line-height: 1.3;
   transition: color var(--transition-fast);
@@ -102,7 +102,7 @@
 .service-card-header-subtitle {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #475569;
+  color: var(--clr-navy-medium);
   margin: 0;
   line-height: 1.4;
 }
@@ -136,7 +136,7 @@
 }
 
 .service-card-header-link:hover .service-card-header-title {
-  color: var(--clr-primary-pink);
+  color: var(--clr-primary-pink-hover);
 }
 
 .service-card:hover {
@@ -269,9 +269,6 @@
   .services-section.section-padding {
     padding-top: 32px;
   }
-  .services-title {
-    font-size: 2.2rem;
-  }
   .services-subtitle {
     font-size: 1.4rem;
   }
@@ -291,6 +288,10 @@
 
 /* ---- Desktop ---- */
 @media (min-width: 1024px) {
+  .services-title {
+    font-size: 2.4rem;
+  }
+
   .services-grid-6 {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;

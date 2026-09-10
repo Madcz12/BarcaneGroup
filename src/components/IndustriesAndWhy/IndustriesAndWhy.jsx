@@ -28,7 +28,7 @@ export default function IndustriesAndWhy() {
               <ProcessTimeline reducedMotion={prefersReducedMotion} />
             </div>
 
-            <div className="iw-section__block">
+            <div id="materiales" className="iw-section__block" tabIndex={-1}>
               <h2 className="block-title">
                 Calidad que se siente en cada detalle
               </h2>
