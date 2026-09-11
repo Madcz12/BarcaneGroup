@@ -4,7 +4,7 @@
 const mockProducts = [
   {
     id: 'bolsas-comerciales',
-    name: 'Bolsas especiales',
+    name: 'Bolsas comerciales',
     category: 'packaging',
     tag: 'PACKAGING',
     description:
@@ -15,7 +15,7 @@ const mockProducts = [
     items: [
       {
         id: 'bolsas-comerciales-1',
-        name: 'Bolsas especiales',
+        name: 'Bolsas comerciales',
         image: '/images/catalog/CatalogFinale/BAGS/1_BAG.webp',
         tag: 'PACKAGING',
         feature: 'Acabados finos y asas a elección',
