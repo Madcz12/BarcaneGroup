@@ -31,7 +31,7 @@ export const SpotlightCard = ({
   children,
   className = '',
   spotlightColor = 'rgba(233, 30, 99, 0.12)',
-  borderColor = 'rgba(233, 30, 99, 0.35)',
+  borderColor = 'var(--clr-primary-pink)',
 }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
@@ -83,13 +83,15 @@ export const PillarsShowcase = () => {
         <SpotlightCard
           className="pillar-col-7"
           spotlightColor="rgba(245, 158, 11, 0.14)"
-          borderColor="rgba(245, 158, 11, 0.4)"
+          borderColor="var(--clr-primary-pink)"
         >
           <div className="pillar-card-content">
-            <div className="pillar-icon-box pillar-icon-box--amber">
-              <CompassIcon />
+            <div className="pillar-card-header">
+              <div className="pillar-icon-box pillar-icon-box--amber">
+                <CompassIcon />
+              </div>
+              <h3 className="pillar-title">Pensamos contigo</h3>
             </div>
-            <h3 className="pillar-title">Pensamos contigo</h3>
             <p className="pillar-desc">
               No todo proyecto empieza con un archivo listo para imprimir. Te ayudamos a encontrar materiales, formatos y acabados adecuados para que tu propuesta destaque con máxima eficiencia.
             </p>
@@ -100,13 +102,15 @@ export const PillarsShowcase = () => {
         <SpotlightCard
           className="pillar-col-5"
           spotlightColor="rgba(16, 185, 129, 0.14)"
-          borderColor="rgba(16, 185, 129, 0.4)"
+          borderColor="var(--clr-primary-pink)"
         >
           <div className="pillar-card-content">
-            <div className="pillar-icon-box pillar-icon-box--emerald">
-              <ShieldCheckIcon />
+            <div className="pillar-card-header">
+              <div className="pillar-icon-box pillar-icon-box--emerald">
+                <ShieldCheckIcon />
+              </div>
+              <h3 className="pillar-title">Producimos con criterio</h3>
             </div>
-            <h3 className="pillar-title">Producimos con criterio</h3>
             <p className="pillar-desc">
               Elegimos cada alternativa considerando uso, presentación, presupuesto y resultado final con los más altos estándares.
             </p>
@@ -117,7 +121,7 @@ export const PillarsShowcase = () => {
         <SpotlightCard
           className="pillar-col-12"
           spotlightColor="rgba(233, 30, 99, 0.12)"
-          borderColor="rgba(233, 30, 99, 0.35)"
+          borderColor="var(--clr-primary-pink)"
         >
           <div className="pillar-card-content pillar-card-content--full">
             <div className="pillar-icon-box pillar-icon-box--pink">

@@ -218,19 +218,19 @@
 }
 
 .iw-materials__advisor-icon {
-  color: var(--iw-accent);
+  color: #fc6dab;
   flex-shrink: 0;
   display: flex;
   align-items: center;
 }
 
 .iw-materials__advisor-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .iw-materials__advisor-text {
-  font-size: 0.89rem;
+  font-size: 0.97rem;
   color: #fc6dab;
   font-weight: 700;
   line-height: 1.45;
