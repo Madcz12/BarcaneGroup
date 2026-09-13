@@ -33,7 +33,7 @@ export default function ProcessAndCTA() {
           {/* Inline Action Elements: WhatsApp & Email Contact */}
           <div className="process-actions">
             <a
-              href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20deseo%20una%20cotizaci%C3%B3n."
+              href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20deseo%20me%20puedan%20ayudar%20con%20lo%20siguiente..."
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-pink btn-process-whatsapp"
