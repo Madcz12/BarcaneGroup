@@ -10,7 +10,7 @@ export default function MerchTextile() {
   }, []);
 
   const buildWhatsAppLink = (categoryName) => {
-    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Merchandising y textil).`;
+    const message = `Hola BarcaneGroup, deseo una cotización para ${categoryName}.`;
     return `https://wa.me/51992441610?text=${encodeURIComponent(message)}`;
   };
 

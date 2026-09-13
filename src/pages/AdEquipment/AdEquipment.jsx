@@ -10,7 +10,7 @@ export default function AdEquipment() {
   }, []);
 
   const buildWhatsAppLink = (categoryName) => {
-    const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Publicidad y equipamiento).`;
+    const message = `Hola BarcaneGroup, deseo una cotización para ${categoryName}.`;
     return `https://wa.me/51992441610?text=${encodeURIComponent(message)}`;
   };
 

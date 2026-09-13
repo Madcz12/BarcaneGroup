@@ -267,7 +267,7 @@ function CatalogCard({ product }) {
 
         {/* Solicitar cotizacion CTA */}
         <a
-          href={buildWhatsAppLink(activeItem.name || firstItem.name)}
+          href={buildWhatsAppLink(firstItem.name || product.name)}
           target="_blank"
           rel="noopener noreferrer"
           className="catalog-card-cta"
