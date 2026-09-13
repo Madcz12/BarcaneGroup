@@ -257,7 +257,7 @@ export default function Navbar() {
           
           <div className="navbar-cta-mobile">
             <a 
-              href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" 
+              href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20deseo%20una%20cotizaci%C3%B3n." 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-pink" 
@@ -272,7 +272,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="navbar-cta-desktop">
           <a 
-            href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" 
+            href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20deseo%20una%20cotizaci%C3%B3n." 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-pink"

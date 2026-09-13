@@ -6,7 +6,7 @@ import './Catalog.css';
 // Builds the WhatsApp quote link with the product name pre-filled.
 function buildWhatsAppLink(productName) {
   const base = 'https://wa.me/51992441610';
-  const message = `Hola BarcaneGroup, quisiera solicitar una cotización para ${productName}`;
+  const message = `Hola BarcaneGroup, deseo una cotización para ${productName}.`;
   return `${base}?text=${encodeURIComponent(message)}`;
 }
 
@@ -373,7 +373,7 @@ export default function Catalog() {
               </p>
             </div>
             <a
-              href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20quisiera%20cotizar%20un%20proyecto%20personalizado"
+              href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20deseo%20una%20cotizaci%C3%B3n."
               target="_blank"
               rel="noopener noreferrer"
               className="catalog-cta-banner-btn"

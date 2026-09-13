@@ -17,7 +17,7 @@ export default function FloatingWhatsApp() {
 
   return (
     <a
-      href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n"
+      href="https://wa.me/51992441610?text=Hola%20BarcaneGroup,%20deseo%20una%20cotizaci%C3%B3n."
       target="_blank"
       rel="noopener noreferrer"
       className={`floating-whatsapp${visible ? ' floating-whatsapp--visible' : ''}`}
