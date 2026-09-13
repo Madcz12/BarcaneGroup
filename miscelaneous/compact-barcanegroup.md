@@ -184,7 +184,7 @@ Fondo azul grisáceo (`#b8c2d9`). Carrusel horizontal con scroll snap:
 
 ## 📞 Lead Generation
 
-- **Canal principal:** WhatsApp Business `+51 941 192 676`
+- **Canal principal:** WhatsApp Business `+51 992 441 610`
 - **Texto predefinido:** "Hola BarcaneGroup, quisiera solicitar una cotización"
 - **CTAs:** Navbar, Hero, cada producto destacado, cada card de servicio, sección ProcessAndCTA
 - **Email alternativo:** `ventas@barcanegroup.com`

@@ -262,7 +262,7 @@ Diseño Mobile First con puntos de quiebre:
 
 ## 8. Estrategia de Lead Generation
 
-- **Canal principal:** WhatsApp Business `+51 941 192 676`
+- **Canal principal:** WhatsApp Business `+51 992 441 610`
 - **Mensaje predefinido:** "Hola BarcaneGroup, quisiera solicitar una cotización"
 - **Puntos de conversión (CTAs):**
   - Navbar (desktop y mobile)

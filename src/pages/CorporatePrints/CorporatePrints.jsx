@@ -11,7 +11,7 @@ export default function CorporatePrints() {
 
   const buildWhatsAppLink = (categoryName) => {
     const message = `Hola BarcaneGroup, quisiera solicitar información y cotización sobre ${categoryName} (Impresos Corporativos).`;
-    return `https://wa.me/51941192676?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/51992441610?text=${encodeURIComponent(message)}`;
   };
 
   const productCategories = [
