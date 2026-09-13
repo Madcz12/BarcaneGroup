@@ -84,7 +84,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/productos" className="btn btn-outline">
+            <Link to="/catalogo" className="btn btn-outline">
               Ver catálogo
               <svg
                 viewBox="0 0 24 24"

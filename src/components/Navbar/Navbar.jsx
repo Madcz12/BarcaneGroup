@@ -241,7 +241,7 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <Link to="/productos" className="nav-link" onClick={() => setIsOpen(false)}>Catálogo</Link>
+              <Link to="/catalogo" className="nav-link" onClick={() => setIsOpen(false)}>Catálogo</Link>
             </li>
                         <li className="nav-item">
               <a href="#materiales" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('materiales'); }}>Materiales</a>
@@ -257,7 +257,7 @@ export default function Navbar() {
           
           <div className="navbar-cta-mobile">
             <a 
-              href="https://wa.me/51943703905?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" 
+              href="https://wa.me/51941192676?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-pink" 
@@ -272,7 +272,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="navbar-cta-desktop">
           <a 
-            href="https://wa.me/51943703905?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" 
+            href="https://wa.me/51941192676?text=Hola%20BarcaneGroup,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-pink"

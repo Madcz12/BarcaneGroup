@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/MainLayout/MainLayout';
 import HomePage from './pages/HomePage/HomePage';
 import Catalog from './pages/Catalog/Catalog';
@@ -16,7 +16,8 @@ function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="productos" element={<Catalog />} />
+        <Route path="catalogo" element={<Catalog />} />
+        <Route path="productos" element={<Navigate to="/catalogo" replace />} />
         <Route path="servicios/impresos-corporativos" element={<CorporatePrints />} />
         <Route path="servicios/empaques-personalizados" element={<CustomPackaging />} />
         <Route path="servicios/merchandising-y-textil" element={<MerchTextile />} />
