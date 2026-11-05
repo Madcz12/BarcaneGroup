@@ -1,5 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import MainLayout from './components/MainLayout/MainLayout';
 import HomePage from './pages/HomePage/HomePage';
 import Catalog from './pages/Catalog/Catalog';
@@ -11,22 +13,28 @@ import MaterialsPage from './pages/MaterialsPage/MaterialsPage';
 import './App.css';
 
 // Route configuration: MainLayout wraps every page with Navbar + Footer.
+// Analytics: tracks page views and visitor traffic (visible in Vercel dashboard).
+// SpeedInsights: tracks Web Vitals (LCP, FID, CLS) for performance monitoring.
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<HomePage />} />
-        <Route path="catalogo" element={<Catalog />} />
-        <Route path="productos" element={<Navigate to="/catalogo" replace />} />
-        <Route path="servicios/impresos-corporativos" element={<CorporatePrints />} />
-        <Route path="servicios/empaques-personalizados" element={<CustomPackaging />} />
-        <Route path="servicios/merchandising-y-textil" element={<MerchTextile />} />
-        <Route path="servicios/publicidad-y-equipamiento" element={<AdEquipment />} />
-        <Route path="materiales" element={<MaterialsPage />} />
-        <Route path="materiales-y-acabados" element={<MaterialsPage />} />
-        <Route path="servicios/materiales" element={<MaterialsPage />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="catalogo" element={<Catalog />} />
+          <Route path="productos" element={<Navigate to="/catalogo" replace />} />
+          <Route path="servicios/impresos-corporativos" element={<CorporatePrints />} />
+          <Route path="servicios/empaques-personalizados" element={<CustomPackaging />} />
+          <Route path="servicios/merchandising-y-textil" element={<MerchTextile />} />
+          <Route path="servicios/publicidad-y-equipamiento" element={<AdEquipment />} />
+          <Route path="materiales" element={<MaterialsPage />} />
+          <Route path="materiales-y-acabados" element={<MaterialsPage />} />
+          <Route path="servicios/materiales" element={<MaterialsPage />} />
+        </Route>
+      </Routes>
+      <Analytics />
+      <SpeedInsights />
+    </>
   );
 }
 
